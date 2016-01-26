@@ -1,0 +1,168 @@
+\section{Hamiltonian Monte Carlo}
+\label{sec:HMC}
+A very popular MCMC method is the Hamiltonian Monte Carlo (or Hybrid Monte Carlo, HMC) algorithm \parencite{Duane1987}, since it is highly efficient and widely applicable. The idea behind this algorithm is to propose new points by simulating the dynamics of a particle on a potential energy landscape induced by the desired target distribution. This simulation is done using the Hamiltonian Dynamics formulation, which results in several useful properties for the HMC algorithm. These can be further exploited by using HMC within the Markov Chain Variational Inference scheme. To understand these synergies, we will first review Hamiltonian Dynamics and the HMC algorithm. For a more exhaustive review and discussion please see \parencite{Neal2011}.
+
+\subsection{Hamiltonian Dynamics}
+
+Hamiltonian Dynamics is a reformulation of classical dynamics, where the state of the physical system is described by a pair $(q, p)$ of $d$-dimensional vectors, where $q$ is the \textit{position} vector and $p$ is the \textit{momentum} vector. The evolution of the system with time is then given by the so-called Hamilton's equations:
+\begin{equation} \label{eq:HamiltonsEquations}
+\begin{split}
+\frac{dq_i}{dt} &= \frac{\partial H}{\partial p_i} \\
+\frac{dp_i}{dt} &= - \frac{\partial H}{\partial q_i},
+\end{split}
+\end{equation}
+where $H(q, p, t)$ is the Hamiltonian of the system (often its total energy).
+
+In our application we are interested in the motion of a single frictionless particle in $d$-dimensional space, with position $q$ and momentum $p$, governed by the potential energy $U(q)$ and kinetic energy $K(p)$. In this setting the Hamiltonian is just the total energy of the system, i.e. $H(q, p) = U(q) + K(p)$, which is independent of time due to conservation of energy. In two dimensions this can be visualized well as a frictionless particle sliding over a landscape of varying height.
+
+In such a physical system the kinetic energy is then given by $K(p) = p^T M^{-1} p /2$, where $M$ is the called the mass matrix and in a physical context usually is $m I$, a scalar multiple of the identity. Here the scalar $m$ corresponds to the mass of the particle. With this kinetic energy we can retrieve Newton's equation of motion relating the acceleration $d^2q/dt^2$ to the acting force upon a particle (given by $-\nabla U(q)$):
+\begin{equation} \label{eq:NewtonsEquation}
+\frac{d^2q}{dt^2} = M^{-1} \frac{dp}{dt} = - M^{-1} \frac{\partial H}{\partial q} = - M^{-1} \nabla U(q)
+\end{equation}
+
+The key advantage of Hamiltonian Dynamics over other formulations of classical dynamics is that analytic solutions to the above system have three crucial properties \parencite{Neal2011}:
+\begin{itemize}
+\item Reversibility: The mapping $T_s$ from the state $(q(t), p(t))$ at some time point $t$ to the state at $t+s$ (for any $s \in \mathbb{R^+}$) is one-to-one and hence reversible. So by running time backwards, i.e. negating both time derivatives in Hamilton's equations, we can uniquely determine previous states.
+\item Volume preservation: $T_s$ conserves volume in $(q, p)$-space, so applying it to some region of a certain volume results in a region of the same volume.\footnote{Actually the stronger property of symplecticness holds.}
+\item Conservation of the Hamiltonian: The Hamiltonian $H(q, p)$ is invariant with time, so $dH/dt = 0$.
+\end{itemize}
+
+All three of these properties would be useful in the application of the HMC algorithm, but due to the inevitable discretization of the differential equation not all of them can be preserved. The leapfrog method, which will be explained in the following, maintains reversibility and volume preservation and furthermore approximately conserves the Hamiltonian.\footnote{This approximate conservation of the Hamiltonian makes it a so-called symplectic integrator.}
+
+Given the step size $\epsilon$ the leapfrog method performs the following updates for $n \in \mathbb{N_0}$ starting from the initial state $(q^{(0)}, p^{(0)})$:
+\begin{equation}
+\begin{split}
+p_i^{(n + 1/2)} &= p_i^{(n)} - \frac{\epsilon}{2} \frac{\partial U}{\partial q_i}(q^{(n)}) \\
+q_i^{(n + 1)} &= q_i^{(n)} + \epsilon \frac{\partial K}{\partial p_i}(p^{(n + 1/2)}) \\
+p_i^{(n + 1)} &= p_i^{(n + 1/2)} - \frac{\epsilon}{2} \frac{\partial U}{\partial q_i}(q^{(n + 1)})
+\end{split}
+\end{equation}
+So first a half-step for the momentum variables is computed, which is then used for a full position step. Finally a second momentum half-step based on the updated position completes the leapfrog step. Since each of these updates is simply a shear transformation in $(q, p)$-space and therefore has a determinant of 1, a complete leapfrog step also has a determinant of 1 and is volume-conserving. If we perform multiple leapfrog steps, then in practice we can compute this more efficiently, since we can move from $p_i^{(n + 1/2)}$ to $p_i^{(n + 3/2)}$ directly.
+
+With the usual choice for the kinetic energy $K(p) = p^T M^{-1} p /2$ and some manipulation of the above equations we can obtain an alternative formulation of the leapfrog method, which is more intuitive and perhaps familiar from high-school physics (but computationally more expensive):
+\begin{equation}
+\begin{split}
+q^{(n + 1)} &= q^{(n)} + \epsilon M^{-1} p^{(n)}) + (\epsilon^2/2) M^{-1} F(q^{(n)}) \\
+p^{(n + 1)} &= p^{(n)} + \epsilon (F(q^{(n)}) + F(q^{(n+1)}))/2,
+\end{split}
+\end{equation}
+where $F(q) = - \nabla U(q)$ is the force acting on the particle at position $q$ due to the change in potential energy. Since $M$ corresponds to the mass of the particle, $M^{-1} p$ gives its velocity and $M^{-1} F(q)$ its acceleration. Therefore the first equation describes the motion of a particle under constant acceleration: $q(t) = q_0 + v_0 t + 1/2 a t^2$ with a initial position $q_0 = q^{(n)}$, initial velocity $v_0 = M^{-1} p^{(n)}$ and constant acceleration $a = M^{-1} F(q^{(n)})$. The second equation is simply a discretized version of the basic relationship $dp/dt = F$, i.e. force equals change of momentum, using the average between the force at the start point and that at the end point.
+
+The local error of the leapfrog method, i.e. the error incurred in a single step, has order $\epsilon^3$; the global error, i.e. the error in the solution over a fixed time interval $L$, has order $\epsilon^2$. Further for the leapfrog method (being a symplectic integrator) the global error in the Hamiltonian, which is also order $\epsilon^2$, does in most cases not grow exponentially with the simulation length $L$ (with $\epsilon$ fixed) as it may for many other integration schemes \parencite{Neal2011}.
+
+\subsection{The HMC algorithm}
+\label{sec:HMCAlgorithmSection}
+\subsubsection{Relating probability density to energy}
+In order to apply Hamiltonian Dynamics within an MCMC method to sample from some target distribution, we need to derive appropriate energy functions. A key relationship in statistical mechanics is
+\begin{equation}
+P(s) = \frac{1}{Z} \exp \left(- \frac{E(s)}{T} \right),
+\end{equation}
+relating the probability density function $P(s)$ for observing a particle in state $s$ with the energy $E(s)$ of that state. Here $T$ is the temperature of the system\footnote{Here we assume $T$ to be given in units such that the Boltzmann constant is 1.} and $Z$ is a normalization constant such that the total probability over all states equals 1. The distribution given by this probability density function is the so-called canonical distribution.
+
+By inverting this relationship we can derive the appropriate energy from any target distribution (w.l.o.g.\ setting $T=1$): The potential energy $U(q)$, whose canonical distribution is the target distribution $\tilde{P}(q)$, is thus given by $U(q) = -\log \left( \tilde{P}(q) \right) - \log Z$,
+where we can drop the $\log Z$ term because energies only influence the particle motion through their derivatives. This also means that we do not need $\tilde{p}(q)$ to be normalized. A closer look at $U(q)$ reveals that it actually is the negative log-likelihood (NLL) of $\tilde{P}(q)$, which is frequently used as a minimization objective in machine learning. Therefore this potential energy will promote motion towards low NLL (i.e. high likelihood) points and thus the points proposed by motion simulation with this potential energy will tend to have a higher likelihood than those proposed by other methods.
+
+For the simulation by Hamiltonian Dynamics the state of the system consists of the variable of interest $q$ plus an auxiliary momentum variable $p$ of the same size and so is given by the $2d$-dimensional $s = (q, p)$. With the potential energy $U(q)$ derived from the target distribution as described above the Hamiltonian of this system is given by $H(q, p) = U(q) + K(p)$ for some kinetic energy $K(p)$ of our choice. Due to the additive nature of this Hamiltonian the joint canonical distribution of $(q, p)$ factorizes:
+\begin{equation}
+\begin{split}
+p(q, p) &= \frac{1}{Z} \exp \left( -H(q, p) \right) \\
+			&\propto \tilde{P}(q) \cdot \exp{(-K(p))}
+\end{split}
+\end{equation}
+
+\subsubsection{Choice of kinetic energy}
+Now all that remains to do is constructing a Markov chain whose invariant distribution is the canonical distribution. For this to work some restrictions apply to the choice of kinetic energy \parencite{Betancourt2014}: Most importantly that the corresponding canonical distribution has a mean of zero, since otherwise the resulting drift in the position variables makes convergence to the canonical distribution impossible. While it is possible to make the kinetic energy dependent on position in the Riemann Manifold Hamiltonian Monte Carlo method \parencite{Girolami2011}, this requires complicated modifications to the integrator and will not be considered here. \parencite{Betancourt2014} argue that a natural choice for the kinetic energies is the quadratic form from classical physics and in the following we will assume the usual choice for the kinetic energy
+\begin{equation} \label{eq:KineticEnergy}
+K(p) = p^T M^{-1} p/2
+\end{equation}
+for some positive definite mass matrix M. The corresponding canonical distribution (after normalization) $P_\textrm{kin}(p)$ is the multivariate Gaussian distribution with mean zero and covariance matrix $M$.
+
+\subsubsection{The algorithm}
+To generate the desired Markov chain the HMC Algorithm \parencite{Neal2011} is used, which consists of the following steps at each iteration starting from the current state $(q_{t-1}, p_{t-1})$:
+\begin{enumerate}
+\item Sample a new momentum $p^*_{t-1}$ from the canonical momentum distribution $P_\textrm{kin}(p) \propto \exp{(-K(p))}$
+\item Simulate Hamiltonian Dynamics for a fixed number of steps with a given step size $\epsilon$ (using any reversible and volume-preserving method, e.g. the leapfrog method) starting from the state $(q_{t-1}, p^*_{t-1})$ and then negate the momentum component of the result to obtain the proposed state $(\tilde{q}_t, \tilde{p}_t)$
+\item Compute the probability of accepting the proposed state: \\
+$p_{\textrm{accept}}(q_{t-1}, p^*_{t-1}) = \min[1, \exp(-H(\tilde{q}_t, \tilde{p}_t) + H(q_{t-1}, p^*_{t-1}))]$
+\item Randomly accept or reject the proposed state with the computed acceptance probability, i.e. set \begin{equation}
+(q_t, p_t) := \begin{cases} (\tilde{q}_t, \tilde{p}_t) & \textrm{with probability } p_{\textrm{accept}} \\ 
+											(q_{t-1}, p^*_{t-1}) 			& \textrm{with probability } (1 - p_{\textrm{accept}})
+					  \end{cases}
+\end{equation}
+\end{enumerate}
+The momentum negation of the proposed state in the second step is necessary to make the proposal distribution symmetrical using the reversibility of the integration method. As a result $\tilde{q}(\tilde{s}_t|s_{t-1}) = \tilde{q}(s_{t-1}|\tilde{s}_t)$ holds in the Metropolis-Hastings acceptance probability in equation~\eqref{eq:Metropolis-Hastings}, so the acceptance probability simplifies giving exactly the expression in the third step of the algorithm.
+
+Each step of the algorithm conserves canonical distribution \parencite{Neal2011}, so it is also the invariant distribution of the constructed Markov chain. If the Hamiltonian Dynamics simulation was exact, then the Hamiltonian would be conserved (since negation of the momentum does not change the value of the Hamiltonian because of its symmetry) and therefore the acceptance probability would always be 1. Sadly with numeric integrators it is not possible to guarantee this, so the acceptance step is required. However, for symplectic integrators such as the leapfrog method the numerical usually does not grow exponentially and therefore the rejection rate can be kept small even for simulations with many steps.
+
+Due to the (approximate) conservation of the Hamiltonian during Hamiltonian Dynamics, the joint density of $(p,q)$ (given by $\exp \left( -H(q, p) \right)/Z$) remains almost unchanged by steps 2 to 4 of the algorithm. Only the resampling of the momentum variable in the first step allows large changes in the joint density. 
+%As an example consider the situation, where the potential energy landscape has a deep valley and the starting point is on the side of the valley. For any initial momentum the particle will move toward the low point (after perhaps a short move uphill) while at the same time increasing its momentum. In most cases in such a setting the final position of the particle will have a lower potential energy than the original point and the particle's kinetic energy has increased. At the start of the next step the resampling of the kinetic energy will on average give the particle a lower kinetic energy than before the resampling. As a result the total energy of the particle has decreased, which corresponds to an increase in the likelihood of the point in terms of the canonical distribution.
+
+\subsection{Effect of the kinetic energy covariance matrix}
+\label{sec:EffectOfKineticEnergyChoice}
+%For simplicity we restrict the covariance matrix $M$ in the kinetic energy (see eq.~\eqref{eq:KineticEnergy}) to be a diagonal matrix, but not necessarily a scalar multiple of the identity as the physical intuition of particle mass would suggest. A possible interpretation of such a "mass" matrix would be that the inertial mass of the particle, i.e. its resistance to change in velocity, is not isotropic. So the particle is more responsive to applied forces in some directions than in others. This somewhat non-physical freedom, however, has a very nice effect in the HMC algorithm: It allows a rescaling of the $q$-space.
+
+For simplicity we restrict the kinetic energy (see eq.~\eqref{eq:KineticEnergy}) to be a positive-definite quadratic form, but not necessarily with a scalar multiple of the identity as covariance matrix as the physical intuition of particle mass would suggest. A possible interpretation of such a "mass" matrix would be that the inertial mass of the particle, i.e. its resistance to change in velocity, is not isotropic. So the particle is more responsive to applied forces in some directions than in others. This somewhat non-physical freedom, however, has a very nice effect in the HMC algorithm: It allows an implicit rescaling of the $q$-space as explained below.
+
+Such a rescaling can be very beneficial for the numerical solution, because the most restricted direction (with the most extreme changes in potential energy) limits the step length $\epsilon$ to be used in the discrete simulation. If a larger step length is used, the approximations of the energy surface used in the simulation are too coarse in the restricted direction and the discretization error becomes very large. As a result one may have to choose a very small step size, but this then limits the motion in the less restricted directions, where a larger step size would allow faster movement through the state space. Therefore by rescaling the space we can achieve a more equal scaling in each direction, so that neither large errors nor slow exploration hamper the performance of the algorithm.
+
+Assume the numerics of the dynamics w.r.t.\ the original variables $(q, p)$ were badly scaled when using the physically intuitive $K(p) = p^T p/2$ (taking $m=1$ for simplicity). Further suppose a transformation $q' = A^{-1} q$ with $p'=p$ and the same kinetic energy would yield a better scaling for some non-singular matrix $A$. Then the target distribution for $q'$ is given by $\tilde{P}'(q') = \tilde{P}(Aq')/|\det(A^{-1})|$ in terms of the original target distribution $\tilde{P}(q)$. Therefore the corresponding potential energy is $U'(q') = U(Aq')$, where we can drop the additive $\log(|\det(A^{-1})|)$ term. From Hamilton's equations (see equation~\eqref{eq:HamiltonsEquations}) for this system we get the following equations for the motion in terms of the original variables $(q, p)$:
+\begin{equation}
+\begin{split}
+\frac{dq}{dt} &= A \frac{dq'}{dt} = Ap' = Ap \\
+\frac{dp}{dt} &= \frac{dp'}{dt} = - \nabla U'(q') = - A^T \nabla U(q)
+\end{split}
+\end{equation}
+The evolution of the position variable $q$ is thus given by (compare Newton's equation of motion~\eqref{eq:NewtonsEquation}):
+\begin{equation} \label{eq:EvolutionQTransformed}
+\frac{d^2q}{dt^2} = A \frac{dp}{dt} = - A A^T \nabla U(q)
+\end{equation}
+
+Now alternatively consider the untransformed system, but with the kinetic energy $K''(p) = p^T A A^T p$. Then Hamilton's equation give us:
+\begin{equation}
+\begin{split}
+\frac{dq}{dt} &= A A^T p \\
+\frac{dp}{dt} &= - \nabla U(q),
+\end{split}
+\end{equation}
+which results in the same evolution of the variable of interest $q$ as the above transformation of $q$ (compare equation~\eqref{eq:EvolutionQTransformed}). So regarding the evolution of $q$ these two approaches are equivalent, while the trajectory of the momentum variables differs between them.
+
+Introducing this transformation via the kinetic energy rather than transforming $q$ directly has the advantage, that we do not manipulate the variables of interest, which may be needed in their original form. Instead we can achieve the same rescaling needed for the efficiency of the numeric computations by modifying the auxiliary momentum variables, which do not have any external significance.
+
+For any choice of positive-definite matrix $M$, $p^T M^{-1} p$ is distributed like a $\chi^2$-distribution on $d$ degrees of freedom. So the kinetic energy (ignoring additive constants) a particle receives in the momentum resampling is $(1/2) \cdot \chi^2_d$-distributed and is independent of $M$.
+
+\subsection{Partial momentum update}
+\label{sec:PartialMomentumUpdate}
+If the number of leapfrog steps is small, subsequent points in the Markov chain generated by the HMC algorithm may be close to each other and highly correlated. This is especially obvious, if we imagine a flat plateau in the potential energy surface: Whatever momentum is sampled at the start of the HMC step, the simulated motion may frequently end at some other point still on the plateau, if the number of leapfrog steps is small. There the same may happen again, perhaps even bringing us back to the previous point, leading to an inefficient random-walk-like behaviour on this plateau.
+
+To counter such a behaviour \parencite{Horowitz1991} proposed an extension to HMC, where the momentum is only partially updated: So instead of overwriting the momentum variable with a random sample from the canonical momentum distribution, the idea is to use a weighted sum of the current momentum and the newly drawn sample. By doing this the particle does not completely loose its current momentum after each HMC step, but continues in a similar direction as before. In the plateau example above this means the particle is very unlikely to double back on its previous progress and will rather travel across the plateau in a directed fashion, avoiding the random walk behaviour of the base HMC algorithm.
+
+Some care must be taken in combining the current momentum $p_{t-1}$ with the new sample $p_\textrm{sampled}$, because this momentum scrambling step must conserve the canonical distribution. This can be done by defining the updated momentum $p^*_{t-1}$ as:
+\begin{equation} \label{eq:partialMomentumUpdate}
+p^*_{t-1} = \alpha \cdot p_{t-1} + \sqrt{1 - \alpha ^2} \cdot p_\textrm{sampled}
+\end{equation}
+for some $\alpha \in [-1, 1]$. Since in the converged chain both $p_{t-1}$ and $p_\textrm{sampled}$ are distributed according to the canonical distribution (Gaussian with mean zero and covariance matrix $M$), $p^*_{t-1}$ will also be Gaussian and have mean zero. Since $p_{t-1}$ and $p_\textrm{sampled}$ are also independent of each other, the covariance is also $M$ as required:
+\begin{equation}
+\Cov(p^*_{t-1}) = \alpha^2 \cdot M + (1 - \alpha ^2) \cdot M = M
+\end{equation}
+
+So the updated algorithm to perform a HMC step starting from the current state $(q_{t-1}, p_{t-1})$ is: \label{sec:FullHMCAlgorithm}
+\begin{enumerate}
+\item Sample a new momentum $p_\textrm{sampled}$ from the canonical momentum distribution $P_\textrm{kin}(p) \propto \exp{(-K(p))}$
+\item Set the updated momentum $p^*_{t-1}$ according to equation~\eqref{eq:partialMomentumUpdate}
+\item Simulate Hamiltonian Dynamics starting from the state $(q_{t-1}, p^*_{t-1})$ and then negate the momentum component of the result to obtain the proposed state $(\tilde{q}_t, \tilde{p}_t)$
+\item Compute the probability of accepting the proposed state:
+\begin{equation} \label{eq:AcceptanceProbability}
+p_{\textrm{accept}}(q_{t-1}, p^*_{t-1}) = \min[1, \exp(-H(\tilde{q}_t, \tilde{p}_t) + H(q_{t-1}, p^*_{t-1}))]
+\end{equation}
+\item Randomly accept or reject the proposed state with the computed acceptance probability, i.e. set
+\begin{equation} \label{eq:StateAfterAcceptReject}
+(q_t, p_t) := \begin{cases} (\tilde{q}_t, \tilde{p}_t) & \textrm{with probability } p_{\textrm{accept}} \\ 
+											(q_{t-1}, p^*_{t-1}) 			& \textrm{with probability } (1 - p_{\textrm{accept}})
+					  \end{cases}
+\end{equation}
+\item Negate the momentum component of the obtained state
+\end{enumerate} %TODO Algorithmen abgleichen: Mit und ohne Accept sollten ähnlich sein
+
+Each step of this algorithm preserves the joint canonical distribution and thus yields a Markov chain with the required properties. Compared to the base HMC algorithm only steps 2 and 6 are new (although the base algorithm can be recovered by setting $\alpha = 0$). Step 6 is important for the algorithm to behave as desired: If the proposed state was accepted, then this reverses the earlier momentum negation so that the particle keeps its direction. If the proposal was rejected, then step 6 flips the momentum and the particle doubles back on itself.
+
+While the partial momentum update brings little benefit, if the number of leapfrog steps is large, it can be beneficial for chains with shorter than optimal trajectories \parencite{Neal2011}.

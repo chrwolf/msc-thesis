@@ -1,0 +1,50 @@
+\documentclass{article}
+
+% Packages hyperref and algorithmic misbehave sometimes.  We can fix
+% this with the following command.
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+
+\usepackage[accepted]{icml2015}
+\input{settings/commands}
+\input{settings/packages_paper}
+\input{settings/settings}
+\bibliography{bibliography/library}
+%\usepackage{showframe}
+\icmltitlerunning{\getShortTitle}
+
+\begin{document} 
+
+\twocolumn[
+\icmltitle{\getTitle{}}
+
+% It is OKAY to include author information, even for blind
+% submissions: the style file will automatically remove it for you
+% unless you've provided the [accepted] option to the icml2015
+% package.
+\icmlauthor{\getAuthor{}}{christopher.wolf@tum.de}
+\icmladdress{\getUniversityTUM, \getFacultyTUM}
+
+% You may provide any keywords that you 
+% find helpful for describing your paper; these are used to populate 
+% the "keywords" metadata in the PDF but will not be shown in the document
+\icmlkeywords{Variational Inference, Hamiltonian Monte Carlo, density estimation, Variational Auto Encoder}
+
+\vskip 0.3in
+]
+
+\input{pages/abstract}
+
+\input{chapters/introduction}
+\input{chapters/backgroundSalimans}
+\input{chapters/backgroundHMC}
+\input{chapters/HMCVI}
+\input{chapters/experiments}
+\input{chapters/conclusion}
+
+\printbibliography{}
+
+\clearpage
+\input{chapters/appendix}
+\end{document}
+
+\end{document}

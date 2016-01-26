@@ -1,0 +1,9 @@
+[1] Config.pm:324> INFO - This is Biber 2.1
+[1] Config.pm:327> INFO - Logfile is 'build/tum_paper.blg'
+[89] biber-darwin:276> INFO - === Wed Jan 20, 2016, 18:26:12
+[89] Biber.pm:333> INFO - Reading 'build/tum_paper.bcf'
+[281] Biber.pm:645> INFO - Found 0 citekeys in bib section 0
+[282] Utils.pm:146> WARN - The file 'build/tum_paper.bcf' does not contain any citations!
+[318] bbl.pm:505> INFO - Writing 'build/tum_paper.bbl' with encoding 'ascii'
+[319] bbl.pm:596> INFO - Output to build/tum_paper.bbl
+[319] Biber.pm:106> INFO - WARNINGS: 1

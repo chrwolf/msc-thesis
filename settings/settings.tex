@@ -1,0 +1,41 @@
+% Settings for pgfplots
+\pgfplotsset{compat=newest} % TODO: adjust to your installed version
+\pgfplotsset{
+  % For available color names, see http://www.latextemplates.com/svgnames-colors
+  cycle list={m0\\m1\\m2\\m3\\},
+}
+
+\usetikzlibrary[pgfplots.groupplots]
+
+% Settings for lstlistings
+\lstset{%
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  autogobble,
+  keywordstyle=\bfseries\color{m0},
+  stringstyle=\color{m2}
+}
+
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{9} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{9}  % for normal
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+language=Python,
+basicstyle=\ttm,
+otherkeywords={self},             % Add keywords here
+keywordstyle=\ttb\color{m0},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{m1},    % Custom highlighting style
+stringstyle=\color{m2},
+frame=tb,                         % Any extra options here
+showstringspaces=false            % 
+}}
+
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}

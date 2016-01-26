@@ -1,0 +1,38 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\abx@aux@sortscheme{nyt}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces A continuously differentiable solution $\psi (x)$ for Abel's equation \textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:abel}\unskip \@@italiccorr )}} with $f(x) = \qopname  \relax o{exp}(x).$}}{1}{figure.1}}
+\newlabel{fig:psi}{{1}{1}{A continuously differentiable solution $\psi (x)$ for Abel's equation \eqref {eq:abel} with $f(x) = \exp (x).$}{figure.1}{}}
+\@writefile{toc}{\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax }
+\@writefile{lof}{\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax }
+\@writefile{lot}{\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax }
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {1}Fractional Iterates of the Exponential Function}{1}{section.1}}
+\newlabel{sec:frac}{{1}{1}{}{section.1}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Abel's Functional Equation}{1}{subsection.1.1}}
+\newlabel{eq:psi}{{1a}{1}{}{equation.1.1}{}}
+\newlabel{eq:psicond}{{1b}{1}{}{equation.1.2}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {2}Implementation Details}{1}{section.2}}
+\newlabel{ch:impl}{{2}{1}{}{section.2}{}}
+\@writefile{loa}{\defcounter {refsection}{0}\relax }\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Computation of $\psi (x)$.}}{1}{algorithm.1}}
+\newlabel{alg:psi}{{1}{1}{}{algorithm.1}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{Appendices}{1}{section*.1}}
+\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Results for the interpolation of $\qopname  \relax o{exp}^{(n)}$ with method A (left) and method B (right). $r_{z}$ and $r_{n}$ are the sampling resolutions used for choosing the values to be precomputed. $t$ denotes the runtime of computing function values for one million test points and $M$ gives the required memory for the respective setting. All GPU computations have been conducted on a Nvidia Quadro K2200. The used CPU is a Intel Xeon E3-1226 v3 @ 3.30 GHz.}}{2}{table.1}}
+\newlabel{tab:ip}{{1}{2}{Results for the interpolation of $\expn $ with method A (left) and method B (right). $r_{z}$ and $r_{n}$ are the sampling resolutions used for choosing the values to be precomputed. $t$ denotes the runtime of computing function values for one million test points and $M$ gives the required memory for the respective setting. All GPU computations have been conducted on a Nvidia Quadro K2200. The used CPU is a Intel Xeon E3-1226 v3 @ 3.30 GHz}{table.1}{}}
+\@writefile{loa}{\defcounter {refsection}{0}\relax }\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Computation of $\psi ^{-1}(\psi )$. The value for $\psi ^{-1}$ with $\psi < -1$ would mathematically be $-\infty $. Similarly, inputs with $\psi \gtrsim 4.406$ evaluate to values larger than can be represented with single precision floating point numbers. Since infinite values cause problems in gradient-based learning, we restrict $\psi ^{-1}$ to the interval $\left [-10,10\right ]$. $\psi _{min}$ and $\psi _{max}$ are set as $\psi _{min}=-0.999955$ and $\psi _{max}=2.83403$, so that $\psi ^{-1}(\psi _{min})=-10$ and $\psi ^{-1}(\psi _{max})=10$.}}{2}{algorithm.2}}
+\newlabel{alg:psiInv}{{2}{2}{}{algorithm.2}{}}
