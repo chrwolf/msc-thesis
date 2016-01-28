@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.7)  24 JAN 2016 01:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.7)  27 JAN 2016 18:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -13,7 +13,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.12   uniquename=init]{
+l.16   uniquename=init]{
                         biblatex} % TODO: adapt bibliography style
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -21,7 +21,7 @@ between \documentclass and \begin{document}.
 ! Undefined control sequence.
 <argument> \bibnamesep 
                        
-l.13 \setlength{\bibnamesep}{0.5\baselineskip}
+l.17 \setlength{\bibnamesep}{0.5\baselineskip}
                                               
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -36,7 +36,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.13 \setlength{\bibnamesep}{0.5\baselineskip}
+l.17 \setlength{\bibnamesep}{0.5\baselineskip}
                                               
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -47,7 +47,7 @@ Missing character: There is no 5 in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    \relax 
-l.13 \setlength{\bibnamesep}{0.5\baselineskip}
+l.17 \setlength{\bibnamesep}{0.5\baselineskip}
                                               
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -56,7 +56,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.13 \setlength{\bibnamesep}{0.5\baselineskip}
+l.17 \setlength{\bibnamesep}{0.5\baselineskip}
                                               
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -72,7 +72,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.14 \renewcommand*{\nameyeardelim}
+l.18 \renewcommand*{\nameyeardelim}
                                    {\addcomma\space}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -84,7 +84,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.15 \usepackage{
+l.19 \usepackage{
                  graphicx}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -96,7 +96,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.16 \usepackage{
+l.20 \usepackage{
                  lstautogobble}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -108,13 +108,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.17 \usepackage{
+l.21 \usepackage{
                  tikz}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
 ! Undefined control sequence.
-l.18 \usetikzlibrary
+l.22 \usetikzlibrary
                     {arrows}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -129,7 +129,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no s in font nullfont!
 ! Undefined control sequence.
-l.19 \usetikzlibrary
+l.23 \usetikzlibrary
                     {shapes}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -144,7 +144,7 @@ Missing character: There is no p in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 ! Undefined control sequence.
-l.20 \usetikzlibrary
+l.24 \usetikzlibrary
                     [pgfplots.groupplots]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -180,7 +180,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.21 \usepackage{
+l.25 \usepackage{
                  tikzscale}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -192,7 +192,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.22 \usepackage{
+l.26 \usepackage{
                  pgfplots}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -204,7 +204,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.23 \usepackage{
+l.27 \usepackage{
                  pgfplotstable}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -216,7 +216,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.24 \usepackage{
+l.28 \usepackage{
                  array}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -228,7 +228,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.25 \usepackage{
+l.29 \usepackage{
                  booktabs}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -240,7 +240,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.26 \usepackage{
+l.30 \usepackage{
                  hyperref} % hidelinks removes colored boxes around referenc...
 
 \usepackage may only appear in the document preamble, i.e.,
@@ -253,7 +253,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.27 \usepackage[textwidth=1.5cm, textsize=tiny]{
+l.31 \usepackage[textwidth=1.5cm, textsize=tiny]{
                                                  todonotes}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -265,7 +265,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.28 \usepackage{
+l.32 \usepackage{
                  pdfpages}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -277,7 +277,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.29 \usepackage{
+l.33 \usepackage{
                  lipsum}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -289,7 +289,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.30 \usepackage{
+l.34 \usepackage{
                  amsmath}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -301,7 +301,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.31 \usepackage{
+l.35 \usepackage{
                  mathtools}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -313,7 +313,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.32 \usepackage{
+l.36 \usepackage{
                  amssymb}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -325,7 +325,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.33 \usepackage{
+l.37 \usepackage{
                  amsthm}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -337,7 +337,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.34 \usepackage{
+l.38 \usepackage{
                  algorithm,algpseudocode}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -349,7 +349,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.35 \usepackage[titletoc,toc,title,page]{
+l.39 \usepackage[titletoc,toc,title,page]{
                                           appendix}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -361,7 +361,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.36 \usepackage{
+l.40 \usepackage{
                  scrhack} % necessary for listings package
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -373,13 +373,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.37 \usepackage{
+l.41 \usepackage{
                  listings}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 13--38
+Overfull \hbox (20.0pt too wide) in paragraph at lines 17--42
 []
  []
 

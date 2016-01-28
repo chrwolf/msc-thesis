@@ -23,9 +23,10 @@
 \BOOKMARK [3][-]{subsubsection.4.5.2}{Computing Expectations Explicitly}{subsection.4.5}% 23
 \BOOKMARK [1][-]{section.5}{Experimental Results}{}% 24
 \BOOKMARK [2][-]{subsection.5.1}{Variational Auto Encoders}{section.5}% 25
-\BOOKMARK [2][-]{subsection.5.2}{Effects of Data Binarization}{section.5}% 26
+\BOOKMARK [2][-]{subsection.5.2}{The dataset and the effects of data binarization}{section.5}% 26
 \BOOKMARK [2][-]{subsection.5.3}{Model Specifications}{section.5}% 27
 \BOOKMARK [2][-]{subsection.5.4}{Model Comparison}{section.5}% 28
 \BOOKMARK [1][-]{section.6}{Conclusion and Future Work}{}% 29
 \BOOKMARK [1][-]{section*.2}{Appendices}{}% 30
-\BOOKMARK [1][-]{Appendix.1.A}{Appendix Likelihood Estimation by Importance Sampling}{}% 31
+\BOOKMARK [1][-]{Appendix.1.A}{Appendix Likelihood estimation by importance sampling}{}% 31
+\BOOKMARK [1][-]{Appendix.1.B}{Appendix Visualizations of latent space}{}% 32

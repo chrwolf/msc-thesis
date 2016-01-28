@@ -7,7 +7,7 @@ U(z) = -\log(p(x, z))
 
 Unless stated otherwise, the results below will hold for the more general algorithm with partial momentum update, from which the standard HMC algorithm can be recovered by setting $\alpha = 0$. For notational ease we will write $u_{t-1}$ for the updated momentum, which was referred to as $p^*_{t-1}$ in the previous section.
 
-%TODO Graphik zur Reihenfolge/Bezeichnung der verschiedenen Zustände innerhalb eines HMC Schritts
+%TODO Graphik zur Reihenfolge/Bezeichnung der verschiedenen Zustände innerhalb eines HMC Schritts verlinken
 \label{sec:KinEnergyMayDependOnX}
 For the initial state of the chain we sample the position from a parametric approximation $q_0(z_0|x)$ as in Variational Inference and the momentum from the distribution $P_\textrm{kin}(v_0|x)$ corresponding to the chosen kinetic energy. Interestingly, there is no theoretical reason for the kinetic energy to be independent of $x$, which can be exploited to improve the quality of the bound (see section~\ref{sec:MassMatrixChoice} below).
 
@@ -78,7 +78,7 @@ The main drawback of leaving out the acceptance step is that the canonical distr
 
 A drawback of the basic MCVI approach is that when using the latent variable $z$ as the state and proposal density $\tilde{q}(z_t|z_{t-1}, x)$ for new points, then we cannot include the acceptance step of the Metropolis-Hastings algorithm \parencite{Salimans2014}: Letting $\rho(z_{t-1}, z_t)$ be the probability of accepting the transition from $z_{t-1}$ to $z_t$, the transition density is given by $q(z_t|z_{t-1}, x) = \tilde{q}(z_t|z_{t-1}, x) \cdot \rho(z_{t-1}, z_t) + \delta[z_t - z_{t-1}] \cdot P_\textrm{reject}(z_{t-1})$, where $P_\textrm{reject}(z_{t-1}) = \int_{\tilde{z}_{t}} \tilde{q}(\tilde{z}_t|z_{t-1}, x) \cdot (1 - \rho(z_{t-1}, \tilde{z}_t)) d\tilde{z}_t$ is usually intractable. A possible solution would be to explicitly include a binary random variable in the state, which records the acceptance of the previous step. However, this would lead to non-differentiability of the lower bound.
 
-Exploiting the structure of HMC we can bypass this problem and include the acceptance step without introducing any new variables, because in case of rejection the momentum variable is not reset to its previous value, but keeps the updated value (see equation~\eqref{eq:StateAfterAcceptReject} in step 5 of the HMC algorithm in section~\ref{sec:FullHMCAlgorithm}). In this way it stores the proposed state, which was rejected, making the transition density tractable as shown below.
+Exploiting the structure of HMC we can bypass this problem and include the acceptance step without introducing any new variables, because in case of rejection the momentum variable is not reset to its previous value, but keeps the updated value (see equation~\eqref{eq:StateAfterAcceptReject} in section~\ref{sec:PartialMomentumUpdate}). In this way it stores the proposed state, which was rejected, making the transition density tractable as shown below.
 
 Crucially by including the acceptance step in the algorithm convergence of the approximation of the posterior to the true posterior is guaranteed, so by performing a sufficient number of HMC steps the obtained approximation can be made to fit arbitrarily well.
 
