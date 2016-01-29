@@ -1,13 +1,12 @@
 \section{VI with HMC}
 \label{sec:HMCVI}
-As suggested in \parencite{Salimans2014} HMC is a very good MCMC method to be used within MCVI as introduced in section~\ref{sec:MCVI}, because it is very efficient, usually requiring fewer steps than other methods for good convergence. However, some care must be taken in the derivation of the auxiliary lower bound, since now the state of the underlying MCMC chain is not just the variable of interest $z$ but also the auxiliary momentum variable, which we will call $v$ as it is related to velocity. So the complete state is the $2d$-dimensional $s=(z, v)$, corresponding to the state $(q, p)$ in the previous section, and the transition $(z_{t-1}, v_{t-1})$ to $(z_t, v_t)$ is obtained by the Hamiltonian Monte Carlo algorithm as described above. The appropriate potential energy $U(z)$ is derived from the posterior density $p(z|x) \propto p(x, z)$, which is known upto a multiplicative constant from Bayes' Theorem:
+As suggested by \textcite{Salimans2014} HMC is a very good MCMC method to be used within MCVI as introduced in section~\ref{sec:MCVI}, because it is very efficient, usually requiring fewer steps than other methods for good convergence. However, some care must be taken in the derivation of the auxiliary lower bound, since now the state of the underlying MCMC chain is not just the variable of interest $z$ but also the auxiliary momentum variable, which we will call $v$ as it is related to velocity. So the complete state is the $2d$-dimensional $s=(z, v)$, corresponding to the state $(q, p)$ in the previous section, and the transition $(z_{t-1}, v_{t-1})$ to $(z_t, v_t)$ is obtained by the Hamiltonian Monte Carlo algorithm as described above. The appropriate potential energy $U(z)$ is derived from the posterior density $p(z|x) \propto p(x, z)$, which is known upto a multiplicative constant from Bayes' Theorem:
 \begin{equation} \label{eq:VIwithHMCPotEnergy}
 U(z) = -\log(p(x, z))
 \end{equation}
 
 Unless stated otherwise, the results below will hold for the more general algorithm with partial momentum update, from which the standard HMC algorithm can be recovered by setting $\alpha = 0$. For notational ease we will write $u_{t-1}$ for the updated momentum, which was referred to as $p^*_{t-1}$ in the previous section.
 
-%TODO Graphik zur Reihenfolge/Bezeichnung der verschiedenen Zustände innerhalb eines HMC Schritts verlinken
 \label{sec:KinEnergyMayDependOnX}
 For the initial state of the chain we sample the position from a parametric approximation $q_0(z_0|x)$ as in Variational Inference and the momentum from the distribution $P_\textrm{kin}(v_0|x)$ corresponding to the chosen kinetic energy. Interestingly, there is no theoretical reason for the kinetic energy to be independent of $x$, which can be exploited to improve the quality of the bound (see section~\ref{sec:MassMatrixChoice} below).
 
@@ -66,9 +65,9 @@ r(&s_{t-1}|s_{t}, t, x) = r(z_{t-1}, v_{t-1}| z_t, v_t, t, x) \\
 &\;= r_V(v_{t-1}|z_{t-1}, u_{t-1}, t, x) \cdot \delta[z^*_{t-1} - z_{t-1}] \\
 \end{split}
 \end{equation}
-So the auxiliary reverse model is fixed except for the distribution $r_V$ of the arrival momentum $v_{t-1}$, with which the position $z_{t-1}$ was reached. To model this distribution we may use the position $z_{t-1}$, $x$ and the current time step $t$, as well as the updated momentum $u_{t-1}$, which was used in the step away from this point. If we assume a bias due to the initial state, all of these may contain information about the arrival momentum, so they all should be included for a better fitting model.
+So the auxiliary reverse model is fixed except for the distribution $r_V$ of the arrival momentum $v_{t-1}$, with which the position $z_{t-1}$ was reached (see the middle column of fig.~\ref{fig:HMC_Effect_Illustration} for examples of arrival momentum distributions). To model this distribution we may use the position $z_{t-1}$, $x$ and the current time step $t$, as well as the updated momentum $u_{t-1}$, which was used in the step away from this point. If we assume a bias due to the initial state, all of these may contain information about the arrival momentum, so they all should be included for a better fitting model.
 
-For the computation of the lower bound the Dirac functions are problematic because their value is infinite, when their argument equals $0$. However, since a delta function appears both in the forward and in the reverse model (whose log-likelihoods are subtracted from each other), the Dirac functions can be handled: The Dirac function $\delta(x)$ can be approximated by a function with a small but extended support, say of width $\kappa$, where its value is $1/\kappa \cdot \mathbb{I}\big[x \in (x - 0.5 \cdot \kappa, x + 0.5 \cdot \kappa)\big]$, so that the property of the Dirac function of integrating to 1 is preserved. Here $\mathbb{I}[x \in A]$ denotes the indicator function of some set $A$, which equals $1$ if $x \in A$ and $0$ otherwise. Taking the limit of this for $\kappa \rightarrow 0$ returns the Dirac function. By subtracting the logarithms of two Dirac functions their height factor, i.e. $1/\kappa$, cancels, so we can safely take the limit and are left with two indicator functions instead of the two Dirac functions.
+For the computation of the lower bound the Dirac $\delta$-functions are problematic because their value is infinite, when their argument equals $0$. However, since a delta function appears both in the forward and in the reverse model (whose log-likelihoods are subtracted from each other), the Dirac functions can be handled: The Dirac function $\delta(x)$ can be approximated by a function with a small but extended support, say of width $\kappa$, where its value is $1/\kappa \cdot \mathbb{I}\big[x \in (x - 0.5 \cdot \kappa, x + 0.5 \cdot \kappa)\big]$, so that the property of the Dirac function of integrating to 1 is preserved. Here $\mathbb{I}[x \in A]$ denotes the indicator function of some set $A$, which equals $1$ if $x \in A$ and $0$ otherwise. Taking the limit of this for $\kappa \rightarrow 0$ returns the Dirac function. By subtracting the logarithms of two Dirac functions their height factor, i.e. $1/\kappa$, cancels, so we can safely take the limit and are left with two indicator functions instead of the two Dirac $\delta$-functions.
 
 When computing the lower bound we only require the transition densities of the points generated by the algorithm and these are generated from the previous points by HD. Therefore for all of these transitions the indicator functions will take the value $1$, so taking the logarithm of these terms does not lead to any problems.
 
@@ -84,38 +83,44 @@ Crucially by including the acceptance step in the algorithm convergence of the a
 
 \subsubsection{Forward model}
 
-For the derivation of the transition density $q(s_t|s_{t-1}, x)$ let $A$ be the random variable indicating, whether the proposed move was accepted or not, i.e. $A=1$, if the move was accepted, and $A=0$ otherwise. For extra clarity we will in the following write out the probability density functions (denoted by $f$) with the variables explicitly given in the subscript, so for example $q(s_t|s_{t-1}, x) = f_{S_t|S_{t-1}, X}(s_t|s_{t-1}, x)$. Then using the law of total probability we can decompose this as:
+For the derivation of the transition density $q(s_t|s_{t-1}, x)$ let $A$ be the random variable indicating, whether the proposed move was accepted or not, i.e. $A=1$, if the move was accepted, and $A=0$ otherwise. For extra clarity we will in the following write out the probability density functions (denoted by $f$) with the variables explicitly given in the subscript, so for example $q(s_t|s_{t-1}, x) = f_{S_t|S_{t-1}, X}(s_t|s_{t-1}, x)$. Then using the law of total probability we can decompose this as follows:
 \begin{equation}
 \begin{split}
-f_{S_t|S_{t-1}, X}&(s_t|s_{t-1}, x)= \sum_{a=0}^1 \int \limits_{u_{t-1}} f_{S_t, A, U_{t-1}|S_{t-1}, X}(s_t, a, u_{t-1}|s_{t-1}, x) du_{t-1} \\
-& = \sum_{a=0}^1 \int \limits_{u_{t-1}} f_{S_t|A, U_{t-1}, S_{t-1}, X}(s_t| a, u_{t-1}, s_{t-1}, x) \\
-& \qquad\cdot \mathbb{P}(A = a|U_{t-1} = u_{t-1}, S_{t-1} = s_{t-1}, x) \cdot f_{U_{t-1}|S_{t-1}, X}(u_{t-1}|s_{t-1}, x) du_{t-1}
+&f_{S_t|S_{t-1}, X}(s_t|s_{t-1}, x)\\
+&\;=\sum_{a=0}^1 \int f_{S_t, A, U_{t-1}|S_{t-1}, X}(s_t, a, u|s_{t-1}, x) du \\
+&\;=\sum_{a=0}^1 \int f_{S_t|A, U_{t-1}, S_{t-1}, X}(s_t| a, u, s_{t-1}, x) \\
+&\qquad\qquad\cdot \mathbb{P}(A = a|U_{t-1} = u, S_{t-1} = s_{t-1}, x) \\
+&\qquad\qquad \cdot f_{U_{t-1}|S_{t-1}, X}(u|s_{t-1}, x) du
 \end{split}
 \end{equation}
 Each term in this expression can be computed:
 \begin{itemize}
-\item $f_{U_{t-1}|S_{t-1}, X}(u_{t-1}|s_{t-1}, x) = q_U(u_{t-1}|v_{t-1}, x) = P_\textrm{kin}(v_{\textrm{samp}}|x) \cdot (\frac{1}{\sqrt{1 - \alpha^2}})^{d}$ as in equation~\eqref{eq:qUDefinition} for the forward transition without the acceptance step.
-\item $\mathbb{P}(A=1|S_{t-1} = s_{t-1}, U_{t-1} = u_{t-1}, x) = p_{\textrm{accept}}(z_{t-1}, u_{t-1})$ as in equation~\eqref{eq:AcceptanceProbability}
-\item $\mathbb{P}(A=0|S_{t-1} = s_{t-1}, U_{t-1} = u_{t-1}, x) = 1- p_{\textrm{accept}}(z_{t-1}, u_{t-1})$
-\item $f_{S_t|A, U_{t-1}, S_{t-1}, X}\big((z_t, v_t)| 1, u_{t-1}, s_{t-1}, x\big) = \delta \left[(z_t, v_t) - HD(z_{t-1}, u_{t-1}) \right]$
-\item $f_{S_t|A, U_{t-1}, S_{t-1}, X}\big((z_t, v_t)| 0, u_{t-1}, s_{t-1}, x\big) = \delta \left[(z_t, v_t) - (z_{t-1}, -u_{t-1}) \right]$
+\item $f_{U_{t-1}|S_{t-1}, X}(u|s_{t-1}, x) = q_U(u|v_{t-1}, x)$ as in equation~\eqref{eq:qUDefinition} for the forward transition without the acceptance step.
+\item $\mathbb{P}(A=1|S_{t-1} = s_{t-1}, U_{t-1} = u, x) = p_{\textrm{accept}}(z_{t-1}, u)$ as in equation~\eqref{eq:AcceptanceProbability} and correspondingly $\mathbb{P}(A=0|S_{t-1} = s_{t-1}, U_{t-1} = u, x) = 1- p_{\textrm{accept}}(z_{t-1}, u)$.
+\item If the updated state $S^*_{t-1} = (Z_{t-1}, U_{t-1})$ and $A$ are known, the new state can be deduced, so $f_{S_t|A, U_{t-1}, S_{t-1}, X} = f_{S_t|A, S^*_{t-1}}$ with $f_{S_t|A, S^*_{t-1}}(s_t| 1, (z_{t-1}, u)) = \delta \left[s_t - HD(z_{t-1}, u) \right]$ and $f_{S_t|A, S^*_{t-1}}(s_t| 0, (z_{t-1}, u)) = \delta \left[s_t - (z_{t-1}, -u) \right]$.
 \end{itemize}
 
 Putting all of these together and integrating out the delta functions gives
 \begin{equation}
 \begin{split}
-q(s_t |s_{t-1}, x) &= \delta \left[z_{\textrm{revHD}} - z_{t-1} \right] \cdot p_{\textrm{accept}}(z_{t-1}, v_{revHD}) \cdot q_U(v_{revHD}|v_{t-1}, x) \\
-&\quad + \delta \left[ z_t - z_{t-1} \right] \cdot (1 - p_{\textrm{accept}}(z_{t-1}, -v_t)) \cdot q_U(-v_t|v_{t-1}, x)
+q(s_t& |s_{t-1}, x) \\
+&= \delta \left[z_{\textrm{revHD}} - z_{t-1} \right] \cdot p_{\textrm{accept}}(z_{t-1}, v_{revHD}) \\
+&\qquad\qquad\qquad \cdot q_U(v_{revHD}|v_{t-1}, x) \\
+&\quad + \delta \left[ z_t - z_{t-1} \right] \cdot (1 - p_{\textrm{accept}}(z_{t-1}, -v_t)) \\
+&\qquad\qquad\qquad \cdot q_U(-v_t|v_{t-1}, x)
 \end{split}
 \end{equation}
 where we write $z_{\textrm{revHD}}$ and $v_{\textrm{revHD}}$ for the projections of $revHD(z_t, v_t)$ into $z$- and $v$-space respectively.
 
-As we will see below, the reverse model densities will also contain a $d$-dimensional Dirac function in each summand, so we can apply the trick introduced in section~\ref{sec:TransitionDensitiesNoAcceptance} to replace Dirac functions by indicator functions. Here the indicator functions can be taken to indicate, whether the proposed state was accepted (in the first summand) and rejected (in the second), because the probability of exactly achieving the equality inside the $\delta$-function in the other case is negligible, i.e. if the move is accepted $z_t = z_{t-1}$ will not occur in practice. In the following we will write $\mathbb{I}_\textrm{accepted}$ for this indicator.
+As we will see below, the reverse model densities will also contain a $d$-dimensional Dirac $\delta$-function in each summand, so we can apply the trick introduced in section~\ref{sec:TransitionDensitiesNoAcceptance} to replace $\delta$-functions by indicator functions. Here the indicator functions can be taken to indicate, whether the proposed state was accepted (in the first summand) and rejected (in the second), because the probability of exactly achieving the equality inside the $\delta$-function in the other case is negligible, i.e. if the move is accepted $z_t = z_{t-1}$ will not occur in practice. In the following we will write $\mathbb{I}_\textrm{acc}$ for this indicator.
 
 So we can regard each summand as treating one of the acceptance/rejection cases and since in the first summand $u_{t-1} = v_{revHD}$ and in the second summand $u_{t-1} = -v_t$, the term for the velocity in both cases becomes $q_U(u_{t-1}|v_{t-1}, x)$, where $u_{t-1}$ is the updated velocity generated in the algorithm outlined above. Also the $p_\textrm{accept}$ term is always computed from this $u_{t-1}$ and the current position $z_{t-1}$, so the transition density can easily be calculated during the sampling process as
-\begin{equation}
-q(s_t|s_{t-1}, x) = q_U(u_{t-1}|v_{t-1}, x) \cdot \Big( \mathbb{I}_\textrm{accepted} \cdot p_{\textrm{accept}} + (1 - \mathbb{I}_\textrm{accepted}) \cdot (1- p_{\textrm{accept}}) \Big),
-\end{equation}
+\begin{align}
+\begin{split}
+&q(s_t|s_{t-1}, x) = q_U(u_{t-1}|v_{t-1}, x) \\
+&\;\;\;\cdot \Big( \mathbb{I}_\textrm{acc} \cdot p_{\textrm{accept}} + (1 - \mathbb{I}_\textrm{acc}) \cdot (1- p_{\textrm{accept}}) \Big),
+\end{split}
+\end{align}
 where we can also simplify $q_U(u_{t-1}|v_{t-1}, x)$ as in equation~\eqref{eq:qUDefinition}.
 
 \subsubsection{Reverse Model}
@@ -123,69 +128,49 @@ where we can also simplify $q_U(u_{t-1}|v_{t-1}, x)$ as in equation~\eqref{eq:qU
 In the lower bound approximation we also need a density approximation for moves backwards through the chain, i.e. for $r(s_{t-1}|s_t, t, x) = f_{S_{t-1}|S_t,T, X}(s_{t-1} | s_t, t, x)$. By again letting $A$ be the event of accepting the move from $S_{t-1}$ to $S_t$ we can apply the law of total probability to simplify the problem:
 \begin{equation}
 \begin{split}
-f_{S_{t-1}|S_t, T, X}(s_{t-1} | s_t, t, x) &= \sum_{a=0}^1 f_{S_{t-1}, A|S_t, T, X}(s_{t-1}, a | s_t, t, x) \\
-&= \sum_{a=0}^1 f_{S_{t-1} |A, S_t, T, X}(s_{t-1} | a, s_t, t, x) \cdot \mathbb{P}(A = a | S_{t} = s_{t}, t, x)
+&f_{S_{t-1}|S_t, T, X}(s_{t-1} | s_t, t, x) \\
+&\qquad = \sum_{a} f_{S_{t-1}, A|S_t, T, X}(s_{t-1}, a | s_t, t, x) \\
+&\qquad = \sum_{a} f_{S_{t-1} |A, S_t, T, X}(s_{t-1} | a, s_t, t, x) \\
+&\qquad\qquad\qquad\qquad \cdot \mathbb{P}(A = a | S_t = s_t, t, x)
 \end{split}
 \end{equation}
 The individual terms are now easier to handle:
 \begin{itemize}
-\item If we know that the previous move was accepted, we can use the reversibility of Hamiltonian Dynamics to obtain the state $S_{t-1}^* = (Z_{t-1}, U_{t-1})$, from which the HD-simulation was started, so
+\item If we know that the previous move was accepted, we can use the reversibility of HD to obtain the state $S_{t-1}^* = (Z_{t-1}, U_{t-1})$, from which the HD-simulation was started, so
 \begin{equation}
 \begin{split}
-f_{S_{t-1} |A, S_t, T, X}(s_{t-1} | 1, s_t, t, x) \\
-&= f_{S_{t-1} |S_{t-1}^*, T, X}\big(s_{t-1} | revHD(s_t), t, x\big) \\
-&= \delta \left[z_{t-1} - z_{\textrm{revHD}} \right] \cdot r_V(v_{t-1}|z_{\textrm{revHD}}, v_{\textrm{revHD}}, t, x) \\
-&= \mathbb{I}_\textrm{accepted} \cdot r_V(v_{t-1}|z_{t-1}, u_{t-1}, t, x) 
+&f_{S_{t-1} |A, S_t, T, X}(s_{t-1} | 1, s_t, t, x) \\
+&\quad= f_{S_{t-1} |S_{t-1}^*, T, X}\big(s_{t-1} | revHD(s_t), t, x\big) \\
+&\quad= \delta \left[z_{t-1} - z_{\textrm{revHD}} \right] \\
+&\quad\qquad \cdot r_V(v_{t-1}|z_{\textrm{revHD}}, v_{\textrm{revHD}}, t, x) \\
+&\quad= \mathbb{I}_\textrm{acc} \cdot r_V(v_{t-1}|z_{t-1}, u_{t-1}, t, x) 
 \end{split}
 \end{equation}
-with $r_V$ as in equation~\eqref{eq:ReverseTransitionNoAcceptance} and the updated momentum $u_{t-1} = v_{\textrm{revHD}}$. As described earlier the $\delta$-function in the derivation is replaced by an indicator function by cancelling it against the $\delta$-function in the forward density.
+with $r_V$ as in equation~\eqref{eq:ReverseTransitionNoAcceptance} and the updated momentum $u_{t-1} = v_{\textrm{revHD}}$. As described earlier the $\delta$-function is replaced by an indicator function by cancelling it against the $\delta$-function in the forward density.
 \item If the previous move was not accepted, we know that the current state equals the state $S_{t-1}^*$ (with the velocity negated) from which the HD-transition was started, but rejected, so
 \begin{equation}
 \begin{split}
-f_{S_{t-1} |A, S_t, T, X}(s_{t-1} | 0, s_t, t, x) &= f_{S_{t-1} |S_{t-1}^*, T, X}\big(s_{t-1} | (z_t, -v_t), t, x\big) \\
-&= \delta \left[z_{t-1} - z_{t} \right] \cdot r_V(v_{t-1}|z_{t-1}, -v_t, t, x) \\
-&= (1 - \mathbb{I}_\textrm{accepted}) \cdot r_V(v_{t-1}| z_{t-1}, u_{t-1}, t, x)
+&f_{S_{t-1} |A, S_t, T, X}(s_{t-1} | 0, s_t, t, x) \\
+&\quad= f_{S_{t-1} |S_{t-1}^*, T, X}\big(s_{t-1} | (z_t, -v_t), t, x\big) \\
+&\quad= \delta \left[z_{t-1} - z_{t} \right] \cdot r_V(v_{t-1}|z_{t-1}, -v_t, t, x) \\
+&\quad= (1 - \mathbb{I}_\textrm{acc}) \cdot r_V(v_{t-1}| z_{t-1}, u_{t-1}, t, x)
 \end{split}
 \end{equation}
 where now $u_{t-1} = -v_t$ and the $\delta$-function is again converted to an indicator function by cancellation.
 
-If these densities are computed during the sampling process, $u_{t-1}$ is actually known in both cases, since we generate it in the forward model and by the bijectivity of HD it is uniquely determined: If $\mathbb{I}_\textrm{accepted} = 1$, then $v_{\textrm{revHD}}$ is the updated velocity $u_{t-1}$ in the algorithm, and if $\mathbb{I}_\textrm{accepted} = 0$, then $-v_t$ is the updated velocity.
-\item The probability $\mathbb{P}(A = 1|S_t = s_t, t, x)$ of accepting the previous step given the current position can be related to the distribution of $S_{t-1}^*$ by considering
-\begin{subequations}
-\begin{equation}
-\mathbb{P}(A = 1|S_t = s_t, t, x) = \frac{f_{A, S_t|T, X}(1, s_t| t, x)}{f_{A, S_t|T, X}(1, s_t| t, x) + f_{A, S_t|T, X}(0, s_t| t, x)},
-\end{equation}
-where we can rewrite the terms using $p_\textrm{accept}(s)$ defined in equation~\eqref{eq:AcceptanceProbability}:
-\begin{align}
-\begin{split}
-f_{A, S_t|T, X}(1, s_t| t, x) &= f_{A, S_{t-1}^*|T, X}\big(1, revHD(s_t)| t, x\big) \\
-&= \mathbb{P}\big(A = 1| S^*_{t-1} = revHD(s_t), x\big) \cdot f_{S^*_{t-1}|T, X}\big(revHD(s_t)| t, x\big) \\
-&= p_\textrm{accept}(revHD(s_t)) \cdot f_{S^*_{t-1}|T, X}\big(revHD(s_t)| t, x\big)
-\end{split} \\
-\begin{split}
-f_{A, S_t|T, X}(0, s_t| t, x) &= f_{A, S_{t-1}^*|T, X}\big(0, (z_t, -v_t)| t, x\big) \\
-&= \mathbb{P}\big(A = 0| S^*_{t-1} = (z_t, -v_t), x\big) \cdot f_{S^*_{t-1}|T, X}\big((z_t, -v_t)| t, x\big) \\
-&= \big(1 - p_\textrm{accept}(z_t, -v_t)\big) \cdot f_{S^*_{t-1}|T, X}\big((z_t, -v_t)| t, x\big)
-\end{split}
-\end{align}
-\end{subequations}
-Now $p_\textrm{accept}(z_t, -v_t) = \min[1, \exp(-H(HD(z_t, -v_t)) + H(z_t, -v_t)]$, where $H(s)$ is the Hamiltonian of state $s$. So if the exponent of the second term is positive, then $p_\textrm{accept}(z_t, -v_t) = 1$ and inserting this in the above gives that $\mathbb{P}(A = 1|S_t = s_t, t, x) = 1$, so the move to $s_t$ must have been accepted.
-
-If this is not the case then the above expression cannot be simplified further without reducing the flexibility of the model. So in this case one would ideally learn an approximation for $\mathbb{P}(A=1|S_t = s_t, t, x)$, taking $s_t$, $x$ and the time point $t$ as inputs, in effect trying to predict whether the previous move was accepted based on the current position. A good starting point for this model can be obtained by assuming that the Markov chain has already converged, in which case $S_{t-1}^*$ would follow the canonical distribution, so we would have $f_{S^*_{t-1}|T, X}(s| t, x) \propto \exp(-H(s))$. Inserting this in the above equations and noting, that $HD(z_t, -v_t) = revHD(z_t, v_t)$ by the invertibility of HD and $H(z_t, -v_t) = H(z_t, v_t)$ by symmetry of the kinetic energy, yields
-\begin{equation}
-\mathbb{P}(A = 1|S_t = s_t, t, x) = \exp(-H(revHD(s_t)) + H(s_t))
-\end{equation}
-So if $H(revHD(s_t)) \leq H(s_t)$, the previous move was always accepted. Otherwise, the probability needs to be learnt, but will tend towards $\exp(-H(revHD(s_t)) + H(s_t))$ as the chain converges. 
+If these densities are computed during the sampling process, $u_{t-1}$ is directly available and does not need to be recomputed.
+\item The probability $\mathbb{P}(A = 1|S_t = s_t, t, x)$ of accepting the previous step can be simplified under certain circumstances (for the derivation see appendix~\ref{app:DerivationOfReverseAcceptanceProbability}): If $H(revHD(s_t)) \leq H(s_t)$, then $\mathbb{P}(A = 1|S_t = s_t, t, x) = 1$. Otherwise, this reverse acceptance probability needs to be learnt, but will tend towards $\exp(-H(revHD(s_t)) + H(s_t))$ as the chain converges. 
 \item $\mathbb{P}(A = 0|S_t = s_t, t, x) = 1 - \mathbb{P}(A = 1|S_t = s_t, t, x)$
 \end{itemize}
 
-So a full auxiliary reverse model to capture the density of the backward Markov chain consists of two parts: Firstly the density estimating model for $r_V(v_{t-1}|z_{t-1}, u_{t-1}, t, x)$ as for the case without the acceptance step and secondly a model for $\mathbb{P}(A = 1|S_t = s_t, t, x)$. Regarding $r_V$ a small difference to the case without the acceptance step is, that here $v_{t-1}$ is not always the end of a previous HD simulation, but can also be equal to  $-u_{t-2}$, the updated momentum at the start of the previous simulation, if the resulting proposal was rejected. 
+To capture the density of the backward Markov chain a full auxiliary reverse model should therefore consist of two parts: Firstly the density estimating model for $r_V(v_{t-1}|z_{t-1}, u_{t-1}, t, x)$ as for the case without the acceptance step and secondly a model for $\mathbb{P}(A = 1|S_t = s_t, t, x)$. Regarding $r_V$ a small difference to the case without the acceptance step is, that here $v_{t-1}$ is not always the end of a previous HD simulation, but can also be equal to  $-u_{t-2}$, the updated momentum at the start of the previous simulation, if the resulting proposal was rejected. 
 
 Putting these terms together the reverse transition density is given by
 \begin{equation}
 \begin{split}
 r(s_{t-1} &| s_t, t, x) = r_V(v_{t-1}| z_{t-1}, u_{t-1}, t, x) \\
-&\cdot \Big( \mathbb{I}_\textrm{accepted} \cdot \mathbb{P}(A = 1 | s_{t}, t, x) + (1 - \mathbb{I}_\textrm{accepted}) \cdot \mathbb{P}(A = 0 | s_{t}, t, x) \Big)
+&\cdot \Big( \mathbb{I}_\textrm{acc} \cdot \mathbb{P}(A = 1 | s_{t}, t, x) \\
+&\qquad\; + (1 - \mathbb{I}_\textrm{acc}) \cdot \mathbb{P}(A = 0 | s_{t}, t, x) \Big)
 \end{split}
 \end{equation}
 With this last component for the computation of the auxiliary lower bound using the full HMC algorithm including the acceptance step we are now able to apply the full HMC algorithm within the MCVI framework. In particular, we recover the guaranteed convergence to the exact posterior, which was lost by skipping the acceptance step.
@@ -197,17 +182,23 @@ In its usual application as a sampling algorithm the freedom in the configuratio
 In addition to this indirect contribution to the lower bound through improved convergence, the mass matrix also directly appears in the lower bound as the covariance matrix of the canonical momentum distribution: From the lower bound and the transition densities derived in the previous sections we see that for each HMC step a term $-\log P_\textrm{kin}(v_\textrm{samp}|x)$ appears. Here $P_\textrm{kin}$ is the density of the canonical momentum distribution, a zero-mean multivariate normal distribution with covariance matrix $M$, and $v_\textrm{samp}$ is a sample from this distribution. In the lower bound the expectation of this term is taken w.r.t.\ the distribution, which generated $v_\textrm{samp}$, i.e. the canonical momentum distribution, so the contribution to the lower bound is
 \begin{equation}
 \begin{split}
-\E_{P_\textrm{kin}(v|x)} \Big[ -\log P_\textrm{kin}(v|x) \Big] &= \frac{1}{2}\E_{P_\textrm{kin}(v|x)} \left[d\log(2 \pi) + \log(|\det(M)|) +  v^T M^{-1} v \right] \\
-&= \frac{1}{2} \Big( d \log(2 \pi) + \log(|\det(M)|) + d \Big), 
+&\E_{P_\textrm{kin}(v|x)} \Big[ -\log P_\textrm{kin}(v|x) \Big] \\
+&\quad= \frac{1}{2}\E_{P_\textrm{kin}} \left[d\log(2 \pi) + \log(|M|) +  v^T M^{-1} v \right] \\
+&\quad= \frac{1}{2} \Big( d \log(2 \pi) + \log(|M|) + d \Big), 
 \end{split}
 \end{equation}
-since $v^T M^{-1} v$ has a $\chi^2$-distribution on $d$ degrees of freedom, which therefore has expected value $d$. Assuming for simplicity that $M$ is diagonal, this simplifies to
-\begin{equation}
-\E_{P_\textrm{kin}(v|x)} \Big[ -\log P_\textrm{kin}(v|x) \Big] = \frac{d}{2} \Big( \log(2 \pi) + 1 \Big) + \frac{1}{2} \sum_{i=1}^d \log(m_i),
-\end{equation}
-where $m_i$ is the $i^{\textrm{th}}$ diagonal element of $M$.
+since $v^T M^{-1} v$ has a $\chi^2$-distribution on $d$ degrees of freedom, which therefore has expected value $d$. 
 
-Now in the reverse model we have the density $r_V(v_{t-1}|z_{t-1}, u_{t-1}, t, x)$ capturing the distribution of the arrival momentum. In other words this tries to learn, the momentum distribution at the end of the HD simulations. Thus it should be closely related to the momentum distribution at the start of the HD simulations, which is exactly $P_\textrm{kin}$. Assuming a multivariate normal density for $r_V$, in particular their covariance matrices should be similar, so their contributions to the lower bound should offset each other and not have a significant influence.
+%Assuming for simplicity that $M$ is diagonal, this simplifies to
+%\begin{equation}
+%\begin{split}
+%\E_{P_\textrm{kin}(v|x)}& \Big[ -\log P_\textrm{kin}(v|x) \Big] \\
+%&= \frac{d}{2} \Big( \log(2 \pi) + 1 \Big) + \frac{1}{2} \sum_{i=1}^d \log(m_i),
+%\end{split}
+%\end{equation}
+%where $m_i$ is the $i^{\textrm{th}}$ diagonal element of $M$.
+%
+Now in the reverse model we have the density $r_V(v_{t-1}|z_{t-1}, u_{t-1}, t, x)$ capturing the distribution of the arrival momentum. In other words this tries to learn, the momentum distribution at the end of the HD simulations. Thus it should be closely related to the momentum distribution at the start of the HD simulations, which is exactly $P_\textrm{kin}$. Assuming a multivariate normal density for $r_V$, in particular their covariance matrices should be similar, so their direct contributions to the lower bound via forward and reverse densities should offset each other and not have a significant influence on value of $M$.
 
 The straight forward approach for the choice of mass matrix is to learn a single global mass matrix, which is used for all observed variables $x$. This corresponds to a global rescaling of the latent space for all computations within the algorithm. However, the potential energy $U(z)$ defining the landscape, on which the dynamics are simulated, may strongly depend on $x$ (see equation~\eqref{eq:VIwithHMCPotEnergy}) and require a different rescaling for each $x$ for optimal performance. Therefore a global rescaling will probably only have limited effect on the lower bound.
 

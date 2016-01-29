@@ -1,10 +1,10 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 2.5 $
+% $ biblatex version 2.5 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
-% This file may safely be deleted. It will be recreated by
-% biber as required.
+% This file may safely be deleted. It will be recreated as
+% required.
 %
 \begingroup
 \makeatletter
@@ -16,5 +16,1161 @@
   {}
 \endgroup
 
-\endinput
+\entry{Bastien2012}{article}{}
+  \name{author}{9}{}{%
+    {{}%
+     {Bastien}{B.}%
+     {F}{F}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Lamblin}{L.}%
+     {Pascal}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Pascanu}{P.}%
+     {Razvan}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bergstra}{B.}%
+     {James}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Goodfellow}{G.}%
+     {Ian}{I.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bergeron}{B.}%
+     {Arnaud}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bouchard}{B.}%
+     {Nicolas}{N.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Warde-Farley}{W.-F.}%
+     {David}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bengio}{B.}%
+     {Yoshua}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BF+1}
+  \strng{fullhash}{BFLPPRBJGIBABNWFDBY1}
+  \field{labelyear}{2012}
+  \field{sortinit}{B}
+  \field{abstract}{%
+  Theano is a linear algebra compiler that optimizes a user's
+  symbolically-specified mathematical computations to produce efficient
+  low-level implementations. In this paper, we present new features and
+  efficiency improvements to Theano, and benchmarks demonstrating Theano's
+  performance relative to Torch7, a recently introduced machine learning
+  library, and to RNNLM, a C++ library targeted at recurrent neural networks.%
+  }
+  \verb{eprint}
+  \verb arXiv:1211.5590v1
+  \endverb
+  \field{pages}{1\bibrangedash 10}
+  \field{title}{{Theano: new features and speed improvements}}
+  \verb{url}
+  \verb http://arxiv.org/abs/1211.5590
+  \endverb
+  \field{journaltitle}{arXiv preprint arXiv: {\ldots}}
+  \field{eprinttype}{arXiv}
+  \field{year}{2012}
+\endentry
 
+\entry{Bayer2015}{report}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Bayer}{B.}%
+     {Justin}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Osendorfer}{O.}%
+     {Christian}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Diot-Girard}{D.-G.}%
+     {Sarah}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {R{\"{u}}ckstiess}{R.}%
+     {Thomas}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Urban}{U.}%
+     {Sebastian}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{climin,python}
+  \strng{namehash}{BJ+1}
+  \strng{fullhash}{BJOCDGSRTUS1}
+  \field{labelyear}{2015}
+  \field{sortinit}{B}
+  \field{title}{{climin - A pythonic framework for gradient-based function
+  optimization}}
+  \verb{url}
+  \verb http://climin.readthedocs.org
+  \endverb
+  \list{institution}{1}{%
+    {Technische Universit{\"{a}}t M{\"{u}}nchen}%
+  }
+  \field{type}{techreport}
+  \field{year}{2015}
+\endentry
+
+\entry{Bergstra2010}{inproceedings}{}
+  \name{author}{9}{}{%
+    {{}%
+     {Bergstra}{B.}%
+     {James}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Breuleux}{B.}%
+     {Olivier}{O.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bastien}{B.}%
+     {Frederic}{F.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Lamblin}{L.}%
+     {Pascal}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Pascanu}{P.}%
+     {Razvan}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Desjardins}{D.}%
+     {Guillaume}{G.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Turian}{T.}%
+     {Joseph}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Warde-Farley}{W.-F.}%
+     {David}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bengio}{B.}%
+     {Yoshua}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BJ+2}
+  \strng{fullhash}{BJBOBFLPPRDGTJWFDBY1}
+  \field{labelyear}{2010}
+  \field{sortinit}{B}
+  \field{abstract}{%
+  Theano is a compiler for mathematical expressions in Python that combines the
+  convenience of NumPy’s syntax with the speed of optimized native machine
+  language. The user composes mathematical expressions in a high-level
+  description that mimics NumPy’s syntax and semantics, while being
+  statically typed and functional (as opposed to imperative). These expressions
+  allow Theano to provide symbolic differentiation. Before performing
+  computation, Theano optimizes the choice of expressions, translates them into
+  C++ (or CUDA for GPU), compiles them into dynamically loaded Python modules,
+  all automatically. Common machine learning algorithms implemented with Theano
+  are from 1:6 to 7:5 faster than competitive alternatives (including those
+  implemented with C/C++, NumPy/SciPy and MATLAB) when compiled for the CPU and
+  between 6:5 and 44 faster when compiled for the GPU. This paper illustrates
+  how to use Theano, outlines the scope of the compiler, provides benchmarks on
+  both CPU and GPU processors, and explains its overall design%
+  }
+  \field{booktitle}{9th Python in Science Conference}
+  \field{number}{Scipy}
+  \field{pages}{1\bibrangedash 7}
+  \field{title}{{Theano: a CPU and GPU math compiler in Python}}
+  \verb{url}
+  \verb http://www-etud.iro.umontreal.ca/{~}wardefar/publications/theano{\_}sci
+  \verb py2010.pdf
+  \endverb
+  \verb{file}
+  \verb :Users/christopher/Library/Application Support/Mendeley Desktop/Downloa
+  \verb ded/Bergstra et al. - 2010 - Theano a CPU and GPU math compiler in Pyth
+  \verb on.pdf:pdf
+  \endverb
+  \field{year}{2010}
+\endentry
+
+\entry{Betancourt2014}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Betancourt}{B.}%
+     {M~J}{M.~J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Byrne}{B.}%
+     {Simon}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Livingstone}{L.}%
+     {Samuel}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Girolami}{G.}%
+     {Mark}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{and phrases,bundle,carlo,differential
+  geometry,disintegration,fiber,hamiltonian monte,inference requires algorithms
+  capable,markov chain monte carlo,of fitting complex mod-,riemannian
+  geometry,smooth manifold,symplectic geometry,the frontier of bayesian}
+  \strng{namehash}{BMJ+1}
+  \strng{fullhash}{BMJBSLSGM1}
+  \field{labelyear}{2014}
+  \field{sortinit}{B}
+  \field{abstract}{%
+  Although Hamiltonian Monte Carlo has proven an empirical success, the lack of
+  a rigorous theoretical understanding of the algorithm has in many ways
+  impeded both principled developments of the method and use of the algorithm
+  in practice. In this paper we develop the formal foundations of the algorithm
+  through the construction of measures on smooth manifolds, and demonstrate how
+  the theory naturally identifies efficient implementations and motivates
+  promising generalizations.%
+  }
+  \verb{eprint}
+  \verb 1410.5110
+  \endverb
+  \field{pages}{1\bibrangedash 45}
+  \field{title}{{The Geometric Foundations of Hamiltonian Monte Carlo}}
+  \verb{url}
+  \verb http://arxiv.org/abs/1410.5110v1$\backslash$npapers2://publication/uuid
+  \verb /7D906BF6-2FFE-4AC3-9A60-C68E3CCBF6F7
+  \endverb
+  \field{volume}{stat.ME}
+  \verb{file}
+  \verb :Users/christopher/Documents/Masterarbeit/Literatur/The Geometric Found
+  \verb ations of HMC.pdf:pdf
+  \endverb
+  \field{journaltitle}{arXiv.org}
+  \field{eprinttype}{arXiv}
+  \field{year}{2014}
+\endentry
+
+\entry{Duane1987}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Duane}{D.}%
+     {Simon}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Kennedy}{K.}%
+     {A.D.}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Pendleton}{P.}%
+     {Brian~J.}{B.~J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Roweth}{R.}%
+     {Duncan}{D.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{DS+1}
+  \strng{fullhash}{DSKAPBJRD1}
+  \field{labelyear}{1987}
+  \field{sortinit}{D}
+  \field{abstract}{%
+  We present a new method for the numerical simulation of lattice field theory.
+  A hybrid (molecular dynamics/Langevin) algorithm is used to guide a Monte
+  Carlo simulation. There are no discretization errors even for large step
+  sizes. The method is especially efficient for systems such as quantum
+  chromodynamics which contain fermionic degrees of freedom. Detailed results
+  are presented for four-dimensional compact quantum electrodynamics including
+  the dynamical effects of electrons.%
+  }
+  \verb{doi}
+  \verb 10.1016/0370-2693(87)91197-X
+  \endverb
+  \field{isbn}{0370-2693}
+  \field{issn}{03702693}
+  \field{number}{2}
+  \field{pages}{216\bibrangedash 222}
+  \field{title}{{Hybrid Monte Carlo}}
+  \field{volume}{195}
+  \verb{file}
+  \verb :Users/christopher/Documents/Masterarbeit/Literatur/Hybrid Monte Carlo.
+  \verb pdf:pdf
+  \endverb
+  \field{journaltitle}{Physics Letters B}
+  \field{year}{1987}
+\endentry
+
+\entry{Girolami2011}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Girolami}{G.}%
+     {Mark}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Calderhead}{C.}%
+     {Ben}{B.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{Bayesian inference,Geometry in statistics,Hamiltonian Monte Carlo
+  methods,Langevin diffusion,Markov chain Monte Carlo methods,Riemann
+  manifolds}
+  \strng{namehash}{GMCB1}
+  \strng{fullhash}{GMCB1}
+  \field{labelyear}{2011}
+  \field{sortinit}{G}
+  \field{abstract}{%
+  The paper proposes Metropolis adjusted Langevin and Hamiltonian Monte Carlo
+  sampling methods defined on the Riemann manifold to resolve the shortcomings
+  of existing Monte Carlo algorithms when sampling from target densities that
+  may be high dimensional and exhibit strong correlations. The methods provide
+  fully automated adaptation mechanisms that circumvent the costly pilot runs
+  that are required to tune proposal densities for Metropolis-Hastings or
+  indeed Hamiltonian Monte Carlo and Metropolis adjusted Langevin algorithms.
+  This allows for highly efficient sampling even in very high dimensions where
+  different scalings may be required for the transient and stationary phases of
+  the Markov chain. The methodology proposed exploits the Riemann geometry of
+  the parameter space of statistical models and thus automatically adapts to
+  the local structure when simulating paths across this manifold, providing
+  highly efficient convergence and exploration of the target density. The
+  performance of these Riemann manifold Monte Carlo methods is rigorously
+  assessed by performing inference on logistic regression models, log-Gaussian
+  Cox point processes, stochastic volatility models and Bayesian estimation of
+  dynamic systems described by non-linear differential equations. Substantial
+  improvements in the time-normalized effective sample size are reported when
+  compared with alternative sampling approaches. MATLAB code that is available
+  from http://www.ucl.ac.uk/statistics/research/rmhmc allows replication of all
+  the results reported.%
+  }
+  \verb{doi}
+  \verb 10.1111/j.1467-9868.2010.00765.x
+  \endverb
+  \verb{eprint}
+  \verb 0907.1100
+  \endverb
+  \field{issn}{13697412}
+  \field{number}{2}
+  \field{pages}{123\bibrangedash 214}
+  \field{title}{{Riemann manifold Langevin and Hamiltonian Monte Carlo
+  methods}}
+  \field{volume}{73}
+  \verb{file}
+  \verb :Users/christopher/Documents/Masterarbeit/Literatur/Riemann manifold La
+  \verb ngevin and HMC methods.pdf:pdf
+  \endverb
+  \field{journaltitle}{Journal of the Royal Statistical Society. Series B:
+  Statistical Methodology}
+  \field{eprinttype}{arXiv}
+  \field{year}{2011}
+\endentry
+
+\entry{Gregor2015}{article}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Gregor}{G.}%
+     {Karol}{K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Danihelka}{D.}%
+     {Ivo}{I.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Graves}{G.}%
+     {Alex}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{Jimenez Rezende}}{J.}%
+     {Danilo}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wierstra}{W.}%
+     {Daan}{D.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{GK+1}
+  \strng{fullhash}{GKDIGAJDWD1}
+  \field{labelyear}{2015}
+  \field{sortinit}{G}
+  \field{abstract}{%
+  This paper introduces the Deep Recurrent Atten-tive Writer (DRAW) neural
+  network architecture for image generation. DRAW networks combine a novel
+  spatial attention mechanism that mimics the foveation of the human eye, with
+  a sequential variational auto-encoding framework that allows for the
+  iterative construction of complex images. The system substantially improves
+  on the state of the art for generative models on MNIST, and, when trained on
+  the Street View House Numbers dataset, it generates images that cannot be
+  distin-guished from real data with the naked eye.%
+  }
+  \verb{eprint}
+  \verb 1502.04623
+  \endverb
+  \field{title}{{DRAW: A Recurrent Neural Network For Image Generation}}
+  \verb{file}
+  \verb :Users/christopher/Documents/Masterarbeit/Literatur/DRAW.pdf:pdf
+  \endverb
+  \field{journaltitle}{ICML}
+  \field{eprinttype}{arXiv}
+  \field{year}{2015}
+\endentry
+
+\entry{Hinton2012}{article}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Hinton}{H.}%
+     {Geoffrey~E.}{G.~E.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Srivastava}{S.}%
+     {Nitish}{N.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Krizhevsky}{K.}%
+     {Alex}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Sutskever}{S.}%
+     {Ilya}{I.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Salakhutdinov}{S.}%
+     {Ruslan~R.}{R.~R.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HGE+1}
+  \strng{fullhash}{HGESNKASISRR1}
+  \field{labelyear}{2012}
+  \field{sortinit}{H}
+  \field{abstract}{%
+  When a large feedforward neural network is trained on a small training set,
+  it typically performs poorly on held-out test data. This "overfitting" is
+  greatly reduced by randomly omitting half of the feature detectors on each
+  training case. This prevents complex co-adaptations in which a feature
+  detector is only helpful in the context of several other specific feature
+  detectors. Instead, each neuron learns to detect a feature that is generally
+  helpful for producing the correct answer given the combinatorially large
+  variety of internal contexts in which it must operate. Random "dropout" gives
+  big improvements on many benchmark tasks and sets new records for speech and
+  object recognition.%
+  }
+  \verb{doi}
+  \verb arXiv:1207.0580
+  \endverb
+  \verb{eprint}
+  \verb 1207.0580
+  \endverb
+  \field{pages}{1\bibrangedash 18}
+  \field{title}{{Improving neural networks by preventing co-adaptation of
+  feature detectors}}
+  \verb{url}
+  \verb http://arxiv.org/abs/1207.0580
+  \endverb
+  \verb{file}
+  \verb :Users/christopher/Documents/Masterarbeit/Literatur/Dropout.pdf:pdf
+  \endverb
+  \field{journaltitle}{arXiv: 1207.0580}
+  \field{eprinttype}{arXiv}
+  \field{year}{2012}
+\endentry
+
+\entry{Hoffman2013}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Hoffman}{H.}%
+     {Matt}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Blei}{B.}%
+     {David~M.}{D.~M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wang}{W.}%
+     {Chong}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Paisley}{P.}%
+     {John}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HM+1}
+  \strng{fullhash}{HMBDMWCPJ1}
+  \field{labelyear}{2013}
+  \field{sortinit}{H}
+  \field{abstract}{%
+  We develop stochastic variational inference, a scalable algorithm for
+  approximating posterior distributions. We develop this technique for a large
+  class of probabilistic models and we demonstrate it with two probabilistic
+  topic models, latent Dirichlet allocation and the hierarchical Dirichlet
+  process topic model. Using stochastic variational inference, we analyze
+  several large collections of documents: 300K articles from Nature, 1.8M
+  articles from The New York Times, and 3.8M articles from Wikipedia.
+  Stochastic inference can easily handle data sets of this size and outperforms
+  traditional variational inference, which can only handle a smaller subset.
+  (We also show that the Bayesian nonparametric topic model outperforms its
+  parametric counterpart.) Stochastic variational inference lets us apply
+  complex Bayesian models to massive data sets.%
+  }
+  \verb{doi}
+  \verb citeulike-article-id:10852147
+  \endverb
+  \verb{eprint}
+  \verb 1206.7051
+  \endverb
+  \field{isbn}{1532-4435}
+  \field{issn}{1532-4435}
+  \field{number}{3}
+  \field{pages}{1303\bibrangedash 1347}
+  \field{title}{{Stochastic Variational Inference}}
+  \verb{url}
+  \verb http://arxiv.org/abs/1206.7051 http://arxiv.org/abs/1206.7051$\backslas
+  \verb h$npapers2://publication/uuid/D5737928-F59F-43E3-8ADE-53F1831AA866
+  \endverb
+  \field{volume}{14}
+  \verb{file}
+  \verb :Users/christopher/Documents/Masterarbeit/Literatur/Stochastic VI.pdf:p
+  \verb df
+  \endverb
+  \field{journaltitle}{Journal of Machine Learning Research}
+  \field{eprinttype}{arXiv}
+  \field{year}{2013}
+\endentry
+
+\entry{Horowitz1991}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Horowitz}{H.}%
+     {Alan~M.}{A.~M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HAM1}
+  \strng{fullhash}{HAM1}
+  \field{labelyear}{1991}
+  \field{sortinit}{H}
+  \field{abstract}{%
+  A hamiltonian-guided Monte Carlo algorithm for simulations of lattice field
+  theories is presented. It is a generalization of the Hybrid Monte Carlo
+  algorithm allowing the trajectory length to be shrunk to the step-size
+  without losing on the speed of configuration decorrelation. Without the Monte
+  Carlo step, this limit of the generalized algorithm reduces to the
+  second-order Langevin equation. The latter is shown in a gaussian model and
+  in compact QED to be faster than the Hybrid algorithm. The performance of the
+  two algorithms with the Monte Carlo step, HMC and L2MC, turned out to be
+  comparable in compact QED. It is pointed out that L2MC is safer from rounding
+  errors.%
+  }
+  \verb{doi}
+  \verb 10.1016/0370-2693(91)90812-5
+  \endverb
+  \field{issn}{03702693}
+  \field{number}{2}
+  \field{pages}{247\bibrangedash 252}
+  \field{title}{{A generalized guided Monte Carlo algorithm}}
+  \verb{url}
+  \verb http://www.sciencedirect.com/science/article/pii/0370269391908125
+  \endverb
+  \field{volume}{268}
+  \verb{file}
+  \verb :Users/christopher/Documents/Masterarbeit/Literatur/Generalized guided
+  \verb MC algorithm - Partial Momentum.pdf:pdf
+  \endverb
+  \field{journaltitle}{Physics Letters B}
+  \field{year}{1991}
+\endentry
+
+\entry{Jordan1999}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Jordan}{J.}%
+     {Michael~I.}{M.~I.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Ghahramani}{G.}%
+     {Zoubin}{Z.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Jaakkola}{J.}%
+     {Tommi~S.}{T.~S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Saul}{S.}%
+     {Lawrence~K.}{L.~K.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{approximate infer-,bayesian networks,belief networks,boltzmann
+  machines,ence,graphical models,hidden markov models,mean field methods,neural
+  networks,probabilistic inference,variational methods}
+  \strng{namehash}{JMI+1}
+  \strng{fullhash}{JMIGZJTSSLK1}
+  \field{labelyear}{1999}
+  \field{sortinit}{J}
+  \field{abstract}{%
+  This paper presents a tutorial introduction to the use of
+  variational$\backslash$nmethods for inference and learning in graphical
+  models (Bayesian$\backslash$nnetworks and Markov random fields). We present a
+  number of examples$\backslash$nof graphical models, including the QMR-DT
+  database, the sigmoid belief$\backslash$nnetwork, the Boltzmann machine, and
+  several variants of hidden Markov$\backslash$nmodels, in which it is
+  infeasible to run exact inference algorithms.$\backslash$nWe then introduce
+  variational methods, which exploit laws of large$\backslash$nnumbers to
+  transform the original graphical model into a
+  simplified$\backslash$ngraphical model in which inference is efficient.
+  Inference in the$\backslash$nsimpified model provides bounds on probabilities
+  of interest in the$\backslash$noriginal model. We describe a general
+  framework for generating variational$\backslash$ntransformations based on
+  convex duality. Finally we return to the$\backslash$nexamples and demonstrate
+  how variational algorithms can be formulated$\backslash$nin each case.%
+  }
+  \verb{doi}
+  \verb 10.1023/A:1007665907178
+  \endverb
+  \verb{eprint}
+  \verb arXiv:1103.5254v3
+  \endverb
+  \field{isbn}{0262600323}
+  \field{issn}{08856125}
+  \field{number}{2}
+  \field{pages}{183\bibrangedash 233}
+  \field{title}{{Introduction to variational methods for graphical models}}
+  \field{volume}{37}
+  \verb{file}
+  \verb :Users/christopher/Documents/Masterarbeit/Literatur/Varitional Methods
+  \verb Introduction.pdf:pdf
+  \endverb
+  \field{journaltitle}{Machine Learning}
+  \field{eprinttype}{arXiv}
+  \field{year}{1999}
+\endentry
+
+\entry{Kingma2015}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Kingma}{K.}%
+     {Diederik~P.}{D.~P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Ba}{B.}%
+     {Jimmy~Lei}{J.~L.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{KDPBJL1}
+  \strng{fullhash}{KDPBJL1}
+  \field{labelyear}{2015}
+  \field{sortinit}{K}
+  \field{abstract}{%
+  We introduce Adam, an algorithm for first-order gradient-based optimization
+  of stochastic objective functions. The method is straightforward to implement
+  and is based on adaptive estimates of lower-order moments of the gradients.
+  The method is computationally efficient, has little memory requirements and
+  is well suited for problems that are large in terms of data and/or
+  parameters. The method is also appropriate for non-stationary objectives and
+  problems with very noisy and/or sparse gradients. The method exhibits
+  invariance to diagonal rescaling of the gradients by adapting to the geometry
+  of the objective function. The hyper-parameters have intuitive
+  interpretations and typically require little tuning. Some connections to
+  related algorithms, on which Adam was inspired, are discussed. We also
+  analyze the theoretical convergence properties of the algorithm and provide a
+  regret bound on the convergence rate that is comparable to the best known
+  results under the online convex optimization framework. We demonstrate that
+  Adam works well in practice and compares favorably to other stochastic
+  optimization methods.%
+  }
+  \verb{eprint}
+  \verb arXiv:1412.6980v5
+  \endverb
+  \field{pages}{1\bibrangedash 13}
+  \field{title}{{Adam: a Method for Stochastic Optimization}}
+  \verb{file}
+  \verb :Users/christopher/Documents/Masterarbeit/Literatur/Adam - A Method for
+  \verb  Stochastic Optimization.pdf:pdf
+  \endverb
+  \field{journaltitle}{International Conference on Learning Representations}
+  \field{eprinttype}{arXiv}
+  \field{year}{2015}
+\endentry
+
+\entry{Kingma2014}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Kingma}{K.}%
+     {Diederik~P}{D.~P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Welling}{W.}%
+     {Max}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{KDPWM1}
+  \strng{fullhash}{KDPWM1}
+  \field{labelyear}{2014}
+  \field{sortinit}{K}
+  \field{abstract}{%
+  Can we efficiently learn the parameters of directed probabilistic models, in
+  the presence of continuous latent variables with intractable posterior
+  distributions, and large datasets? We introduce an unsupervised on-line
+  learning algorithm that efficiently optimizes the variational lower bound on
+  the marginal likelihood and that, under some mild conditions, even works in
+  the intractable case. The algorithm, Stochastic Gradient Variational Bayes
+  (SGVB), optimizes a probabilistic encoder (also called a recognition model)
+  to approximate the intractable posterior distribution of the latent
+  variables. Crucial is a reparameterization of the variational bound with an
+  independent noise variable, yielding a stochastic objective function which
+  can be jointly optimized w.r.t. variational and generative parameters using
+  standard gradient-based stochastic optimization methods. Theoretical
+  advantages are reflected in experimental results.%
+  }
+  \verb{eprint}
+  \verb 1312.6114
+  \endverb
+  \field{number}{Ii}
+  \field{pages}{1\bibrangedash 14}
+  \field{title}{{Stochastic Gradient VB and the Variational Auto-Encoder}}
+  \verb{url}
+  \verb http://arxiv.org/abs/1312.6114
+  \endverb
+  \verb{file}
+  \verb :Users/christopher/Documents/Masterarbeit/Literatur/Stochastic Gradient
+  \verb  VB and the Variational Auto-Encoder.pdf:pdf
+  \endverb
+  \field{journaltitle}{International Conference on Learning Representationsm}
+  \field{eprinttype}{arXiv}
+  \field{year}{2014}
+\endentry
+
+\entry{LeCun1998}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {LeCun}{L.}%
+     {Yann}{Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bottou}{B.}%
+     {Leon}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bengio}{B.}%
+     {Yoshua}{Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Haffner}{H.}%
+     {Patrick}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{character recognition,convolutional neural networks,document
+  recog-,finite state transducers,gradient-based learning,graph,machine
+  learning,neural networks,nition,ocr,optical,transformer networks}
+  \strng{namehash}{LY+1}
+  \strng{fullhash}{LYBLBYHP1}
+  \field{labelyear}{1998}
+  \field{sortinit}{L}
+  \field{abstract}{%
+  A long and detailed paper on convolutional nets, graph
+  transformer$\backslash$nnetworks, and discriminative training methods for
+  sequence labeling.$\backslash$nWe show how to build systems that integrate
+  segmentation, feature$\backslash$nextraction, classification, contextual
+  post-processing, and language$\backslash$nmodeling into one single learning
+  machine trained end-to-end. Applications$\backslash$nto handwriting
+  recognition and face detection are described.%
+  }
+  \verb{doi}
+  \verb 10.1109/5.726791
+  \endverb
+  \verb{eprint}
+  \verb 1102.0183
+  \endverb
+  \field{isbn}{0018-9219}
+  \field{issn}{00189219}
+  \field{number}{11}
+  \field{pages}{2278\bibrangedash 2324}
+  \field{title}{{Gradient Based Learning Applied to Document Recognition}}
+  \field{volume}{86}
+  \field{journaltitle}{Proceedings of the IEEE}
+  \field{eprinttype}{arXiv}
+  \field{year}{1998}
+\endentry
+
+\entry{Neal2011}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Neal}{N.}%
+     {Radford~M.}{R.~M.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{hamiltonian dynamics,mcmc}
+  \strng{namehash}{NRM1}
+  \strng{fullhash}{NRM1}
+  \field{labelyear}{2011}
+  \field{sortinit}{N}
+  \field{abstract}{%
+  Hamiltonian dynamics can be used to produce distant proposals for the
+  Metropolis algorithm, thereby avoiding the slow exploration of the state
+  space that results from the diffusive behaviour of simple random-walk
+  proposals. Though originating in physics, Hamiltonian dynamics can be applied
+  to most problems with continuous state spaces by simply introducing
+  fictitious "momentum" variables. A key to its usefulness is that Hamiltonian
+  dynamics preserves volume, and its trajectories can thus be used to define
+  complex mappings without the need to account for a hard-to-compute Jacobian
+  factor - a property that can be exactly maintained even when the dynamics is
+  approximated by discretizing time. In this review, I discuss theoretical and
+  practical aspects of Hamiltonian Monte Carlo, and present some of its
+  variations, including using windows of states for deciding on acceptance or
+  rejection, computing trajectories using fast approximations, tempering during
+  the course of a trajectory to handle isolated modes, and short-cut methods
+  that prevent useless trajectories from taking much computation time.%
+  }
+  \verb{doi}
+  \verb doi:10.1201/b10905-6
+  \endverb
+  \verb{eprint}
+  \verb 1206.1901
+  \endverb
+  \field{isbn}{9781420079418}
+  \field{issn}{<null>}
+  \field{pages}{113\bibrangedash 162}
+  \field{title}{{MCMC using Hamiltonian dynamics}}
+  \verb{url}
+  \verb http://arxiv.org/abs/1206.1901
+  \endverb
+  \verb{file}
+  \verb :Users/christopher/Documents/Masterarbeit/Literatur/MCMC using Hamilton
+  \verb ian dynamics.pdf:pdf
+  \endverb
+  \field{journaltitle}{Handbook of Markov Chain Monte Carlo}
+  \field{eprinttype}{arXiv}
+  \field{year}{2011}
+\endentry
+
+\entry{Rezende2015}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Rezende}{R.}%
+     {Danilo~Jimenez}{D.~J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Mohamed}{M.}%
+     {Shakir}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{RDJMS1}
+  \strng{fullhash}{RDJMS1}
+  \field{labelyear}{2015}
+  \field{sortinit}{R}
+  \field{abstract}{%
+  The choice of approximate posterior distribution is one of the core problems
+  in variational inference. Most applications of variational inference employ
+  simple families of posterior approximations in order to allow for efficient
+  inference, focusing on mean-field or other simple structured approximations.
+  This restriction has a significant impact on the quality of inferences made
+  using variational methods. We introduce a new approach for specifying
+  flexible, arbitrarily complex and scalable approximate posterior
+  distributions. Our approximations are distributions constructed through a
+  normalizing flow, whereby a simple initial density is transformed into a more
+  complex one by applying a sequence of invertible transformations until a
+  desired level of complexity is attained. We use this view of normalizing
+  flows to develop categories of finite and infinitesimal flows and provide a
+  unified view of approaches for constructing rich posterior approximations. We
+  demonstrate that the theoretical advantages of having posteriors that better
+  match the true posterior, combined with the scalability of amortized
+  variational approaches, provides a clear improvement in performance and
+  applicability of variational inference.%
+  }
+  \verb{eprint}
+  \verb 1505.05770
+  \endverb
+  \field{title}{{Variational Inference with Normalizing Flows}}
+  \verb{url}
+  \verb http://arxiv.org/abs/1505.05770
+  \endverb
+  \field{volume}{37}
+  \verb{file}
+  \verb :Users/christopher/Documents/Masterarbeit/Literatur/Variational Inferen
+  \verb ce with Normalizing Flows.pdf:pdf
+  \endverb
+  \field{eprinttype}{arXiv}
+  \field{year}{2015}
+\endentry
+
+\entry{Rezende2014}{inproceedings}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Rezende}{R.}%
+     {Danilo~Jimenez}{D.~J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Mohamed}{M.}%
+     {Shakir}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wierstra}{W.}%
+     {Daan}{D.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{RDJ+1}
+  \strng{fullhash}{RDJMSWD1}
+  \field{labelyear}{2014}
+  \field{sortinit}{R}
+  \field{abstract}{%
+  We marry ideas from deep neural networks and approximate Bayesian inference
+  to derive a generalised class of deep, directed generative models, endowed
+  with a new algorithm for scalable inference and learning. Our algorithm
+  introduces a recognition model to represent approximate posterior
+  distributions, and that acts as a stochastic encoder of the data. We develop
+  stochastic back-propagation -- rules for back-propagation through stochastic
+  variables -- and use this to develop an algorithm that allows for joint
+  optimisation of the parameters of both the generative and recognition model.
+  We demonstrate on several real-world data sets that the model generates
+  realistic samples, provides accurate imputations of missing data and is a
+  useful tool for high-dimensional data visualisation.%
+  }
+  \field{booktitle}{Proceedings of The 31st International Conference on Machine
+  Learning}
+  \verb{eprint}
+  \verb 1401.4082
+  \endverb
+  \field{isbn}{9781634393973}
+  \field{pages}{1278\bibrangedash 1286}
+  \field{title}{{Stochastic Backpropagation and Approximate Inference in Deep
+  Generative Models}}
+  \verb{url}
+  \verb http://arxiv.org/abs/1401.4082 http://jmlr.org/proceedings/papers/v32/r
+  \verb ezende14.html$\backslash$npapers3://publication/uuid/F2747569-7719-4EAC
+  \verb -A5A7-9ECA9D6A8FE6
+  \endverb
+  \verb{file}
+  \verb :Users/christopher/Documents/Masterarbeit/Literatur/Stochastic Backprop
+  \verb agation and Approximate Inference in Deep Generative Models.pdf:pdf
+  \endverb
+  \field{eprinttype}{arXiv}
+  \field{year}{2014}
+\endentry
+
+\entry{Roberts2004}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Roberts}{R.}%
+     {Gareth~O}{G.~O.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Rosenthal}{R.}%
+     {Jeffrey~S}{J.~S.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{qa mathematics}
+  \strng{namehash}{RGORJS1}
+  \strng{fullhash}{RGORJS1}
+  \field{labelyear}{2004}
+  \field{sortinit}{R}
+  \field{abstract}{%
+  This paper surveys various results about Markov chains on general
+  (non-countable) state spaces. It begins with an introduction to Markov chain
+  Monte Carlo (MCMC) algorithms, which provide the motivation and context for
+  the theory which follows. Then, sufficient conditions for geometric and
+  uniform ergodicity are presented, along with quantitative bounds on the rate
+  of convergence to stationarity. Many of these results are proved using direct
+  coupling constructions based on minorisation and drift conditions. Necessary
+  and sufficient conditions for Central Limit Theorems (CLTs) are also
+  presented, in some cases proved via the Poisson Equation or direct
+  regeneration constructions. Finally, optimal scaling and weak convergence
+  results for Metropolis-Hastings algorithms are discussed. None of the results
+  presented is new, though many of the proofs are. We also describe some Open
+  Problems.%
+  }
+  \verb{doi}
+  \verb 10.1214/154957804100000024
+  \endverb
+  \verb{eprint}
+  \verb 0404033v4
+  \endverb
+  \field{isbn}{1549-5787}
+  \field{issn}{1549-5787}
+  \field{pages}{20\bibrangedash 71}
+  \field{title}{{General state space Markov chains and MCMC algorithms.}}
+  \verb{url}
+  \verb http://arxiv.org/abs/math/0404033
+  \endverb
+  \field{volume}{1}
+  \verb{file}
+  \verb :Users/christopher/Documents/Masterarbeit/Literatur/General state space
+  \verb  Markov chains and MCMC algorithms.pdf:pdf
+  \endverb
+  \field{journaltitle}{Probability Surveys}
+  \field{eprinttype}{arXiv}
+  \field{eprintclass}{arXiv:math}
+  \field{year}{2004}
+\endentry
+
+\entry{Salakhutdinov2008}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Salakhutdinov}{S.}%
+     {Ruslan}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Murray}{M.}%
+     {Iain}{I.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{binarized}
+  \strng{namehash}{SRMI1}
+  \strng{fullhash}{SRMI1}
+  \field{labelyear}{2008}
+  \field{sortinit}{S}
+  \field{abstract}{%
+  Deep Belief Networks (DBN’s) are generative models that contain many layers
+  of hidden variables. Efficient greedy algorithms for learning and approximate
+  inference have allowed these models to be applied successfully in many
+  application domains. The main building block of a DBN is a bipartite
+  undirected graphical model called a restricted Boltzmann machine (RBM). Due
+  to the presence of the partition function, model selection, complexity
+  control, and exact maximum likelihood learning in RBM's are intractable. We
+  show that Annealed Importance Sampling (AIS) can be used to efficiently
+  estimate the partition function of an RBM, and we present a novel AIS scheme
+  for comparing RBM's with different architectures. We further show how an AIS
+  estimator, along with approximate inference, can be used to estimate a lower
+  bound on the log-probability that a DBN model with multiple hidden layers
+  assigns to the test data. This is, to our knowledge, the first step towards
+  obtaining quantitative results that would allow us to directly assess the
+  performance of Deep Belief Networks as generative models of data.%
+  }
+  \verb{doi}
+  \verb 10.1145/1390156.1390266
+  \endverb
+  \field{isbn}{978-1-60558-205-4}
+  \field{issn}{1605582050}
+  \field{pages}{872\bibrangedash 879}
+  \field{title}{{On the quantitative analysis of Deep Belief Networks}}
+  \verb{url}
+  \verb http://hdl.handle.net/1842/4588
+  \endverb
+  \field{volume}{25}
+  \verb{file}
+  \verb :Users/christopher/Documents/Masterarbeit/Literatur/Binarized MNIST Urs
+  \verb prungspaper.pdf:pdf
+  \endverb
+  \field{journaltitle}{Proceedings of the 25th International Conference on
+  Machine Learning}
+  \field{year}{2008}
+\endentry
+
+\entry{Salimans2014}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Salimans}{S.}%
+     {Tim}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Kingma}{K.}%
+     {Diederik~P.}{D.~P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Welling}{W.}%
+     {Max}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{ST+1}
+  \strng{fullhash}{STKDPWM1}
+  \field{labelyear}{2015}
+  \field{sortinit}{S}
+  \field{abstract}{%
+  Recent advances in stochastic gradient variational inference have made it
+  possible to perform variational Bayesian inference with posterior
+  approximations containing auxiliary random variables. This enables us to
+  explore a new synthesis of variational inference and Monte Carlo methods
+  where we incorporate one or more steps of MCMC into our variational
+  approximation. By doing so we obtain a rich class of inference algorithms
+  bridging the gap between variational methods and MCMC, and offering the best
+  of both worlds: fast posterior approximation through the maximization of an
+  explicit objective, with the option of trading off additional computation for
+  additional accuracy. We describe the theoretical foundations that make this
+  possible and show some promising first results.%
+  }
+  \verb{eprint}
+  \verb 1410.6460
+  \endverb
+  \field{title}{{Markov Chain Monte Carlo and Variational Inference: Bridging
+  the Gap}}
+  \verb{url}
+  \verb http://arxiv.org/abs/1410.6460
+  \endverb
+  \verb{file}
+  \verb :Users/christopher/Documents/Masterarbeit/Literatur/MCMC and Variationa
+  \verb l Inference.pdf:pdf
+  \endverb
+  \field{journaltitle}{ICML}
+  \field{eprinttype}{arXiv}
+  \field{year}{2015}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

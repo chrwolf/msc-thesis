@@ -1,6 +1,8 @@
 \relax 
 \providecommand\hyper@newdestlabel[2]{}
-\abx@aux@sortscheme{nyt}
+\bibstyle{biblatex}
+\bibdata{tum_paper-blx,bibliography/library}
+\citation{biblatex-control}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
 \global\let\oldcontentsline\contentsline
@@ -17,22 +19,189 @@
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces A continuously differentiable solution $\psi (x)$ for Abel's equation \textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:abel}\unskip \@@italiccorr )}} with $f(x) = \qopname  \relax o{exp}(x).$}}{1}{figure.1}}
-\newlabel{fig:psi}{{1}{1}{A continuously differentiable solution $\psi (x)$ for Abel's equation \eqref {eq:abel} with $f(x) = \exp (x).$}{figure.1}{}}
+\citation{Jordan1999}
+\citation{Hoffman2013}
+\citation{Gregor2015}
+\citation{Rezende2014}
+\citation{Kingma2014}
+\citation{Rezende2015}
+\citation{Salimans2014}
+\citation{Salimans2014}
+\citation{Salimans2014}
 \@writefile{toc}{\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax }
 \@writefile{lof}{\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax }
 \@writefile{lot}{\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax }
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {1}Fractional Iterates of the Exponential Function}{1}{section.1}}
-\newlabel{sec:frac}{{1}{1}{}{section.1}{}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Abel's Functional Equation}{1}{subsection.1.1}}
-\newlabel{eq:psi}{{1a}{1}{}{equation.1.1}{}}
-\newlabel{eq:psicond}{{1b}{1}{}{equation.1.2}{}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {2}Implementation Details}{1}{section.2}}
-\newlabel{ch:impl}{{2}{1}{}{section.2}{}}
-\@writefile{loa}{\defcounter {refsection}{0}\relax }\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Computation of $\psi (x)$.}}{1}{algorithm.1}}
-\newlabel{alg:psi}{{1}{1}{}{algorithm.1}{}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{Appendices}{1}{section*.1}}
-\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Results for the interpolation of $\qopname  \relax o{exp}^{(n)}$ with method A (left) and method B (right). $r_{z}$ and $r_{n}$ are the sampling resolutions used for choosing the values to be precomputed. $t$ denotes the runtime of computing function values for one million test points and $M$ gives the required memory for the respective setting. All GPU computations have been conducted on a Nvidia Quadro K2200. The used CPU is a Intel Xeon E3-1226 v3 @ 3.30 GHz.}}{2}{table.1}}
-\newlabel{tab:ip}{{1}{2}{Results for the interpolation of $\expn $ with method A (left) and method B (right). $r_{z}$ and $r_{n}$ are the sampling resolutions used for choosing the values to be precomputed. $t$ denotes the runtime of computing function values for one million test points and $M$ gives the required memory for the respective setting. All GPU computations have been conducted on a Nvidia Quadro K2200. The used CPU is a Intel Xeon E3-1226 v3 @ 3.30 GHz}{table.1}{}}
-\@writefile{loa}{\defcounter {refsection}{0}\relax }\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Computation of $\psi ^{-1}(\psi )$. The value for $\psi ^{-1}$ with $\psi < -1$ would mathematically be $-\infty $. Similarly, inputs with $\psi \gtrsim 4.406$ evaluate to values larger than can be represented with single precision floating point numbers. Since infinite values cause problems in gradient-based learning, we restrict $\psi ^{-1}$ to the interval $\left [-10,10\right ]$. $\psi _{min}$ and $\psi _{max}$ are set as $\psi _{min}=-0.999955$ and $\psi _{max}=2.83403$, so that $\psi ^{-1}(\psi _{min})=-10$ and $\psi ^{-1}(\psi _{max})=10$.}}{2}{algorithm.2}}
-\newlabel{alg:psiInv}{{2}{2}{}{algorithm.2}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}}
+\abx@aux@page{1}{1}
+\abx@aux@page{2}{1}
+\abx@aux@page{3}{1}
+\abx@aux@page{4}{1}
+\abx@aux@page{5}{1}
+\abx@aux@page{6}{1}
+\abx@aux@page{7}{1}
+\abx@aux@page{8}{1}
+\abx@aux@page{9}{1}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {2}Variational Inference and MCMC}{1}{section.2}}
+\newlabel{sec:VIandMCMC}{{2}{1}{}{section.2}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Variational Inference}{1}{subsection.2.1}}
+\citation{Roberts2004}
+\citation{Roberts2004}
+\citation{Salimans2014}
+\citation{Kingma2014}
+\citation{Rezende2014}
+\citation{Kingma2015}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}MCMC}{2}{subsection.2.2}}
+\newlabel{sec:MCMC}{{2.2}{2}{}{subsection.2.2}{}}
+\abx@aux@page{10}{2}
+\newlabel{eq:Metropolis-Hastings}{{2}{2}{}{equation.2.2}{}}
+\abx@aux@page{11}{2}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Combining Variational Inference and MCMC}{2}{subsection.2.3}}
+\newlabel{sec:MCVI}{{2.3}{2}{}{subsection.2.3}{}}
+\abx@aux@page{12}{2}
+\newlabel{eq:MCVIAuxLowerBound}{{4}{2}{}{equation.2.4}{}}
+\abx@aux@page{13}{2}
+\abx@aux@page{14}{2}
+\citation{Duane1987}
+\citation{Neal2011}
+\citation{Neal2011}
+\abx@aux@page{15}{3}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {3}Hamiltonian Monte Carlo}{3}{section.3}}
+\newlabel{sec:HMC}{{3}{3}{}{section.3}{}}
+\abx@aux@page{16}{3}
+\abx@aux@page{17}{3}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Hamiltonian Dynamics}{3}{subsection.3.1}}
+\newlabel{eq:HamiltonsEquations}{{5}{3}{}{equation.3.5}{}}
+\newlabel{eq:NewtonsEquation}{{6}{3}{}{equation.3.6}{}}
+\abx@aux@page{18}{3}
+\citation{Neal2011}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Dynamics of a particle under Hamiltonian Dynamics computed using the leapfrog method: Each computed point along the discretized trajectory is indicated by a separate color ranging from dark blue (starting point) to dark red (final point). The left plot shows the position of the particle with the prescribed potential energy governing the motion represented by the contour plot. The centre plot depicts the momentum of the particle with the kinetic energy at each point indicated by the contours. In the plot on the right the energy distribution of the particle over time is given, with the potential energy in blue and the kinetic energy in red. Due to the discretization the total energy is not exactly conserved.}}{4}{figure.1}}
+\newlabel{fig:HMC_MOTION_1hmc_12lf}{{1}{4}{Dynamics of a particle under Hamiltonian Dynamics computed using the leapfrog method: Each computed point along the discretized trajectory is indicated by a separate color ranging from dark blue (starting point) to dark red (final point). The left plot shows the position of the particle with the prescribed potential energy governing the motion represented by the contour plot. The centre plot depicts the momentum of the particle with the kinetic energy at each point indicated by the contours. In the plot on the right the energy distribution of the particle over time is given, with the potential energy in blue and the kinetic energy in red. Due to the discretization the total energy is not exactly conserved}{figure.1}{}}
+\abx@aux@page{19}{4}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}The HMC algorithm}{4}{subsection.3.2}}
+\newlabel{sec:HMCAlgorithmSection}{{3.2}{4}{}{subsection.3.2}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Relating probability density to energy}{4}{subsubsection.3.2.1}}
+\citation{Betancourt2014}
+\citation{Girolami2011}
+\citation{Betancourt2014}
+\citation{Neal2011}
+\citation{Neal2011}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Choice of kinetic energy}{5}{subsubsection.3.2.2}}
+\abx@aux@page{20}{5}
+\abx@aux@page{21}{5}
+\abx@aux@page{22}{5}
+\newlabel{eq:KineticEnergy}{{11}{5}{}{equation.3.11}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.3}The algorithm}{5}{subsubsection.3.2.3}}
+\abx@aux@page{23}{5}
+\newlabel{eq:AcceptanceProbability}{{12}{5}{}{equation.3.12}{}}
+\@writefile{loa}{\defcounter {refsection}{0}\relax }\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces The Hamiltonian Monte Carlo algorithm}}{5}{algorithm.1}}
+\newlabel{alg:HMC}{{1}{5}{}{algorithm.1}{}}
+\abx@aux@page{24}{5}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Evolution of a particle under the HMC algorithm with 3 HMC steps consisting of 4 leapfrog steps each: Each computed point along the trajectory is indicated by a separate color ranging from dark blue (starting point) to dark red (final point). Thicker dots highlight points, where momentum resampling was performed. The left plot shows the position of the particle with the prescribed potential energy governing the motion represented by the contour plot. The centre plot depicts the momentum of the particle with the kinetic energy at each point indicated by the contours. Where the momentum was resampled, two identical dots are shown for the state before and after the resampling. In the plot on the right the energy distribution of the particle over time is given, with the potential energy in blue and the kinetic energy in red.}}{6}{figure.2}}
+\newlabel{fig:HMC_Motion}{{2}{6}{Evolution of a particle under the HMC algorithm with 3 HMC steps consisting of 4 leapfrog steps each: Each computed point along the trajectory is indicated by a separate color ranging from dark blue (starting point) to dark red (final point). Thicker dots highlight points, where momentum resampling was performed. The left plot shows the position of the particle with the prescribed potential energy governing the motion represented by the contour plot. The centre plot depicts the momentum of the particle with the kinetic energy at each point indicated by the contours. Where the momentum was resampled, two identical dots are shown for the state before and after the resampling. In the plot on the right the energy distribution of the particle over time is given, with the potential energy in blue and the kinetic energy in red}{figure.2}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Effect of the kinetic energy covariance matrix}{6}{subsection.3.3}}
+\newlabel{sec:EffectOfKineticEnergyChoice}{{3.3}{6}{}{subsection.3.3}{}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Evolution of an ensemble of 1000 particles under the HMC algorithm: The first row of plots shows the initial state of the system and the second row the state after an HMC. The plots on the left give the positions of the particles with the prescribed potential energy represented by the contour plot. The centre plots depict the arrival momenta of the particles with the kinetic energy indicated by the contours. The right-hand plots show histograms of the potential energies of the particles.}}{7}{figure.3}}
+\newlabel{fig:HMC_Effect_Illustration}{{3}{7}{Evolution of an ensemble of 1000 particles under the HMC algorithm: The first row of plots shows the initial state of the system and the second row the state after an HMC. The plots on the left give the positions of the particles with the prescribed potential energy represented by the contour plot. The centre plots depict the arrival momenta of the particles with the kinetic energy indicated by the contours. The right-hand plots show histograms of the potential energies of the particles}{figure.3}{}}
+\newlabel{eq:EvolutionQTransformed}{{14}{7}{}{equation.3.14}{}}
+\citation{Horowitz1991}
+\citation{Neal2011}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Partial momentum update}{8}{subsection.3.4}}
+\newlabel{sec:PartialMomentumUpdate}{{3.4}{8}{}{subsection.3.4}{}}
+\abx@aux@page{25}{8}
+\newlabel{eq:partialMomentumUpdate}{{16}{8}{}{equation.3.16}{}}
+\@writefile{loa}{\defcounter {refsection}{0}\relax }\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces The Hamiltonian Monte Carlo algorithm with partial momentum update}}{8}{algorithm.2}}
+\newlabel{alg:HMCWithPartial}{{2}{8}{}{algorithm.2}{}}
+\newlabel{eq:StateAfterAcceptReject}{{18}{8}{}{equation.3.18}{}}
+\citation{Salimans2014}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Flow chart illustrating the steps of the HMC algorithm with partial momentum update.}}{9}{figure.4}}
+\newlabel{fig:HMC_schematic}{{4}{9}{Flow chart illustrating the steps of the HMC algorithm with partial momentum update}{figure.4}{}}
+\abx@aux@page{26}{9}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {4}VI with HMC}{9}{section.4}}
+\newlabel{sec:HMCVI}{{4}{9}{}{section.4}{}}
+\abx@aux@page{27}{9}
+\newlabel{eq:VIwithHMCPotEnergy}{{19}{9}{}{equation.4.19}{}}
+\newlabel{sec:KinEnergyMayDependOnX}{{4}{9}{}{equation.4.19}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Deriving the variational lower bound}{9}{subsection.4.1}}
+\newlabel{eq:HMCVIAuxLowerBound}{{21}{10}{}{equation.4.21}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Transition densities without the acceptance step}{10}{subsection.4.2}}
+\newlabel{sec:TransitionDensitiesNoAcceptance}{{4.2}{10}{}{subsection.4.2}{}}
+\newlabel{eq:ForwardTransitionNoAcceptance}{{22}{10}{}{equation.4.22}{}}
+\newlabel{eq:qUDefinition}{{23}{10}{}{equation.4.23}{}}
+\newlabel{eq:ReverseTransitionNoAcceptance}{{24}{10}{}{equation.4.24}{}}
+\citation{Salimans2014}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Transition densities with the acceptance step}{11}{subsection.4.3}}
+\abx@aux@page{28}{11}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}Forward model}{11}{subsubsection.4.3.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}Reverse Model}{12}{subsubsection.4.3.2}}
+\newlabel{sec:TransDensitiesWithAcceptReverse}{{4.3.2}{12}{}{subsubsection.4.3.2}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Learning the mass matrix}{13}{subsection.4.4}}
+\newlabel{sec:MassMatrixChoice}{{4.4}{13}{}{subsection.4.4}{}}
+\citation{Kingma2014}
+\citation{Rezende2014}
+\citation{LeCun1998}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Computational Simplifications}{14}{subsection.4.5}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1}Simplifications for HMCVI without Partial Momentum Update}{14}{subsubsection.4.5.1}}
+\newlabel{sec:SimplificationWithoutPartialMomentumUpdate}{{4.5.1}{14}{}{subsubsection.4.5.1}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.2}Computing Expectations Explicitly}{14}{subsubsection.4.5.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {5}Experimental Results}{14}{section.5}}
+\newlabel{sec:Experiments}{{5}{14}{}{section.5}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Variational Auto Encoders}{14}{subsection.5.1}}
+\abx@aux@page{29}{14}
+\abx@aux@page{30}{14}
+\citation{Salakhutdinov2008}
+\citation{Salimans2014}
+\citation{Rezende2014}
+\citation{Hinton2012}
+\citation{Bergstra2010}
+\citation{Bastien2012}
+\citation{Kingma2015}
+\citation{Bayer2015}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}The dataset and the effects of data binarization}{15}{subsection.5.2}}
+\newlabel{sec:Dataset}{{5.2}{15}{}{subsection.5.2}{}}
+\abx@aux@page{31}{15}
+\abx@aux@page{32}{15}
+\abx@aux@page{33}{15}
+\abx@aux@page{34}{15}
+\abx@aux@page{35}{15}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Comparison of different binarization strategies on MNIST: The original (left) containing grey-scales was binarized using thresholding (middle) and stochastic binarization (right).}}{15}{figure.5}}
+\newlabel{fig:MNISTBinarizationComparison}{{5}{15}{Comparison of different binarization strategies on MNIST: The original (left) containing grey-scales was binarized using thresholding (middle) and stochastic binarization (right)}{figure.5}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Model Specifications}{15}{subsection.5.3}}
+\newlabel{sec:ModelSpecifications}{{5.3}{15}{}{subsection.5.3}{}}
+\abx@aux@page{36}{15}
+\abx@aux@page{37}{15}
+\abx@aux@page{38}{15}
+\abx@aux@page{39}{15}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Model Comparison}{16}{subsection.5.4}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion and Future Work}{16}{section.6}}
+\newlabel{sec:ConclAndFuture}{{6}{16}{}{section.6}{}}
+\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Comparison of the obtained lower bound and marginal log-likelihood estimates for different HMCVI configurations with a 2-dimensional (top) and a 20-dimensional latent space (bottom): \#HMC and \#LF give the number of used HMC and leapfrog steps respectively. The "Partial" column indicates, whether partial momentum updates were permitted. The sixth column gives the strategy used for the covariance matrix $M$ of the canonical momentum distribution (as described in section \ref  {sec:ModelSpecifications}) and the seventh column, whether the acceptance step was included and if so what approach was used. The last two columns report the lower bound $\mathcal  {L_\textrm  {aux}}$ and the estimated log-likelihood on the test set.}}{17}{table.1}}
+\newlabel{tab:Results}{{1}{17}{Comparison of the obtained lower bound and marginal log-likelihood estimates for different HMCVI configurations with a 2-dimensional (top) and a 20-dimensional latent space (bottom): \#HMC and \#LF give the number of used HMC and leapfrog steps respectively. The "Partial" column indicates, whether partial momentum updates were permitted. The sixth column gives the strategy used for the covariance matrix $M$ of the canonical momentum distribution (as described in section \ref {sec:ModelSpecifications}) and the seventh column, whether the acceptance step was included and if so what approach was used. The last two columns report the lower bound $\mathcal {L_\textrm {aux}}$ and the estimated log-likelihood on the test set}{table.1}{}}
+\abx@aux@page{40}{18}
+\abx@aux@page{41}{18}
+\abx@aux@page{42}{18}
+\abx@aux@page{43}{18}
+\abx@aux@page{44}{18}
+\abx@aux@page{45}{18}
+\abx@aux@page{46}{18}
+\abx@aux@page{47}{18}
+\abx@aux@page{48}{18}
+\abx@aux@page{49}{18}
+\abx@aux@page{50}{18}
+\abx@aux@page{51}{18}
+\abx@aux@page{52}{18}
+\abx@aux@page{53}{18}
+\abx@aux@page{54}{18}
+\abx@aux@page{55}{18}
+\abx@aux@page{56}{18}
+\abx@aux@page{57}{18}
+\abx@aux@page{58}{18}
+\abx@aux@page{59}{18}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{Appendices}{19}{section*.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{Appendix \numberline {A}Likelihood estimation by importance sampling}{19}{Appendix.1.A}}
+\newlabel{app:NLLestimateImportSampling}{{A}{19}{}{Appendix.1.A}{}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Potential energy surface for the observed digit shown in the inset: The contours indicate the potential energy surface produced by a trained model with a 2-dimensional latent space. The plot also shows the mean images produced by the decoding model at evenly spaced points of the latent space.}}{19}{figure.6}}
+\newlabel{fig:EnergySurfaceMNIST}{{6}{19}{Potential energy surface for the observed digit shown in the inset: The contours indicate the potential energy surface produced by a trained model with a 2-dimensional latent space. The plot also shows the mean images produced by the decoding model at evenly spaced points of the latent space}{figure.6}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{Appendix \numberline {B}Visualizations of latent space}{19}{Appendix.1.B}}
+\newlabel{app:LatentVisualizations}{{B}{19}{}{Appendix.1.B}{}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Illustration of the 2-dimensional latent space representation learnt by the model HMCVI 8 (see table\nobreakspace  {}\ref  {tab:Results}): To compensate for the Gaussian prior on the latent variables linearly spaced coordinates in the unit square were transformed using the inverse Gaussian cdf. Therefore the prior density in this view of latent space is uniform. For each coordinate the mean image produced by the decoder is shown. Additionally the latent space representation of the training dataset as produced by the enhanced encoder is depicted (transformed by the Gaussian cdf), where each digit class is indicated by a different color.}}{19}{figure.7}}
+\newlabel{fig:2d_latent_visualization}{{7}{19}{Illustration of the 2-dimensional latent space representation learnt by the model HMCVI 8 (see table~\ref {tab:Results}): To compensate for the Gaussian prior on the latent variables linearly spaced coordinates in the unit square were transformed using the inverse Gaussian cdf. Therefore the prior density in this view of latent space is uniform. For each coordinate the mean image produced by the decoder is shown. Additionally the latent space representation of the training dataset as produced by the enhanced encoder is depicted (transformed by the Gaussian cdf), where each digit class is indicated by a different color}{figure.7}{}}

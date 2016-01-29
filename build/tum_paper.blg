@@ -1,9 +1,61 @@
-[1] Config.pm:324> INFO - This is Biber 2.1
-[1] Config.pm:327> INFO - Logfile is 'build/tum_paper.blg'
-[89] biber-darwin:276> INFO - === Wed Jan 20, 2016, 18:26:12
-[89] Biber.pm:333> INFO - Reading 'build/tum_paper.bcf'
-[281] Biber.pm:645> INFO - Found 0 citekeys in bib section 0
-[282] Utils.pm:146> WARN - The file 'build/tum_paper.bcf' does not contain any citations!
-[318] bbl.pm:505> INFO - Writing 'build/tum_paper.bbl' with encoding 'ascii'
-[319] bbl.pm:596> INFO - Output to build/tum_paper.bbl
-[319] Biber.pm:106> INFO - WARNINGS: 1
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: tum_paper.aux
+The style file: biblatex.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: tum_paper-blx.bib
+Database file #2: bibliography/library.bib
+Biblatex version: 3.0
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+You've used 21 entries,
+            6047 wiz_defined-function locations,
+            1363 strings with 31964 characters,
+and the built_in function-call counts, 70432 in all, are:
+= -- 2293
+> -- 2217
+< -- 523
++ -- 694
+- -- 1011
+* -- 6752
+:= -- 4348
+add.period$ -- 0
+call.type$ -- 21
+change.case$ -- 241
+chr.to.int$ -- 34
+cite$ -- 40
+duplicate$ -- 8141
+empty$ -- 7737
+format.name$ -- 1654
+if$ -- 15388
+int.to.chr$ -- 0
+int.to.str$ -- 42
+missing$ -- 0
+newline$ -- 950
+num.names$ -- 856
+pop$ -- 6470
+preamble$ -- 1
+purify$ -- 320
+quote$ -- 0
+skip$ -- 3601
+stack$ -- 0
+substring$ -- 1104
+swap$ -- 3233
+text.length$ -- 566
+text.prefix$ -- 21
+top$ -- 1
+type$ -- 785
+warning$ -- 0
+while$ -- 460
+width$ -- 0
+write$ -- 928

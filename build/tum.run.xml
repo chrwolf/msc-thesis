@@ -44,13 +44,13 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>tum.bcf</file>
+      <file>tum.aux</file>
+      <file>tum-blx.bib</file>
     </provides>
     <requires type="dynamic">
       <file>tum.bbl</file>
     </requires>
     <requires type="static">
-      <file>blx-dm.def</file>
       <file>blx-compat.def</file>
       <file>biblatex.def</file>
       <file>authoryear.bbx</file>
@@ -62,13 +62,14 @@
     </requires>
   </internal>
   <external package="biblatex" priority="5" active="0">
-    <generic>biber</generic>
+    <generic>bibtex</generic>
     <cmdline>
-      <binary>biber</binary>
+      <binary>bibtex</binary>
+      <option>-min-crossrefs 2</option>
       <infile>tum</infile>
     </cmdline>
     <input>
-      <file>tum.bcf</file>
+      <file>tum.aux</file>
     </input>
     <output>
       <file>tum.bbl</file>
@@ -77,10 +78,14 @@
       <file>tum.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>tum.bcf</file>
+      <file>tum.aux</file>
+      <file>tum-blx.bib</file>
     </requires>
     <requires type="editable">
       <file>bibliography/literature.bib</file>
+    </requires>
+    <requires type="static">
+      <file>biblatex.bst</file>
     </requires>
   </external>
 </requests>
