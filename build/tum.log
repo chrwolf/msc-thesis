@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.7)  28 JAN 2016 15:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.7)  29 JAN 2016 03:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2136,11 +2136,11 @@ Package pdftex.def Info: pages/tum.pdf used on input line 12.
 LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/pplx/b/n' tried instead on input line 24.
 
-<pages/faculty.pdf, id=8, 30.1125pt x 33.12375pt>
+<pages/faculty.pdf, id=8, 34.14326pt x 34.14326pt>
 File: pages/faculty.pdf Graphic file (type pdf)
  <use pages/faculty.pdf>
 Package pdftex.def Info: pages/faculty.pdf used on input line 30.
-(pdftex.def)             Requested size: 56.9055pt x 62.60217pt.
+(pdftex.def)             Requested size: 56.9055pt x 56.90959pt.
 
 [1
 
@@ -2214,13 +2214,13 @@ File: pages/faculty.pdf Graphic file (type pdf)
 
 <use pages/faculty.pdf>
 Package pdftex.def Info: pages/faculty.pdf used on input line 30.
-(pdftex.def)             Requested size: 56.9055pt x 62.60217pt.
+(pdftex.def)             Requested size: 56.9055pt x 56.90959pt.
  [1
 
 
 
 ]) (./pages/disclaimer.tex [2])
-<tum_paper.pdf, id=64, 597.50829pt x 845.0471pt>
+<tum_paper.pdf, id=62, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
  <use tum_paper.pdf>
 Package pdftex.def Info: tum_paper.pdf used on input line 29.
@@ -2230,7 +2230,7 @@ File: tum_paper.pdf Graphic file (type pdf)
 <use tum_paper.pdf>
 Package pdftex.def Info: tum_paper.pdf used on input line 29.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
- <tum_paper.pdf, id=67, page=1, 597.50829pt x 845.0471pt>
+ <tum_paper.pdf, id=65, page=1, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 1>
@@ -2250,7 +2250,7 @@ File: tum_paper.pdf Graphic file (type pdf)
 Package pdftex.def Info: tum_paper.pdf, page1 used on input line 29.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 
-<tum_paper.pdf, id=68, page=2, 597.50829pt x 845.0471pt>
+<tum_paper.pdf, id=66, page=2, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 2>
@@ -2276,7 +2276,7 @@ Package pdftex.def Info: tum_paper.pdf, page1 used on input line 29.
 
 
  <build/tum_paper.pdf>]
-<tum_paper.pdf, id=133, page=3, 597.50829pt x 845.0471pt>
+<tum_paper.pdf, id=91, page=3, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 3>
@@ -2292,7 +2292,7 @@ File: tum_paper.pdf Graphic file (type pdf)
 Package pdftex.def Info: tum_paper.pdf, page2 used on input line 29.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [2 <build/tum_paper.pdf>]
-<tum_paper.pdf, id=158, page=4, 597.50829pt x 845.0471pt>
+<tum_paper.pdf, id=151, page=4, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 4>
@@ -2308,7 +2308,7 @@ File: tum_paper.pdf Graphic file (type pdf)
 Package pdftex.def Info: tum_paper.pdf, page3 used on input line 29.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [3 <build/tum_paper.pdf>]
-<tum_paper.pdf, id=173, page=5, 597.50829pt x 845.0471pt>
+<tum_paper.pdf, id=171, page=5, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 5>
@@ -2324,7 +2324,7 @@ File: tum_paper.pdf Graphic file (type pdf)
 Package pdftex.def Info: tum_paper.pdf, page4 used on input line 29.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [4 <build/tum_paper.pdf>]
-<tum_paper.pdf, id=230, page=6, 597.50829pt x 845.0471pt>
+<tum_paper.pdf, id=223, page=6, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 6>
@@ -2340,7 +2340,7 @@ File: tum_paper.pdf Graphic file (type pdf)
 Package pdftex.def Info: tum_paper.pdf, page5 used on input line 29.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [5 <build/tum_paper.pdf>]
-<tum_paper.pdf, id=236, page=7, 597.50829pt x 845.0471pt>
+<tum_paper.pdf, id=234, page=7, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 7>
@@ -2356,7 +2356,7 @@ File: tum_paper.pdf Graphic file (type pdf)
 Package pdftex.def Info: tum_paper.pdf, page6 used on input line 29.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [6 <build/tum_paper.pdf>]
-<tum_paper.pdf, id=282, page=8, 597.50829pt x 845.0471pt>
+<tum_paper.pdf, id=239, page=8, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 8>
@@ -2372,7 +2372,7 @@ File: tum_paper.pdf Graphic file (type pdf)
 Package pdftex.def Info: tum_paper.pdf, page7 used on input line 29.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [7 <build/tum_paper.pdf>]
-<tum_paper.pdf, id=295, page=9, 597.50829pt x 845.0471pt>
+<tum_paper.pdf, id=285, page=9, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 9>
@@ -2388,7 +2388,7 @@ File: tum_paper.pdf Graphic file (type pdf)
 Package pdftex.def Info: tum_paper.pdf, page8 used on input line 29.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [8 <build/tum_paper.pdf>]
-<tum_paper.pdf, id=300, page=10, 597.50829pt x 845.0471pt>
+<tum_paper.pdf, id=298, page=10, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 10>
@@ -2404,7 +2404,7 @@ File: tum_paper.pdf Graphic file (type pdf)
 Package pdftex.def Info: tum_paper.pdf, page9 used on input line 29.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [9 <build/tum_paper.pdf>]
-<tum_paper.pdf, id=305, page=11, 597.50829pt x 845.0471pt>
+<tum_paper.pdf, id=303, page=11, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 11>
@@ -2420,7 +2420,7 @@ File: tum_paper.pdf Graphic file (type pdf)
 Package pdftex.def Info: tum_paper.pdf, page10 used on input line 29.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [10 <build/tum_paper.pdf>]
-<tum_paper.pdf, id=311, page=12, 597.50829pt x 845.0471pt>
+<tum_paper.pdf, id=309, page=12, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 12>
@@ -2436,7 +2436,7 @@ File: tum_paper.pdf Graphic file (type pdf)
 Package pdftex.def Info: tum_paper.pdf, page11 used on input line 29.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [11 <build/tum_paper.pdf>]
-<tum_paper.pdf, id=321, page=13, 597.50829pt x 845.0471pt>
+<tum_paper.pdf, id=319, page=13, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 13>
@@ -2452,7 +2452,7 @@ File: tum_paper.pdf Graphic file (type pdf)
 Package pdftex.def Info: tum_paper.pdf, page12 used on input line 29.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [12 <build/tum_paper.pdf>]
-<tum_paper.pdf, id=326, page=14, 597.50829pt x 845.0471pt>
+<tum_paper.pdf, id=324, page=14, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 14>
@@ -2468,7 +2468,7 @@ File: tum_paper.pdf Graphic file (type pdf)
 Package pdftex.def Info: tum_paper.pdf, page13 used on input line 29.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [13 <build/tum_paper.pdf>]
-<tum_paper.pdf, id=331, page=15, 597.50829pt x 845.0471pt>
+<tum_paper.pdf, id=329, page=15, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 15>
@@ -2484,7 +2484,7 @@ File: tum_paper.pdf Graphic file (type pdf)
 Package pdftex.def Info: tum_paper.pdf, page14 used on input line 29.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [14 <build/tum_paper.pdf>]
-<tum_paper.pdf, id=336, page=16, 597.50829pt x 845.0471pt>
+<tum_paper.pdf, id=334, page=16, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 16>
@@ -2500,7 +2500,7 @@ File: tum_paper.pdf Graphic file (type pdf)
 Package pdftex.def Info: tum_paper.pdf, page15 used on input line 29.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [15 <build/tum_paper.pdf>]
-<tum_paper.pdf, id=351, page=17, 597.50829pt x 845.0471pt>
+<tum_paper.pdf, id=349, page=17, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 17>
@@ -2516,7 +2516,7 @@ File: tum_paper.pdf Graphic file (type pdf)
 Package pdftex.def Info: tum_paper.pdf, page16 used on input line 29.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [16 <build/tum_paper.pdf>]
-<tum_paper.pdf, id=357, page=18, 597.50829pt x 845.0471pt>
+<tum_paper.pdf, id=355, page=18, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 18>
@@ -2532,7 +2532,7 @@ File: tum_paper.pdf Graphic file (type pdf)
 Package pdftex.def Info: tum_paper.pdf, page17 used on input line 29.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [17 <build/tum_paper.pdf>]
-<tum_paper.pdf, id=367, page=19, 597.50829pt x 845.0471pt>
+<tum_paper.pdf, id=365, page=19, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 19>
@@ -2548,12 +2548,28 @@ File: tum_paper.pdf Graphic file (type pdf)
 Package pdftex.def Info: tum_paper.pdf, page18 used on input line 29.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [18 <build/tum_paper.pdf>]
+<tum_paper.pdf, id=375, page=20, 597.50829pt x 845.0471pt>
+File: tum_paper.pdf Graphic file (type pdf)
+
+<use tum_paper.pdf, page 20>
+Package pdftex.def Info: tum_paper.pdf, page20 used on input line 29.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: tum_paper.pdf Graphic file (type pdf)
+ <use tum_paper.pdf, page 20>
+Package pdftex.def Info: tum_paper.pdf, page20 used on input line 29.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 19>
 Package pdftex.def Info: tum_paper.pdf, page19 used on input line 29.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [19 <build/tum_paper.pdf>]
+File: tum_paper.pdf Graphic file (type pdf)
+
+<use tum_paper.pdf, page 20>
+Package pdftex.def Info: tum_paper.pdf, page20 used on input line 29.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [20 <build/tum_paper.pdf>]
 
 Package glossaries Warning: No \printglossary or \printglossaries found.
 (Remove \makeglossaries if you don't want any glossaries.)
@@ -2572,10 +2588,10 @@ Package logreq Info: Writing requests to 'tum.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52543 strings out of 493089
- 1131888 string characters out of 6134842
- 1797434 words of memory out of 5000000
- 55043 multiletter control sequences out of 15000+600000
+ 52547 strings out of 493089
+ 1131965 string characters out of 6134842
+ 1797433 words of memory out of 5000000
+ 55046 multiletter control sequences out of 15000+600000
  30662 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,18n,84p,10462b,1489s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2605,10 +2621,10 @@ blic/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
 1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
 ype1/urw/palatino/uplb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/ur
 w/palatino/uplr8a.pfb>
-Output written on build/tum.pdf (22 pages, 6419359 bytes).
+Output written on build/tum.pdf (23 pages, 6426177 bytes).
 PDF statistics:
- 1071 PDF objects out of 1200 (max. 8388607)
- 664 compressed objects within 7 object streams
- 22 named destinations out of 1000 (max. 500000)
- 19589 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 1076 PDF objects out of 1200 (max. 8388607)
+ 668 compressed objects within 7 object streams
+ 23 named destinations out of 1000 (max. 500000)
+ 19594 words of extra memory for PDF output out of 20736 (max. 10000000)
 

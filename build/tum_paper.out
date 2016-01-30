@@ -28,5 +28,6 @@
 \BOOKMARK [2][-]{subsection.5.4}{Model Comparison}{section.5}% 28
 \BOOKMARK [1][-]{section.6}{Conclusion and Future Work}{}% 29
 \BOOKMARK [1][-]{section*.2}{Appendices}{}% 30
-\BOOKMARK [1][-]{Appendix.1.A}{Appendix Likelihood estimation by importance sampling}{}% 31
-\BOOKMARK [1][-]{Appendix.1.B}{Appendix Visualizations of latent space}{}% 32
+\BOOKMARK [1][-]{Appendix.1.A}{Appendix Derivation of the reverse acceptance probability}{}% 31
+\BOOKMARK [1][-]{Appendix.1.B}{Appendix Likelihood estimation by importance sampling}{}% 32
+\BOOKMARK [1][-]{Appendix.1.C}{Appendix Visualizations of latent space}{}% 33
