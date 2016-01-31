@@ -85,33 +85,34 @@
 \citation{Betancourt2014}
 \citation{Neal2011}
 \citation{Neal2011}
+\newlabel{eq:JointDensity}{{9}{5}{}{equation.3.9}{}}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Choice of kinetic energy}{5}{subsubsection.3.2.2}}
 \abx@aux@page{20}{5}
 \abx@aux@page{21}{5}
 \abx@aux@page{22}{5}
-\newlabel{eq:KineticEnergy}{{11}{5}{}{equation.3.11}{}}
+\newlabel{eq:KineticEnergy}{{10}{5}{}{equation.3.10}{}}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.3}The algorithm}{5}{subsubsection.3.2.3}}
 \abx@aux@page{23}{5}
-\newlabel{eq:AcceptanceProbability}{{12}{5}{}{equation.3.12}{}}
+\newlabel{eq:AcceptanceProbability}{{11}{5}{}{equation.3.11}{}}
 \@writefile{loa}{\defcounter {refsection}{0}\relax }\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces The HMC algorithm}}{5}{algorithm.1}}
 \newlabel{alg:HMC}{{1}{5}{}{algorithm.1}{}}
 \abx@aux@page{24}{5}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Evolution of a particle under the HMC algorithm with 3 HMC steps consisting of 4 leapfrog steps each. Each computed point along the trajectory is indicated by a separate color ranging from dark blue (starting point) to dark red (final point). Thicker dots highlight points, where momentum resampling was performed. The left plot shows the position of the particle with the prescribed potential energy represented by the contour plot. The centre plot depicts the momentum of the particle with the kinetic energy at each point indicated by the contours. Where the momentum was resampled, two identical dots are shown for the state before and after the resampling. In the plot on the right the energy distribution of the particle over time is given, with the potential energy in blue and the kinetic energy in red.}}{6}{figure.2}}
+\newlabel{fig:HMC_MOTION_3hmc_04lf}{{2}{6}{Evolution of a particle under the HMC algorithm with 3 HMC steps consisting of 4 leapfrog steps each. Each computed point along the trajectory is indicated by a separate color ranging from dark blue (starting point) to dark red (final point). Thicker dots highlight points, where momentum resampling was performed. The left plot shows the position of the particle with the prescribed potential energy represented by the contour plot. The centre plot depicts the momentum of the particle with the kinetic energy at each point indicated by the contours. Where the momentum was resampled, two identical dots are shown for the state before and after the resampling. In the plot on the right the energy distribution of the particle over time is given, with the potential energy in blue and the kinetic energy in red}{figure.2}{}}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Effect of the kinetic energy covariance matrix}{6}{subsection.3.3}}
 \newlabel{sec:EffectOfKineticEnergyChoice}{{3.3}{6}{}{subsection.3.3}{}}
-\newlabel{eq:EvolutionQTransformed}{{14}{6}{}{equation.3.14}{}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Evolution of an ensemble of 1000 particles under the HMC algorithm: The first row of plots shows the initial state of the system and the second row the state after an HMC step. The plots on the left give the positions of the particles with the prescribed potential energy represented by the contour plot. The centre plots depict the arrival momenta of the particles with the kinetic energy indicated by the contours. The right-hand plots show histograms of the potential energies of the particles.}}{7}{figure.3}}
+\newlabel{fig:HMC_Effect_Illustration}{{3}{7}{Evolution of an ensemble of 1000 particles under the HMC algorithm: The first row of plots shows the initial state of the system and the second row the state after an HMC step. The plots on the left give the positions of the particles with the prescribed potential energy represented by the contour plot. The centre plots depict the arrival momenta of the particles with the kinetic energy indicated by the contours. The right-hand plots show histograms of the potential energies of the particles}{figure.3}{}}
+\newlabel{eq:EvolutionQTransformed}{{13}{7}{}{equation.3.13}{}}
 \citation{Horowitz1991}
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Evolution of a particle under the HMC algorithm with 3 HMC steps consisting of 4 leapfrog steps each. Each computed point along the trajectory is indicated by a separate color ranging from dark blue (starting point) to dark red (final point). Thicker dots highlight points, where momentum resampling was performed. The left plot shows the position of the particle with the prescribed potential energy represented by the contour plot. The centre plot depicts the momentum of the particle with the kinetic energy at each point indicated by the contours. Where the momentum was resampled, two identical dots are shown for the state before and after the resampling. In the plot on the right the energy distribution of the particle over time is given, with the potential energy in blue and the kinetic energy in red.}}{7}{figure.2}}
-\newlabel{fig:HMC_MOTION_3hmc_04lf}{{2}{7}{Evolution of a particle under the HMC algorithm with 3 HMC steps consisting of 4 leapfrog steps each. Each computed point along the trajectory is indicated by a separate color ranging from dark blue (starting point) to dark red (final point). Thicker dots highlight points, where momentum resampling was performed. The left plot shows the position of the particle with the prescribed potential energy represented by the contour plot. The centre plot depicts the momentum of the particle with the kinetic energy at each point indicated by the contours. Where the momentum was resampled, two identical dots are shown for the state before and after the resampling. In the plot on the right the energy distribution of the particle over time is given, with the potential energy in blue and the kinetic energy in red}{figure.2}{}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Partial momentum update}{7}{subsection.3.4}}
-\newlabel{sec:PartialMomentumUpdate}{{3.4}{7}{}{subsection.3.4}{}}
-\abx@aux@page{25}{7}
-\newlabel{eq:partialMomentumUpdate}{{16}{7}{}{equation.3.16}{}}
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Evolution of an ensemble of 1000 particles under the HMC algorithm: The first row of plots shows the initial state of the system and the second row the state after an HMC step. The plots on the left give the positions of the particles with the prescribed potential energy represented by the contour plot. The centre plots depict the arrival momenta of the particles with the kinetic energy indicated by the contours. The right-hand plots show histograms of the potential energies of the particles.}}{8}{figure.3}}
-\newlabel{fig:HMC_Effect_Illustration}{{3}{8}{Evolution of an ensemble of 1000 particles under the HMC algorithm: The first row of plots shows the initial state of the system and the second row the state after an HMC step. The plots on the left give the positions of the particles with the prescribed potential energy represented by the contour plot. The centre plots depict the arrival momenta of the particles with the kinetic energy indicated by the contours. The right-hand plots show histograms of the potential energies of the particles}{figure.3}{}}
+\citation{Neal2011}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Partial momentum update}{8}{subsection.3.4}}
+\newlabel{sec:PartialMomentumUpdate}{{3.4}{8}{}{subsection.3.4}{}}
+\abx@aux@page{25}{8}
+\newlabel{eq:partialMomentumUpdate}{{15}{8}{}{equation.3.15}{}}
 \@writefile{loa}{\defcounter {refsection}{0}\relax }\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces The HMC algorithm with partial momentum updates}}{8}{algorithm.2}}
 \newlabel{alg:HMCWithPartial}{{2}{8}{}{algorithm.2}{}}
-\newlabel{eq:StateAfterAcceptReject}{{17}{8}{}{equation.3.17}{}}
-\citation{Neal2011}
+\newlabel{eq:StateAfterAcceptReject}{{16}{8}{}{equation.3.16}{}}
 \citation{Salimans2014}
 \@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Flow chart illustrating the steps of the HMC algorithm with partial momentum updates.}}{9}{figure.4}}
 \newlabel{fig:HMC_schematic}{{4}{9}{Flow chart illustrating the steps of the HMC algorithm with partial momentum updates}{figure.4}{}}
@@ -119,21 +120,21 @@
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {4}VI with HMC}{9}{section.4}}
 \newlabel{sec:HMCVI}{{4}{9}{}{section.4}{}}
 \abx@aux@page{27}{9}
-\newlabel{eq:VIwithHMCPotEnergy}{{18}{9}{}{equation.4.18}{}}
-\newlabel{sec:KinEnergyMayDependOnX}{{4}{9}{}{equation.4.18}{}}
+\newlabel{eq:VIwithHMCPotEnergy}{{17}{9}{}{equation.4.17}{}}
+\newlabel{sec:KinEnergyMayDependOnX}{{4}{9}{}{equation.4.17}{}}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Deriving the variational lower bound}{9}{subsection.4.1}}
-\newlabel{eq:HMCVIAuxLowerBound}{{20}{9}{}{equation.4.20}{}}
+\newlabel{eq:HMCVIAuxLowerBound}{{19}{9}{}{equation.4.19}{}}
 \citation{Salimans2014}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Transition densities without the acceptance step}{10}{subsection.4.2}}
 \newlabel{sec:TransitionDensitiesNoAcceptance}{{4.2}{10}{}{subsection.4.2}{}}
-\newlabel{eq:ForwardTransitionNoAcceptance}{{21}{10}{}{equation.4.21}{}}
-\newlabel{eq:qUDefinition}{{22}{10}{}{equation.4.22}{}}
-\newlabel{eq:ReverseTransitionNoAcceptance}{{23}{10}{}{equation.4.23}{}}
+\newlabel{eq:ForwardTransitionNoAcceptance}{{20}{10}{}{equation.4.20}{}}
+\newlabel{eq:qUDefinition}{{21}{10}{}{equation.4.21}{}}
+\newlabel{eq:ReverseTransitionNoAcceptance}{{22}{10}{}{equation.4.22}{}}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Transition densities with the acceptance step}{10}{subsection.4.3}}
 \abx@aux@page{28}{11}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}Forward model}{11}{subsubsection.4.3.1}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}Reverse model}{12}{subsubsection.4.3.2}}
-\newlabel{sec:TransDensitiesWithAcceptReverse}{{4.3.2}{12}{}{subsubsection.4.3.2}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}Reverse model}{11}{subsubsection.4.3.2}}
+\newlabel{sec:TransDensitiesWithAcceptReverse}{{4.3.2}{11}{}{subsubsection.4.3.2}{}}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Learning the mass matrix}{12}{subsection.4.4}}
 \newlabel{sec:MassMatrixChoice}{{4.4}{12}{}{subsection.4.4}{}}
 \citation{Kingma2014}
@@ -142,6 +143,11 @@
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1}Simplifications for HMCVI without partial momentum updates}{13}{subsubsection.4.5.1}}
 \newlabel{sec:SimplificationWithoutPartialMomentumUpdate}{{4.5.1}{13}{}{subsubsection.4.5.1}{}}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.2}Computing expectations explicitly}{13}{subsubsection.4.5.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {5}Experimental Results}{13}{section.5}}
+\newlabel{sec:Experiments}{{5}{13}{}{section.5}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Variational Auto-Encoders}{13}{subsection.5.1}}
+\abx@aux@page{29}{13}
+\abx@aux@page{30}{13}
 \citation{LeCun1998}
 \citation{Salakhutdinov2008}
 \citation{Salimans2014}
@@ -152,11 +158,6 @@
 \citation{Bastien2012}
 \citation{Kingma2015}
 \citation{Bayer2015}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {5}Experimental Results}{14}{section.5}}
-\newlabel{sec:Experiments}{{5}{14}{}{section.5}{}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Variational Auto-Encoders}{14}{subsection.5.1}}
-\abx@aux@page{29}{14}
-\abx@aux@page{30}{14}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}The dataset and the effects of data binarization}{14}{subsection.5.2}}
 \newlabel{sec:Dataset}{{5.2}{14}{}{subsection.5.2}{}}
 \abx@aux@page{31}{14}
@@ -169,10 +170,10 @@
 \abx@aux@page{36}{14}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Model Specifications}{14}{subsection.5.3}}
 \newlabel{sec:ModelSpecifications}{{5.3}{14}{}{subsection.5.3}{}}
-\abx@aux@page{37}{15}
-\abx@aux@page{38}{15}
-\abx@aux@page{39}{15}
-\abx@aux@page{40}{15}
+\abx@aux@page{37}{14}
+\abx@aux@page{38}{14}
+\abx@aux@page{39}{14}
+\abx@aux@page{40}{14}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Model Comparison}{15}{subsection.5.4}}
 \@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Comparison of the obtained lower bound and marginal log-likelihood estimates for different HMCVI configurations with a 2-dimensional (top) and a 20-dimensional latent space (bottom). \#HMC and \#LF give the number of used HMC and leapfrog steps respectively. The fifth column indicates, whether partial momentum updates were permitted. The sixth column gives the strategy used for the covariance matrix $M$ of the canonical momentum distribution and the seventh column, whether the acceptance step was included and, if so, what approach was used (as described in section \ref  {sec:ModelSpecifications}). The last two columns report the lower bound $\mathcal  {L_\textrm  {aux}}$ and the estimated NLL on the test set.}}{16}{table.1}}
 \newlabel{tab:Results}{{1}{16}{Comparison of the obtained lower bound and marginal log-likelihood estimates for different HMCVI configurations with a 2-dimensional (top) and a 20-dimensional latent space (bottom). \#HMC and \#LF give the number of used HMC and leapfrog steps respectively. The fifth column indicates, whether partial momentum updates were permitted. The sixth column gives the strategy used for the covariance matrix $M$ of the canonical momentum distribution and the seventh column, whether the acceptance step was included and, if so, what approach was used (as described in section \ref {sec:ModelSpecifications}). The last two columns report the lower bound $\mathcal {L_\textrm {aux}}$ and the estimated NLL on the test set}{table.1}{}}
@@ -184,8 +185,8 @@
 \abx@aux@page{44}{17}
 \abx@aux@page{45}{17}
 \abx@aux@page{46}{17}
-\abx@aux@page{47}{18}
-\abx@aux@page{48}{18}
+\abx@aux@page{47}{17}
+\abx@aux@page{48}{17}
 \abx@aux@page{49}{18}
 \abx@aux@page{50}{18}
 \abx@aux@page{51}{18}

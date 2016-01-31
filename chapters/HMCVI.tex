@@ -2,12 +2,12 @@
 \label{sec:HMCVI}
 As suggested by \textcite{Salimans2014} HMC is a very good MCMC method to be used within MCVI as introduced in section~\ref{sec:MCVI}, because it is very efficient, usually requiring fewer steps than other methods for good convergence. However, some care must be taken in the derivation of the auxiliary lower bound, since now the state of the generated Markov chain is not just the variable of interest $z$, but also the auxiliary momentum variable, which we will call $v$ (as it is related to velocity). The complete state is thus given by the $2d$-dimensional $s=(z, v)$, corresponding to the state $(q, p)$ in the previous section. The appropriate potential energy $U(z)$ is derived from the posterior density $p(z|x) \propto p(x, z)$, which is known upto a multiplicative constant from Bayes' Theorem:
 \begin{equation} \label{eq:VIwithHMCPotEnergy}
-U(z) = -\log(p(x, z))
+U(z) = -\log p(x, z).
 \end{equation}
 
-Unless stated otherwise, the results below will hold for the more general algorithm with partial momentum updates, from which the standard HMC algorithm can be recovered by setting $\alpha = 0$. For notational ease we will write $u_{t-1}$ for the updated momentum, which was referred to as $p^*_{t-1}$ in the previous section.
-\label{sec:KinEnergyMayDependOnX}
-For the initial state of the chain we sample the position from a parametric approximation $q_0(z_0|x)$ and the momentum from the distribution $P_\textrm{kin}(v_0|x)$ corresponding to the chosen kinetic energy, so the density of the initial state is $q_0(s_0|x)=q_0(z_0|x) \cdot P_\textrm{kin}(v_0|x)$. Interestingly, there is no theoretical reason for the kinetic energy to be independent of $x$. This can be exploited to improve the quality of the bound (see section~\ref{sec:MassMatrixChoice} below).
+Unless stated otherwise, the results below will hold for the more general algorithm with partial momentum updates, from which the standard HMC algorithm can be recovered by setting $\alpha = 0$. For notational ease we will write $u_{t-1}$ for the updated momentum, which was referred to as $p^*_{t-1}$ in the previous section. 
+
+For the initial state of the chain we sample the position from a parametric approximation $q_0(z_0|x)$ and the momentum from the distribution $f_\textrm{kin}(v_0|x)$ corresponding to the chosen kinetic energy, so the density of the initial state is $q_0(s_0|x)=q_0(z_0|x) \cdot f_\textrm{kin}(v_0|x)$. Interestingly, there is no theoretical reason for the kinetic energy to be independent of $x$. This can be exploited to improve the quality of the bound (see section~\ref{sec:MassMatrixChoice} below). \label{sec:KinEnergyMayDependOnX}
 
 \subsection{Deriving the variational lower bound}
 
@@ -25,7 +25,7 @@ Using the Markov property the density of the forward chain can be decomposed int
 \begin{equation} \label{eq:HMCVIAuxLowerBound}
 \begin{split}
 &\mathcal{L_\textrm{aux}} = \E_{q(s_0, \ldots, s_T|x)} \Big[ \log p(x, z_T) - \log q_0(z_0|x) \\
-&\;+ \log r_{\textrm{final}}(v_T | z_T, x) - \log P_\textrm{kin}(v_0|x)  \\ 
+&\;+ \log r_{\textrm{final}}(v_T | z_T, x) - \log f_\textrm{kin}(v_0|x)  \\ 
 &\;+ \sum \limits_{t=1}^T \big( \log r(s_{t-1}|s_t, t, x) - \log q(s_t|s_{t-1}, x) \big) \Big].
 \end{split}
 \end{equation}
@@ -45,7 +45,7 @@ q(s_t|&s_{t-1}, x) = q'(revHD(s_t)|s_{t-1}, x) \\
 \end{equation}
 where $(z^*_{t-1}, u_{t-1}) \coloneqq revHD(z_t, v_t)$. With $v_{\textrm{samp}} \coloneqq (u_{t-1} - \alpha \cdot v_{t-1})/{\sqrt{1 - \alpha^2}}$, the momentum drawn from the canonical momentum distribution in this step, we can simplify the density of the updated momentum
 \begin{equation} \label{eq:qUDefinition}
-q_U(u_{t-1}|v_{t-1}, x) = P_\textrm{kin}(v_{\textrm{samp}}|x) \cdot (\frac{1}{\sqrt{1 - \alpha^2}})^{d}.
+q_U(u_{t-1}|v_{t-1}, x) = f_\textrm{kin}(v_{\textrm{samp}}|x) \cdot (\frac{1}{\sqrt{1 - \alpha^2}})^{d}.
 \end{equation}
 
 For the reverse model $r(s_{t-1}|s_t, t, x)$ we can also exploit the properties of HD to simplify the model to be learnt (with the same notation):
@@ -102,7 +102,7 @@ where we write $z_{\textrm{revHD}}$ and $v_{\textrm{revHD}}$ for the projections
 
 As we will see below, the reverse model densities will also contain a $d$-dimensional Dirac $\delta$-function in each summand, so we can apply the trick introduced in section~\ref{sec:TransitionDensitiesNoAcceptance} to replace $\delta$-functions by indicator functions. Here, the indicator functions can be taken to indicate, whether the proposed state was accepted (in the first summand) or rejected (in the second), because the probability of exactly achieving the equality inside the $\delta$-function in the opposite case is negligible, i.e.\ if the move is accepted, $z_t = z_{t-1}$ will not occur in practice. In the following, we will write $\mathbb{I}_\textrm{acc}$ for this indicator.
 
-Thus, we can regard each summand as treating one of the acceptance/rejection cases. Writing $u_{t-1}$ for the updated velocity generated in the HMC algorithm, we have $u_{t-1} = v_{revHD}$ in the first summand and $u_{t-1} = -v_t$ in the second summand. In other words, the $q_U$ term in both summands is $q_U(u_{t-1}|v_{t-1}, x)$. Also, the $p_\textrm{accept}$ term is always computed from $u_{t-1}$ and the current position $z_{t-1}$, so the transition density can easily be calculated during the sampling process as
+Thus, we can regard each summand as treating one of the acceptance/rejection cases. Writing $u_{t-1}$ for the updated momentum generated in the HMC algorithm, we have $u_{t-1} = v_{revHD}$ in the first summand and $u_{t-1} = -v_t$ in the second summand. In other words, the $q_U$ term in both summands is $q_U(u_{t-1}|v_{t-1}, x)$. Also, the $p_\textrm{accept}$ term is always computed from $u_{t-1}$ and the current position $z_{t-1}$, so the transition density can easily be calculated during the sampling process as
 \begin{align}
 \begin{split}
 &q(s_t|s_{t-1}, x) = q_U(u_{t-1}|v_{t-1}, x) \\
@@ -167,11 +167,11 @@ With this last component for the computation of the auxiliary lower bound, we ar
 \label{sec:MassMatrixChoice}
 In its usual application as a sampling algorithm, the freedom in the configuration of the HMC is often a curse, since a lot of parameters have to be specified, for example the mass matrix and the step size. These choices may then dramatically change the performance of the algorithm. In our application, however, we can side-step this issue by allowing all continuous parameters of the algorithm to be learnt, in particular the mass matrix $M$. As explained in section~\ref{sec:EffectOfKineticEnergyChoice}, choosing a specific mass matrix is equivalent to a rescaling of the $z$-space, which may improve the convergence of the algorithm. It is important to keep in mind, that the space is not actually transformed, but that the mass matrix makes the algorithm behave as if the space was transformed.
 
-In addition to this indirect contribution to the lower bound through improved convergence, the mass matrix also directly appears in the lower bound as the covariance matrix of the canonical momentum distribution. From the lower bound and the transition densities derived in the previous sections we see that for each HMC step a term $-\log P_\textrm{kin}(v_\textrm{samp}|x)$ appears in the bound. $P_\textrm{kin}$ is the density of the canonical momentum distribution, a zero-mean multivariate normal distribution with covariance matrix $M$, and $v_\textrm{samp}$ is a sample from this distribution. In the lower bound the expectation of this term is taken, so the contribution to the lower bound is
+In addition to this indirect contribution to the lower bound through improved convergence, the mass matrix also directly appears in the lower bound as the covariance matrix of the canonical momentum distribution. From the lower bound and the transition densities derived in the previous sections we see that for each HMC step a term $-\log f_\textrm{kin}(v_\textrm{samp}|x)$ appears in the bound. $f_\textrm{kin}$ is the density of the canonical momentum distribution, a zero-mean multivariate normal distribution with covariance matrix $M$, and $v_\textrm{samp}$ is a sample from this distribution. In the lower bound the expectation of this term is taken, so the contribution to the lower bound is
 \begin{equation}
 \begin{split}
-&\E_{P_\textrm{kin}(v|x)} \Big[ -\log P_\textrm{kin}(v|x) \Big] \\
-&\quad= \frac{1}{2}\E_{P_\textrm{kin}} \left[d\log(2 \pi) + \log(|M|) +  v^T M^{-1} v \right] \\
+&\E_{f_\textrm{kin}(v|x)} \Big[ -\log f_\textrm{kin}(v|x) \Big] \\
+&\quad= \frac{1}{2}\E_{f_\textrm{kin}} \left[d\log(2 \pi) + \log(|M|) +  v^T M^{-1} v \right] \\
 &\quad= \frac{1}{2} \Big( d \log(2 \pi) + \log(|M|) + d \Big), 
 \end{split}
 \end{equation}
@@ -180,13 +180,13 @@ since $v^T M^{-1} v$ has a $\chi^2$-distribution on $d$ degrees of freedom, whic
 %Assuming for simplicity that $M$ is diagonal, this simplifies to
 %\begin{equation}
 %\begin{split}
-%\E_{P_\textrm{kin}(v|x)}& \Big[ -\log P_\textrm{kin}(v|x) \Big] \\
+%\E_{f_\textrm{kin}(v|x)}& \Big[ -\log f_\textrm{kin}(v|x) \Big] \\
 %&= \frac{d}{2} \Big( \log(2 \pi) + 1 \Big) + \frac{1}{2} \sum_{i=1}^d \log(m_i),
 %\end{split}
 %\end{equation}
 %where $m_i$ is the $i^{\textrm{th}}$ diagonal element of $M$.
 %
-In the reverse model we have the density $r_V(v_{t-1}|z_{t-1}, u_{t-1}, t, x)$ capturing the distribution of the arrival momentum. In other words, this tries to learn the momentum distribution at the end of the HD simulations. Thus, it should be closely related to the momentum distribution at the start of the HD simulations, which is exactly $P_\textrm{kin}$. In particular when assuming a multivariate normal density for $r_V$, their covariance matrices should be similar, so their direct contributions to the lower bound via forward and reverse densities should offset each other and not have a significant influence on the training of $M$.
+In the reverse model we have the density $r_V(v_{t-1}|z_{t-1}, u_{t-1}, t, x)$ capturing the distribution of the arrival momentum. In other words, this tries to learn the momentum distribution at the end of the HD simulations. Thus, it should be closely related to the momentum distribution at the start of the HD simulations, which is exactly $f_\textrm{kin}$. In particular when assuming a multivariate normal density for $r_V$, their covariance matrices should be similar, so their direct contributions to the lower bound via forward and reverse densities should offset each other and not have a significant influence on the training of $M$.
 
 The straight forward approach for the choice of mass matrix is to learn a single global mass matrix, which is used for all observed variables $x$. This corresponds to a global rescaling of the latent space for all computations within the algorithm. However, the potential energy $U(z)$ defining the landscape on which the dynamics are simulated, may strongly depend on $x$ (see equation~\eqref{eq:VIwithHMCPotEnergy}) and require a different rescaling for each $x$ for optimal performance. Therefore, a global rescaling will probably only have limited effect on the lower bound.
 
@@ -198,10 +198,10 @@ So far we have presented the theory behind HMCVI with the goal of mathematical c
 
 \subsubsection{Simplifications for HMCVI without partial momentum updates}
 \label{sec:SimplificationWithoutPartialMomentumUpdate}
-If we do not perform partial momentum updates, then the initial momentum $v_0$ is immediately replaced in the first step of the HMC algorithm. Thus, it should not influence the lower bound at all. And indeed, if $\alpha = 0$, $r(v_0|z_0, u_0, t=1, x) = P_\textrm{kin}(v_0|x)$ is the optimal choice for $r$ if $t=1$, since no more information about $v_0$ is available. In the loss only these terms contain $v_0$ and they appear with opposite sign in the loss, so by simply cancelling them instead of learning their equality we can reduce the computational load.
+If we do not perform partial momentum updates, then the initial momentum $v_0$ is immediately replaced in the first step of the HMC algorithm. Thus, it should not influence the lower bound at all. And indeed, if $\alpha = 0$, $r(v_0|z_0, u_0, t=1, x) = f_\textrm{kin}(v_0|x)$ is the optimal choice for $r$ if $t=1$, since no more information about $v_0$ is available. In the loss only these terms contain $v_0$ and they appear with opposite sign in the loss, so by simply cancelling them instead of learning their equality we can reduce the computational load.
 
 Furthermore, without partial momentum updates the updated momentum $u_t$ is directly sampled from the canonical momentum distribution, so it does not contain any information about the previous momentum $v_t$. Therefore, $u_t$ should not be used as an input in any of the reverse models, if $\alpha=0$. Conveniently, in this case the density predicting the arrival momentum $r_V$ has the same inputs as the final momentum model $r_\textrm{final}$, so we can combine them by setting $r_\textrm{final}(v_T | z_T, x) = r_V(v_T | z_T, T+1, x)$.
 
 \subsubsection{Computing expectations explicitly}
 
-The lower bound $\mathcal{L_\textrm{aux}}$ is given as the expectation of a sum of terms in equation~\eqref{eq:HMCVIAuxLowerBound}, but for some of these terms the expectation can be computed explicitly, reducing the noise in the stochastic gradient estimates used for training. In particular, the forward model density terms can usually be solved analytically, because the expectation over the sampled paths is actually the expectation over all the random variables determining this path. These random variables are the initial state sampled from $q_0$ and the various momentum updates all sampled from the canonical momentum distribution $P_\textrm{kin}$. For each of these variables the NLL appears as part of the lower bound and the expectation of the NLL of a random variable is actually its entropy, which is known in closed form for most distributions.
+The lower bound $\mathcal{L_\textrm{aux}}$ is given as the expectation of a sum of terms in equation~\eqref{eq:HMCVIAuxLowerBound}, but for some of these terms the expectation can be computed explicitly, reducing the noise in the stochastic gradient estimates used for training. In particular, the forward model density terms can usually be solved analytically, because the expectation over the sampled paths is actually the expectation over all the random variables determining this path. These random variables are the initial state sampled from $q_0$ and the various momentum updates all sampled from the canonical momentum distribution $f_\textrm{kin}$. For each of these variables the NLL appears as part of the lower bound and the expectation of the NLL of a random variable is actually its entropy, which is known in closed form for most distributions.
