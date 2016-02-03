@@ -1,0 +1,126 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.5 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{Neal2011}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Neal}{N.}%
+     {Radford~M.}{R.~M.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{hamiltonian dynamics,mcmc}
+  \strng{namehash}{NRM1}
+  \strng{fullhash}{NRM1}
+  \field{labelyear}{2011}
+  \field{sortinit}{N}
+  \field{abstract}{%
+  Hamiltonian dynamics can be used to produce distant proposals for the
+  Metropolis algorithm, thereby avoiding the slow exploration of the state
+  space that results from the diffusive behaviour of simple random-walk
+  proposals. Though originating in physics, Hamiltonian dynamics can be applied
+  to most problems with continuous state spaces by simply introducing
+  fictitious "momentum" variables. A key to its usefulness is that Hamiltonian
+  dynamics preserves volume, and its trajectories can thus be used to define
+  complex mappings without the need to account for a hard-to-compute Jacobian
+  factor - a property that can be exactly maintained even when the dynamics is
+  approximated by discretizing time. In this review, I discuss theoretical and
+  practical aspects of Hamiltonian Monte Carlo, and present some of its
+  variations, including using windows of states for deciding on acceptance or
+  rejection, computing trajectories using fast approximations, tempering during
+  the course of a trajectory to handle isolated modes, and short-cut methods
+  that prevent useless trajectories from taking much computation time.%
+  }
+  \verb{doi}
+  \verb doi:10.1201/b10905-6
+  \endverb
+  \verb{eprint}
+  \verb 1206.1901
+  \endverb
+  \field{isbn}{9781420079418}
+  \field{issn}{<null>}
+  \field{pages}{113\bibrangedash 162}
+  \field{title}{{MCMC using Hamiltonian dynamics}}
+  \verb{url}
+  \verb http://arxiv.org/abs/1206.1901
+  \endverb
+  \verb{file}
+  \verb :Users/christopher/Documents/Masterarbeit/Literatur/MCMC using Hamilton
+  \verb ian dynamics.pdf:pdf
+  \endverb
+  \field{journaltitle}{Handbook of Markov Chain Monte Carlo}
+  \field{eprinttype}{arXiv}
+  \field{year}{2011}
+\endentry
+
+\entry{Salimans2014}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Salimans}{S.}%
+     {Tim}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Kingma}{K.}%
+     {Diederik~P.}{D.~P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Welling}{W.}%
+     {Max}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{ST+1}
+  \strng{fullhash}{STKDPWM1}
+  \field{labelyear}{2015}
+  \field{sortinit}{S}
+  \field{abstract}{%
+  Recent advances in stochastic gradient variational inference have made it
+  possible to perform variational Bayesian inference with posterior
+  approximations containing auxiliary random variables. This enables us to
+  explore a new synthesis of variational inference and Monte Carlo methods
+  where we incorporate one or more steps of MCMC into our variational
+  approximation. By doing so we obtain a rich class of inference algorithms
+  bridging the gap between variational methods and MCMC, and offering the best
+  of both worlds: fast posterior approximation through the maximization of an
+  explicit objective, with the option of trading off additional computation for
+  additional accuracy. We describe the theoretical foundations that make this
+  possible and show some promising first results.%
+  }
+  \verb{eprint}
+  \verb 1410.6460
+  \endverb
+  \field{title}{{Markov Chain Monte Carlo and Variational Inference: Bridging
+  the Gap}}
+  \verb{url}
+  \verb http://arxiv.org/abs/1410.6460
+  \endverb
+  \verb{file}
+  \verb :Users/christopher/Documents/Masterarbeit/Literatur/MCMC and Variationa
+  \verb l Inference.pdf:pdf
+  \endverb
+  \field{journaltitle}{ICML 2015}
+  \field{eprinttype}{arXiv}
+  \field{year}{2015}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

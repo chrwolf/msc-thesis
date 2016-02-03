@@ -1,0 +1,26 @@
+% \begin{tabular}{@{}l@{}c@{}r@{$\;\;\;$}r@{}c@{}r@{$\;\;$}r@{}c@{}r@{}}
+% \toprule
+% & \phantom{abc}  & \multicolumn{2}{c}{CPU} & \phantom{abc} & \multicolumn{2}{c}{GPU} & \phantom{abc}  & \tn 
+% \cmidrule{3-4} \cmidrule{6-7} 
+% $r_{z}$ && $e_{rel}$  & $t$ && $e_{rel}$  & $t$ && $M$\tn 
+% &&  [$10^{-5}$]  & [ms] && [$10^{-5}$]  & [ms]&& [MB]\tn 
+
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Name & \#HMC & \#LF & Partial & $M$ & Accept & $-\mathcal{L}_{\textrm{aux}}$ & $- \log(p(x)) \approx$ \tn 
+\midrule
+Basic VI & 0 & 0 & - & - & - & 92.35 & 88.27 \tn 
+HMCVI 1 & 1 & 12 & - & Global & - & 89.77 & 87.77 \tn 
+HMCVI 2 & 2 & 6 & - & Global & - & 89.83 & 87.53 \tn 
+\rowcolor{red!20}
+HMCVI 3 & 3 & 4 & - & Global & - & 90.24 & 87.56 \tn 
+\rowcolor{red!20}
+HMCVI 4 & 3 & 4 & Yes & Global & - & 90.15 & 87.49 \tn
+\rowcolor{red!20}
+HMCVI 5 & 3 & 4 & - & NN & - & 90.23 & 87.30 \tn 
+\rowcolor{red!20}
+HMCVI 6 & 3 & 4 & Yes & NN & - & \textbf{89.72} & 87.44 \tn 
+HMCVI 7 & 3 & 4 & - & Global & Yes & 91.40 & 87.28 \tn
+HMCVI 8 & 3 & 4 & - & NN & Yes & ??? & ??? \tn 
+\bottomrule
+\end{tabular}

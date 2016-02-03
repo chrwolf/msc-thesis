@@ -33,7 +33,7 @@ It is important to note that the target distribution density appears both in the
 \label{sec:MCVI}
 For sampling from the intractable posterior $p(z|x)$ via MCMC, we could choose the unobserved variable $z$ as state and the exact posterior $p(z|x)$ as target distribution. In contrast to the parametrized distribution $q_\theta(z|x)$ in VI, this gives us an asymptotically exact approximation of the posterior. However, it is also computationally expensive and does not offer an explicit objective function (which is e.g.\ needed for training the generative model $p(x, z)$).
 
-To integrate the adaptiveness of MCMC into VI \textcite{Salimans2014} have proposed a powerful combination of these two methods, which they call Markov Chain Variational Inference (MCVI). The idea is to interpret the Markov Chain obtained in MCMC as a variational approximation $q(z_0, \dots, z_T|x) = q_{0}(z_0|x) \cdot \prod_{t=1}^T q(z_t|z_{t-1}, x)$. Due to the additional variables $y = (z_0, \dots, z_{T-1})$ ($z_T$ corresponds to the output of standard VI), the lower bound must be modified:
+To integrate the adaptiveness of MCMC into VI \textcite{Salimans2014} have proposed a powerful combination of these two methods, which they call Markov Chain Variational Inference (MCVI). The idea is to interpret the Markov chain obtained in MCMC as a variational approximation $q(z_0, \dots, z_T|x) = q_{0}(z_0|x) \cdot \prod_{t=1}^T q(z_t|z_{t-1}, x)$. Due to the additional variables $y = (z_0, \dots, z_{T-1})$ ($z_T$ corresponds to the output of standard VI), the lower bound must be modified:
 \begin{equation}
 \begin{split}
 \log &p(x) \geq \mathcal{L} \\

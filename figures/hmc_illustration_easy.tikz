@@ -1,0 +1,20 @@
+% Define block styles
+\tikzstyle{decision} = [diamond, draw, fill=white!20, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=white!20, 
+    text width=11em, text centered, rounded corners, minimum height=1em]
+\tikzstyle{line} = [draw, -latex']
+    
+\begin{tikzpicture}[node distance = 1.5cm, auto]
+    % Place nodes
+    \node [block] (initstate) {$s_{t-1}=(z_{t-1}, v_{t-1})$};
+    \node [block, below of=initstate] (updatedstate) {$s^*_{t-1}=(z_{t-1}, v_{\textrm{sampled}})$};
+    \node [block, below of=updatedstate] (propstate) {$\tilde{s}_t = HD(s^*_{t-1})$};
+    \node [block, below of=propstate, xshift=-2cm, text width=9em] (newaccepted) {${s}_t \coloneqq \tilde{s}_t$};
+    \node [block, below of=propstate, xshift=2cm, text width=9em] (newrejected) {${s}_t \coloneqq s^*_{t-1}$};
+
+    % Draw edges
+    \path [line] (initstate) -> node[right] {momentum resample} (updatedstate);
+    \path [line] (updatedstate) -> node[right] {Hamiltonian Dynamics} (propstate);
+    \path [line] (propstate) -> node[left] {IF accepted\;\;} (newaccepted);
+    \path [line] (propstate) -> node[right] {\;\;IF rejected} (newrejected);
+\end{tikzpicture}

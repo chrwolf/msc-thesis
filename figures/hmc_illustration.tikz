@@ -17,6 +17,6 @@
     \path [line] (initstate) -> node[right] {momentum update} (updatedstate);
     \path [line] (updatedstate) -> node[right] {Hamiltonian Dynamics} (postHDstate);
     \path [line] (postHDstate) -> node[right] {momentum negation} (propstate);
-    \path [line] (propstate) -> node[left] {IF accepted} (newaccepted);
-    \path [line] (propstate) -> node[right] {IF rejected} (newrejected);
+    \path [line] (propstate) -> node[left] {IF accepted\;\;} (newaccepted);
+    \path [line] (propstate) -> node[right] {\;\;IF rejected} (newrejected);
 \end{tikzpicture}

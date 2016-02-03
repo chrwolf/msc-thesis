@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.7)  31 JAN 2016 20:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.7)  2 FEB 2016 13:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1544,8 +1544,12 @@ LaTeX Info: Redefining \nameref on input line 15.
 \openout6 = `tum_paper.out'.
 
 Package scrhack Info: undefining \float@addtolists on input line 15.
- (./pages/abstract.tex)
-(./chapters/introduction.tex
+ (./pages/abstract.tex
+Underfull \hbox (badness 1616) in paragraph at lines 2--3
+[]\OT1/cmr/m/n/10 Variational in-fer-ence lies at the core of
+ []
+
+) (./chapters/introduction.tex
 Underfull \hbox (badness 1199) in paragraph at lines 5--6
 []\OT1/cmr/m/n/10 Variational in-fer-ence ap-prox-i-mates the in-tractable
  []
@@ -1858,27 +1862,27 @@ l.1 \section
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \hbox (badness 7925) in paragraph at lines 45--45
+Underfull \hbox (badness 7925) in paragraph at lines 44--44
 [][]\OT1/cmr/m/n/10 Bayer, J., C. Os-endor-fer, S. Diot-Girard, T.
  []
 
 
-Underfull \hbox (badness 6348) in paragraph at lines 45--45
+Underfull \hbox (badness 6348) in paragraph at lines 44--44
 [][]\OT1/cmr/m/n/10 Hinton, G. E., N. Sri-vas-tava, A. Krizhevsky,
  []
 
 
-Underfull \hbox (badness 1509) in paragraph at lines 45--45
+Underfull \hbox (badness 1509) in paragraph at lines 44--44
 \OT1/cmr/m/n/10 I. Sutskever, and R. R. Salakhut-di-nov (2012).
  []
 
 
-Underfull \hbox (badness 2189) in paragraph at lines 45--45
+Underfull \hbox (badness 2189) in paragraph at lines 44--44
 \OT1/cmr/m/n/10 ``Im-prov-ing neu-ral net-works by pre-vent-ing co-
  []
 
 
-Underfull \hbox (badness 7925) in paragraph at lines 45--45
+Underfull \hbox (badness 7925) in paragraph at lines 44--44
 \OT1/cmr/m/n/10 adaptation of fea-ture de-tec-tors''. In: \OT1/cmr/m/it/10 arXi
 v:
  []
@@ -1890,14 +1894,9 @@ Package Fancyhdr Warning: \headheight is too small (10.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [17]
-Underfull \hbox (badness 1205) in paragraph at lines 45--45
+Underfull \hbox (badness 1205) in paragraph at lines 44--44
 \OT1/cmr/m/n/10 Carlo al-go-rithm''. In: \OT1/cmr/m/it/10 Physics Let-ters B \O
 T1/cmr/m/n/10 268.2,
- []
-
-
-Underfull \hbox (badness 1112) in paragraph at lines 45--45
-[][]\OT1/cmr/m/n/10 Kingma, D. P. and J. L. Ba (2015). ``Adam: a
  []
 
 
@@ -1932,7 +1931,7 @@ lds,
  []
 
 
-<figures/vae_pot_energy_example_with_inset.pdf, id=515, 1077.06137pt x 1056.202
+<figures/vae_pot_energy_example_with_inset.pdf, id=498, 1077.06137pt x 1056.202
 18pt>
 File: figures/vae_pot_energy_example_with_inset.pdf Graphic file (type pdf)
  <use figures/vae_pot_energy_example_with_inset.pdf>
@@ -1958,7 +1957,7 @@ s been already used, duplicate ignored
                                                   \fi \fi 
 l.62 
       <./figures/vae_pot_energy_example_with_inset.pdf>]
-<figures/learned_representation_train_points_small.pdf, id=825, 914.21548pt x 8
+<figures/learned_representation_train_points_small.pdf, id=808, 914.21548pt x 8
 60.01299pt>
 File: figures/learned_representation_train_points_small.pdf Graphic file (type 
 pdf)
@@ -1967,8 +1966,8 @@ Package pdftex.def Info: figures/learned_representation_train_points_small.pdf
 used on input line 67.
 (pdftex.def)             Requested size: 234.8775pt x 220.94731pt.
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 49.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 49.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 48.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 48.
 
 
 Package Fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -1981,13 +1980,13 @@ Package Fancyhdr Warning: \headheight is too small (10.0pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.49 \end{document}
+l.48 \end{document}
                    
 
  <./figures/learned_representation_train_points_small.pdf>]
 (./tum_paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 48.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 48.
 Package rerunfilecheck Info: File `tum_paper.out' has not changed.
 (rerunfilecheck)             Checksum: 55F1B96664C50DDC61E4F60CCCF3D5C5;2516.
 Package logreq Info: Writing requests to 'tum_paper.run.xml'.
@@ -1995,11 +1994,11 @@ Package logreq Info: Writing requests to 'tum_paper.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43894 strings out of 493089
- 984554 string characters out of 6134842
- 1524144 words of memory out of 5000000
+ 43893 strings out of 493089
+ 984548 string characters out of 6134842
+ 1524196 words of memory out of 5000000
  46536 multiletter control sequences out of 15000+600000
- 12697 words of font info for 48 fonts, out of 8000000 for 9000
+ 12529 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,19n,84p,10442b,1088s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -2022,13 +2021,12 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2015/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2015/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf-dist
-/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on tum_paper.pdf (20 pages, 4741309 bytes).
+t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on tum_paper.pdf (20 pages, 4728046 bytes).
 PDF statistics:
- 955 PDF objects out of 1000 (max. 8388607)
- 713 compressed objects within 8 object streams
+ 934 PDF objects out of 1000 (max. 8388607)
+ 694 compressed objects within 7 object streams
  122 named destinations out of 1000 (max. 500000)
  307 words of extra memory for PDF output out of 10000 (max. 10000000)
 
