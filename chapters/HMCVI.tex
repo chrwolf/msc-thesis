@@ -1,4 +1,4 @@
-\section{VI with HMC}
+\section{Variational inference with HMC}
 \label{sec:HMCVI}
 As suggested by \textcite{Salimans2014} HMC is a very good MCMC method to be used within MCVI as introduced in section~\ref{sec:MCVI}, because it is very efficient, usually requiring fewer steps than other methods for good convergence. However, some care must be taken in the derivation of the auxiliary lower bound, since now the state of the generated Markov chain is not just the variable of interest $z$, but also the auxiliary momentum variable, which we will call $v$ (as it is related to velocity). The complete state is thus given by the $2d$-dimensional $s=(z, v)$, corresponding to the state $(q, p)$ in the previous section. The appropriate potential energy $U(z)$ is derived from the posterior density $p(z|x) \propto p(x, z)$, which is known upto a multiplicative constant from Bayes' Theorem:
 \begin{equation} \label{eq:VIwithHMCPotEnergy}

@@ -20,7 +20,7 @@
   \name{author}{9}{}{%
     {{}%
      {Bastien}{B.}%
-     {F}{F}%
+     {Fr{\'{e}}d{\'{e}}ric}{F.}%
      {}{}%
      {}{}}%
     {{}%
@@ -76,16 +76,12 @@
   performance relative to Torch7, a recently introduced machine learning
   library, and to RNNLM, a C++ library targeted at recurrent neural networks.%
   }
-  \verb{eprint}
-  \verb arXiv:1211.5590v1
-  \endverb
-  \field{pages}{1\bibrangedash 10}
   \field{title}{{Theano: new features and speed improvements}}
   \verb{url}
   \verb http://arxiv.org/abs/1211.5590
   \endverb
-  \field{journaltitle}{arXiv preprint arXiv: {\ldots}}
-  \field{eprinttype}{arXiv}
+  \field{journaltitle}{Deep Learning and Unsupervised Feature Learning NIPS
+  2012 Workshop}
   \field{year}{2012}
 \endentry
 
@@ -202,9 +198,7 @@
   how to use Theano, outlines the scope of the compiler, provides benchmarks on
   both CPU and GPU processors, and explains its overall design%
   }
-  \field{booktitle}{9th Python in Science Conference}
-  \field{number}{Scipy}
-  \field{pages}{1\bibrangedash 7}
+  \field{booktitle}{9th Python in Science Conference (SciPy)}
   \field{title}{{Theano: a CPU and GPU math compiler in Python}}
   \verb{url}
   \verb http://www-etud.iro.umontreal.ca/{~}wardefar/publications/theano{\_}sci
@@ -261,18 +255,15 @@
   \verb{eprint}
   \verb 1410.5110
   \endverb
-  \field{pages}{1\bibrangedash 45}
   \field{title}{{The Geometric Foundations of Hamiltonian Monte Carlo}}
   \verb{url}
   \verb http://arxiv.org/abs/1410.5110v1$\backslash$npapers2://publication/uuid
   \verb /7D906BF6-2FFE-4AC3-9A60-C68E3CCBF6F7
   \endverb
-  \field{volume}{stat.ME}
   \verb{file}
   \verb :Users/christopher/Documents/Masterarbeit/Literatur/The Geometric Found
   \verb ations of HMC.pdf:pdf
   \endverb
-  \field{journaltitle}{arXiv.org}
   \field{eprinttype}{arXiv}
   \field{year}{2014}
 \endentry
@@ -376,9 +367,6 @@
   \verb{doi}
   \verb 10.1111/j.1467-9868.2010.00765.x
   \endverb
-  \verb{eprint}
-  \verb 0907.1100
-  \endverb
   \field{issn}{13697412}
   \field{number}{2}
   \field{pages}{123\bibrangedash 214}
@@ -391,11 +379,10 @@
   \endverb
   \field{journaltitle}{Journal of the Royal Statistical Society. Series B:
   Statistical Methodology}
-  \field{eprinttype}{arXiv}
   \field{year}{2011}
 \endentry
 
-\entry{Gregor2015}{article}{}
+\entry{Gregor2015}{inproceedings}{}
   \name{author}{5}{}{%
     {{}%
      {Gregor}{G.}%
@@ -437,15 +424,13 @@
   the Street View House Numbers dataset, it generates images that cannot be
   distin-guished from real data with the naked eye.%
   }
-  \verb{eprint}
-  \verb 1502.04623
-  \endverb
+  \field{booktitle}{Proceedings of the 32nd International Conference on Machine
+  Learning}
+  \field{pages}{1462\bibrangedash 1471}
   \field{title}{{DRAW: A Recurrent Neural Network For Image Generation}}
   \verb{file}
   \verb :Users/christopher/Documents/Masterarbeit/Literatur/DRAW.pdf:pdf
   \endverb
-  \field{journaltitle}{ICML}
-  \field{eprinttype}{arXiv}
   \field{year}{2015}
 \endentry
 
@@ -499,7 +484,6 @@
   \verb{eprint}
   \verb 1207.0580
   \endverb
-  \field{pages}{1\bibrangedash 18}
   \field{title}{{Improving neural networks by preventing co-adaptation of
   feature detectors}}
   \verb{url}
@@ -508,7 +492,6 @@
   \verb{file}
   \verb :Users/christopher/Documents/Masterarbeit/Literatur/Dropout.pdf:pdf
   \endverb
-  \field{journaltitle}{arXiv: 1207.0580}
   \field{eprinttype}{arXiv}
   \field{year}{2012}
 \endentry
@@ -557,9 +540,6 @@
   \verb{doi}
   \verb citeulike-article-id:10852147
   \endverb
-  \verb{eprint}
-  \verb 1206.7051
-  \endverb
   \field{isbn}{1532-4435}
   \field{issn}{1532-4435}
   \field{number}{3}
@@ -575,7 +555,6 @@
   \verb df
   \endverb
   \field{journaltitle}{Journal of Machine Learning Research}
-  \field{eprinttype}{arXiv}
   \field{year}{2013}
 \endentry
 
@@ -672,9 +651,6 @@
   \verb{doi}
   \verb 10.1023/A:1007665907178
   \endverb
-  \verb{eprint}
-  \verb arXiv:1103.5254v3
-  \endverb
   \field{isbn}{0262600323}
   \field{issn}{08856125}
   \field{number}{2}
@@ -686,7 +662,6 @@
   \verb Introduction.pdf:pdf
   \endverb
   \field{journaltitle}{Machine Learning}
-  \field{eprinttype}{arXiv}
   \field{year}{1999}
 \endentry
 
@@ -725,17 +700,13 @@
   Adam works well in practice and compares favorably to other stochastic
   optimization methods.%
   }
-  \verb{eprint}
-  \verb arXiv:1412.6980v5
-  \endverb
-  \field{pages}{1\bibrangedash 13}
   \field{title}{{Adam: a Method for Stochastic Optimization}}
   \verb{file}
   \verb :Users/christopher/Documents/Masterarbeit/Literatur/Adam - A Method for
   \verb  Stochastic Optimization.pdf:pdf
   \endverb
-  \field{journaltitle}{International Conference on Learning Representations}
-  \field{eprinttype}{arXiv}
+  \field{journaltitle}{International Conference on Learning Representations
+  2015}
   \field{year}{2015}
 \endentry
 
@@ -771,11 +742,6 @@
   standard gradient-based stochastic optimization methods. Theoretical
   advantages are reflected in experimental results.%
   }
-  \verb{eprint}
-  \verb 1312.6114
-  \endverb
-  \field{number}{Ii}
-  \field{pages}{1\bibrangedash 14}
   \field{title}{{Stochastic Gradient VB and the Variational Auto-Encoder}}
   \verb{url}
   \verb http://arxiv.org/abs/1312.6114
@@ -784,8 +750,8 @@
   \verb :Users/christopher/Documents/Masterarbeit/Literatur/Stochastic Gradient
   \verb  VB and the Variational Auto-Encoder.pdf:pdf
   \endverb
-  \field{journaltitle}{International Conference on Learning Representationsm}
-  \field{eprinttype}{arXiv}
+  \field{journaltitle}{International Conference on Learning Representations
+  2014}
   \field{year}{2014}
 \endentry
 
@@ -831,9 +797,6 @@
   \verb{doi}
   \verb 10.1109/5.726791
   \endverb
-  \verb{eprint}
-  \verb 1102.0183
-  \endverb
   \field{isbn}{0018-9219}
   \field{issn}{00189219}
   \field{number}{11}
@@ -841,7 +804,6 @@
   \field{title}{{Gradient Based Learning Applied to Document Recognition}}
   \field{volume}{86}
   \field{journaltitle}{Proceedings of the IEEE}
-  \field{eprinttype}{arXiv}
   \field{year}{1998}
 \endentry
 
@@ -878,9 +840,6 @@
   \verb{doi}
   \verb doi:10.1201/b10905-6
   \endverb
-  \verb{eprint}
-  \verb 1206.1901
-  \endverb
   \field{isbn}{9781420079418}
   \field{issn}{<null>}
   \field{pages}{113\bibrangedash 162}
@@ -893,11 +852,10 @@
   \verb ian dynamics.pdf:pdf
   \endverb
   \field{journaltitle}{Handbook of Markov Chain Monte Carlo}
-  \field{eprinttype}{arXiv}
   \field{year}{2011}
 \endentry
 
-\entry{Rezende2015}{article}{}
+\entry{Rezende2015}{inproceedings}{}
   \name{author}{2}{}{%
     {{}%
      {Rezende}{R.}%
@@ -933,19 +891,17 @@
   variational approaches, provides a clear improvement in performance and
   applicability of variational inference.%
   }
-  \verb{eprint}
-  \verb 1505.05770
-  \endverb
+  \field{booktitle}{Proceedings of the 32nd International Conference on Machine
+  Learning}
+  \field{pages}{1530\bibrangedash 1538}
   \field{title}{{Variational Inference with Normalizing Flows}}
   \verb{url}
   \verb http://arxiv.org/abs/1505.05770
   \endverb
-  \field{volume}{37}
   \verb{file}
   \verb :Users/christopher/Documents/Masterarbeit/Literatur/Variational Inferen
   \verb ce with Normalizing Flows.pdf:pdf
   \endverb
-  \field{eprinttype}{arXiv}
   \field{year}{2015}
 \endentry
 
@@ -984,11 +940,8 @@
   realistic samples, provides accurate imputations of missing data and is a
   useful tool for high-dimensional data visualisation.%
   }
-  \field{booktitle}{Proceedings of The 31st International Conference on Machine
+  \field{booktitle}{Proceedings of the 31st International Conference on Machine
   Learning}
-  \verb{eprint}
-  \verb 1401.4082
-  \endverb
   \field{isbn}{9781634393973}
   \field{pages}{1278\bibrangedash 1286}
   \field{title}{{Stochastic Backpropagation and Approximate Inference in Deep
@@ -1002,7 +955,6 @@
   \verb :Users/christopher/Documents/Masterarbeit/Literatur/Stochastic Backprop
   \verb agation and Approximate Inference in Deep Generative Models.pdf:pdf
   \endverb
-  \field{eprinttype}{arXiv}
   \field{year}{2014}
 \endentry
 
@@ -1042,9 +994,6 @@
   \verb{doi}
   \verb 10.1214/154957804100000024
   \endverb
-  \verb{eprint}
-  \verb 0404033v4
-  \endverb
   \field{isbn}{1549-5787}
   \field{issn}{1549-5787}
   \field{pages}{20\bibrangedash 71}
@@ -1058,12 +1007,10 @@
   \verb  Markov chains and MCMC algorithms.pdf:pdf
   \endverb
   \field{journaltitle}{Probability Surveys}
-  \field{eprinttype}{arXiv}
-  \field{eprintclass}{arXiv:math}
   \field{year}{2004}
 \endentry
 
-\entry{Salakhutdinov2008}{article}{}
+\entry{Salakhutdinov2008}{inproceedings}{}
   \name{author}{2}{}{%
     {{}%
      {Salakhutdinov}{S.}%
@@ -1098,6 +1045,8 @@
   obtaining quantitative results that would allow us to directly assess the
   performance of Deep Belief Networks as generative models of data.%
   }
+  \field{booktitle}{Proceedings of the 25th International Conference on Machine
+  Learning}
   \verb{doi}
   \verb 10.1145/1390156.1390266
   \endverb
@@ -1108,17 +1057,14 @@
   \verb{url}
   \verb http://hdl.handle.net/1842/4588
   \endverb
-  \field{volume}{25}
   \verb{file}
   \verb :Users/christopher/Documents/Masterarbeit/Literatur/Binarized MNIST Urs
   \verb prungspaper.pdf:pdf
   \endverb
-  \field{journaltitle}{Proceedings of the 25th International Conference on
-  Machine Learning}
   \field{year}{2008}
 \endentry
 
-\entry{Salimans2014}{article}{}
+\entry{Salimans2014}{inproceedings}{}
   \name{author}{3}{}{%
     {{}%
      {Salimans}{S.}%
@@ -1153,9 +1099,9 @@
   additional accuracy. We describe the theoretical foundations that make this
   possible and show some promising first results.%
   }
-  \verb{eprint}
-  \verb 1410.6460
-  \endverb
+  \field{booktitle}{Proceedings of the 32nd International Conference on Machine
+  Learning}
+  \field{pages}{1218\bibrangedash 1226}
   \field{title}{{Markov Chain Monte Carlo and Variational Inference: Bridging
   the Gap}}
   \verb{url}
@@ -1165,8 +1111,6 @@
   \verb :Users/christopher/Documents/Masterarbeit/Literatur/MCMC and Variationa
   \verb l Inference.pdf:pdf
   \endverb
-  \field{journaltitle}{ICML}
-  \field{eprinttype}{arXiv}
   \field{year}{2015}
 \endentry
 

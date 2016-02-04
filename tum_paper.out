@@ -1,17 +1,17 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Variational Inference and MCMC}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Variational Inference}{section.2}% 3
+\BOOKMARK [1][-]{section.2}{Variational inference and MCMC}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Variational inference}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{MCMC}{section.2}% 4
 \BOOKMARK [2][-]{subsection.2.3}{Combining variational inference and MCMC}{section.2}% 5
 \BOOKMARK [1][-]{section.3}{Hamiltonian Monte Carlo}{}% 6
-\BOOKMARK [2][-]{subsection.3.1}{Hamiltonian Dynamics}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.1}{Hamiltonian dynamics}{section.3}% 7
 \BOOKMARK [2][-]{subsection.3.2}{The HMC algorithm}{section.3}% 8
 \BOOKMARK [3][-]{subsubsection.3.2.1}{Relating probability density to energy}{subsection.3.2}% 9
 \BOOKMARK [3][-]{subsubsection.3.2.2}{Choice of kinetic energy}{subsection.3.2}% 10
 \BOOKMARK [3][-]{subsubsection.3.2.3}{The algorithm}{subsection.3.2}% 11
 \BOOKMARK [2][-]{subsection.3.3}{Effect of the kinetic energy covariance matrix}{section.3}% 12
-\BOOKMARK [2][-]{subsection.3.4}{Partial momentum update}{section.3}% 13
-\BOOKMARK [1][-]{section.4}{VI with HMC}{}% 14
+\BOOKMARK [2][-]{subsection.3.4}{Partial momentum updates}{section.3}% 13
+\BOOKMARK [1][-]{section.4}{Variational inference with HMC}{}% 14
 \BOOKMARK [2][-]{subsection.4.1}{Deriving the variational lower bound}{section.4}% 15
 \BOOKMARK [2][-]{subsection.4.2}{Transition densities without the acceptance step}{section.4}% 16
 \BOOKMARK [2][-]{subsection.4.3}{Transition densities with the acceptance step}{section.4}% 17
@@ -21,12 +21,12 @@
 \BOOKMARK [2][-]{subsection.4.5}{Computational simplifications}{section.4}% 21
 \BOOKMARK [3][-]{subsubsection.4.5.1}{Simplifications for HMCVI without partial momentum updates}{subsection.4.5}% 22
 \BOOKMARK [3][-]{subsubsection.4.5.2}{Computing expectations explicitly}{subsection.4.5}% 23
-\BOOKMARK [1][-]{section.5}{Experimental Results}{}% 24
-\BOOKMARK [2][-]{subsection.5.1}{Variational Auto-Encoders}{section.5}% 25
+\BOOKMARK [1][-]{section.5}{Experimental results}{}% 24
+\BOOKMARK [2][-]{subsection.5.1}{Variational auto-encoders}{section.5}% 25
 \BOOKMARK [2][-]{subsection.5.2}{The dataset and the effects of data binarization}{section.5}% 26
-\BOOKMARK [2][-]{subsection.5.3}{Model Specifications}{section.5}% 27
-\BOOKMARK [2][-]{subsection.5.4}{Model Comparison}{section.5}% 28
-\BOOKMARK [1][-]{section.6}{Conclusion and Future Work}{}% 29
+\BOOKMARK [2][-]{subsection.5.3}{Model specifications}{section.5}% 27
+\BOOKMARK [2][-]{subsection.5.4}{Model comparison}{section.5}% 28
+\BOOKMARK [1][-]{section.6}{Conclusion and future work}{}% 29
 \BOOKMARK [1][-]{section*.2}{Appendices}{}% 30
 \BOOKMARK [1][-]{Appendix.1.A}{Appendix Derivation of the reverse acceptance probability}{}% 31
 \BOOKMARK [1][-]{Appendix.1.B}{Appendix Likelihood estimation by importance sampling}{}% 32

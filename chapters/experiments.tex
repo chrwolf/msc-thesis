@@ -1,6 +1,6 @@
-\section{Experimental Results}
+\section{Experimental results}
 \label{sec:Experiments}
-\subsection{Variational Auto-Encoders}
+\subsection{Variational auto-encoders}
 
 A very interesting and powerful application of VI is the so-called Variational Auto-Encoder (VAE), which was introduced by \textcite{Kingma2014} and \textcite{Rezende2014} independently. VAEs are used to estimate the probability density of a set of observations $\{x_i\}_{i=1, \dots, N}$ by assuming the existence of a more concise latent representation or \textit{encoding} $z_i$ for each observed point. This model can be trained by optimizing the lower bound $\mathcal{L}$ on the marginal likelihood $p(x_i)$ not only w.r.t.\ the parameters of the posterior approximation, but also w.r.t.\ the parameters of a generative model for $p(x_i, z_i)$ at the same time. Here, the generative model usually consists of a fixed prior for the latent variables $\pi(z_i)$ and a conditional distribution or \textit{decoder} $p(x_i|z_i)$ to be learnt. Correspondingly, the posterior approximation $q(z_i|x_i)$ is referred to as the \textit{encoder}.
 
@@ -23,7 +23,7 @@ The most common binarization strategy for MNIST is stochastic binarization, whic
 \label{fig:MNISTBinarizationComparison}
 \end{figure}
 
-\subsection{Model Specifications}
+\subsection{Model specifications}
 \label{sec:ModelSpecifications}
 We will evaluate HMCVI on the MNIST dataset with stochastic binarization for better comparability. The training data was resampled as described above before each iteration. For the validation and test set five random draws from the unbinarized sets were used. The HMCVI algorithm was implemented in python using the package Theano \parencite{Bergstra2010, Bastien2012}. All models were trained for several thousand epochs using Adam \parencite{Kingma2015} integrated with Theano by the package climin \parencite{Bayer2015}. Adam was run with the default parameters except for the step size, which was set to $10^{-4}$ or $5 \cdot 10^{-5}$.
 
@@ -37,7 +37,7 @@ For the canonical momentum distribution, which also specifies the kinetic energy
 
 All parameters were independently initialized from a Gaussian distribution $N(0, 0.01)$. In HMCVI experiments the generative model and initial encoder model were then copied from a previously trained VAE (the same for all HMCVI experiments with the same number of latent variables). With this initialization the HMCVI methods showed much better training results than with fully random initialization.
 
-\subsection{Model Comparison}
+\subsection{Model comparison}
 
 \begin{table*}[ht]
 \centering
@@ -58,4 +58,4 @@ Allowing partial momentum updates and the covariance matrix to depend on the obs
 
 For the two-dimensional latent space, including the acceptance step returned worse results, but as to be expected the more complicated reverse probability model (HMCVI 10) outperformed the approach, where the chain was assumed to have already converged (HMCVI 9). The weaker performance of HMCVI with acceptance step in this case is probably due to the fact, that the short chains being used here have not nearly converged to their invariant distribution yet. Therefore, the reduced mixing due to the rejection of proposals outweighs possible gains from the improved posterior approximation, since only with the acceptance step the chain will actually converge to the true posterior. 
 
-A different picture, however, presents itself for the 20-dimensional latent space: Again the lower bound is worse, when the acceptance step is included (HMCVI 18 and 19), but regarding the NLL estimate the models learnt with the acceptance step outperform all other models. This means that the inclusion of the acceptance step improved the quality of the VAE. This indicates, that in the larger latent space it is beneficial to reject some proposed transitions in order to obtain a better approximation of the posterior and this improved approximation allows a better decoder to be learnt. The poor quality of the bound is presumably due to the lacking flexibility of the reverse model, which has to deal with more noise and more complicated distributions, if the acceptance step is included (see section~\ref{sec:TransDensitiesWithAcceptReverse}).
+A different picture, however, presents itself for the 20-dimensional latent space: Again the lower bound is worse, when the acceptance step is included (HMCVI 18 and 19), but regarding the NLL estimate the models learnt with the acceptance step outperform all other models. This means that the inclusion of the acceptance step improved the quality of the VAE. This indicates, that in the larger latent space it is beneficial to reject some proposed transitions in order to obtain a better approximation of the posterior and this improved approximation allows a better decoder to be learnt. The poor quality of the bound is presumably due to the lacking flexibility of the reverse model, which has to deal with more noise and more complicated distributions, if the acceptance step is included (see section~\ref{sec:TransDensitiesWithAcceptReverse}). By combining the acceptance step with the input-dependent kinetic energy (HMCVI 20) the learnt model could be further improved as expected.

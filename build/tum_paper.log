@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.7)  29 JAN 2016 03:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.7)  3 FEB 2016 22:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1544,8 +1544,12 @@ LaTeX Info: Redefining \nameref on input line 15.
 \openout6 = `tum_paper.out'.
 
 Package scrhack Info: undefining \float@addtolists on input line 15.
- (./pages/abstract.tex)
-(./chapters/introduction.tex
+ (./pages/abstract.tex
+Underfull \hbox (badness 1616) in paragraph at lines 2--3
+[]\OT1/cmr/m/n/10 Variational in-fer-ence lies at the core of
+ []
+
+) (./chapters/introduction.tex
 Underfull \hbox (badness 1199) in paragraph at lines 5--6
 []\OT1/cmr/m/n/10 Variational in-fer-ence ap-prox-i-mates the in-tractable
  []
@@ -1568,10 +1572,16 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-Underfull \hbox (badness 3229) in paragraph at lines 42--44
+Underfull \hbox (badness 3229) in paragraph at lines 45--47
 \OT1/cmr/m/n/10 where $\OML/cmm/m/it/10 r\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 y\OM
 S/cmsy/m/n/10 j\OML/cmm/m/it/10 z[]; x\OT1/cmr/m/n/10 )$ is an aux-il-iary dis-
 tri-bu-tion to
+ []
+
+
+Underfull \hbox (badness 1221) in paragraph at lines 48--49
+\OT1/cmr/m/n/10 a nat-u-ral choice for the aux-il-iary \OT1/cmr/m/it/10 re-vers
+e \OT1/cmr/m/n/10 dis-tri-
  []
 
 
@@ -1581,6 +1591,10 @@ Package Fancyhdr Warning: \headheight is too small (10.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2]) (./chapters/backgroundHMC.tex
+Underfull \hbox (badness 1292) in paragraph at lines 57--1
+\OT1/cmr/m/n/10 stochas-tic op-ti-miza-tion al-go-rithms such as Adam
+ []
+
 <figures/hmc_motion_1hmc_12lf.pdf, id=197, 1293.83057pt x 426.7957pt>
 File: figures/hmc_motion_1hmc_12lf.pdf Graphic file (type pdf)
 
@@ -1603,7 +1617,7 @@ Package Fancyhdr Warning: \headheight is too small (10.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [3]
-Underfull \vbox (badness 4726) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -1617,34 +1631,36 @@ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.68 
-      <./figures/hmc_motion_1hmc_12lf.pdf>]
-Underfull \hbox (badness 1552) in paragraph at lines 88--89
-\OT1/cmr/m/n/10 main steps in the al-go-rithm, firstly the sim-u-la-
- []
-
+l.65 B
+      y inverting this relationship we can derive the appropriate energy fro...
+ <./figures/hmc_motion_1hmc_12lf.pdf>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 94.
+put line 89.
+
+<figures/hmc_motion_3hmc_04lf.pdf, id=275, 1293.83057pt x 426.7957pt>
+File: figures/hmc_motion_3hmc_04lf.pdf Graphic file (type pdf)
+
+<use figures/hmc_motion_3hmc_04lf.pdf>
+Package pdftex.def Info: figures/hmc_motion_3hmc_04lf.pdf used on input line 10
+6.
+(pdftex.def)             Requested size: 481.49959pt x 158.83018pt.
+
 
 Package Fancyhdr Warning: \headheight is too small (10.0pt): 
  Make it at least 11.0pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5] <figures/hmc_motion_3hmc_04lf.pdf, id=288, 1293.83057pt x 426.7957pt>
-File: figures/hmc_motion_3hmc_04lf.pdf Graphic file (type pdf)
+[5]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<use figures/hmc_motion_3hmc_04lf.pdf>
-Package pdftex.def Info: figures/hmc_motion_3hmc_04lf.pdf used on input line 11
-1.
-(pdftex.def)             Requested size: 481.49959pt x 158.83018pt.
 
-<figures/hmcvi_distrib_example_top.pdf, id=291, 1289.07109pt x 877.81932pt>
+<figures/hmcvi_distrib_example_top.pdf, id=289, 1289.07109pt x 877.81932pt>
 File: figures/hmcvi_distrib_example_top.pdf Graphic file (type pdf)
 
 <use figures/hmcvi_distrib_example_top.pdf>
 Package pdftex.def Info: figures/hmcvi_distrib_example_top.pdf used on input li
-ne 122.
+ne 117.
 (pdftex.def)             Requested size: 481.49959pt x 327.88217pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1656,36 +1672,50 @@ Package Fancyhdr Warning: \headheight is too small (10.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6]
+[6pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.128 
+       <./figures/hmc_motion_3hmc_04lf.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (10.0pt): 
  Make it at least 11.0pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
+[7pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.168 \begin{equation}
-                       <./figures/hmc_motion_3hmc_04lf.pdf>]
-
-Package Fancyhdr Warning: \headheight is too small (10.0pt): 
- Make it at least 11.0pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[8pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.193 \end{equation}
+l.147 \end{equation}
                      <./figures/hmcvi_distrib_example_top.pdf>]
 (./figures/hmc_illustration.tikz)) (./chapters/HMCVI.tex
-Underfull \hbox (badness 1515) in paragraph at lines 28--31
-[]\OT1/cmr/m/n/10 For the aux-il-iary re-verse den-sity first note that
+
+Package Fancyhdr Warning: \headheight is too small (10.0pt): 
+ Make it at least 11.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8]
+Underfull \hbox (badness 1158) in paragraph at lines 24--25
+\OT1/cmr/m/n/10 For the aux-il-iary re-verse den-sity we can rewrite
+ []
+
+
+Underfull \hbox (badness 1629) in paragraph at lines 24--25
+\OT1/cmr/m/n/10 the po-si-tion $\OML/cmm/m/it/10 z[]$\OT1/cmr/m/n/10 . By then 
+as-sum-ing a Markov
+ []
+
+
+Underfull \hbox (badness 1142) in paragraph at lines 24--25
+\OT1/cmr/m/n/10 struc-ture on the re-verse model (as for the base
  []
 
 
@@ -1699,8 +1729,8 @@ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.39 \end{equation}
-                   ]
+l.33 
+     ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1711,28 +1741,19 @@ Package Fancyhdr Warning: \headheight is too small (10.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [10]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 []\OT1/cmr/m/n/10 For the deriva-tion of the tran-si-tion den-sity
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 99--100
+Underfull \hbox (badness 2368) in paragraph at lines 87--88
 []$\U/msb/m/n/10 P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = 1\OMS/c
 msy/m/n/10 j\OML/cmm/m/it/10 S[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 s[]; U[] \O
 T1/cmr/m/n/10 = \OML/cmm/m/it/10 u; x\OT1/cmr/m/n/10 ) =
  []
 
 
-Underfull \hbox (badness 2856) in paragraph at lines 100--101
-[]\OT1/cmr/m/n/10 If the up-dated state $\OML/cmm/m/it/10 S[] \OT1/cmr/m/n/10 =
- (\OML/cmm/m/it/10 Z[]; U[]\OT1/cmr/m/n/10 )$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
 \OT1/cmr/m/n/10 and $\OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s[]\
 OMS/cmsy/m/n/10 j\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 (\OML/cmm/
 m/it/10 z[]; u\OT1/cmr/m/n/10 )) =
@@ -1745,26 +1766,6 @@ Package Fancyhdr Warning: \headheight is too small (10.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [11]
-Underfull \hbox (badness 1194) in paragraph at lines 128--129
-[]\OT1/cmr/m/n/10 In the lower bound ap-prox-i-ma-tion we also need
- []
-
-
-Underfull \hbox (badness 7344) in paragraph at lines 128--129
-\OT1/cmr/m/n/10 a den-sity ap-prox-i-ma-tion for moves back-wards
- []
-
-
-Underfull \hbox (badness 3240) in paragraph at lines 128--129
-\OT1/cmr/m/n/10 through the chain, i.e. for $\OML/cmm/m/it/10 r\OT1/cmr/m/n/10 
-(\OML/cmm/m/it/10 s[]\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 s[]; t; x\OT1/cmr/m/n/1
-0 ) =
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Package Fancyhdr Warning: \headheight is too small (10.0pt): 
  Make it at least 11.0pt.
@@ -1772,11 +1773,21 @@ Package Fancyhdr Warning: \headheight is too small (10.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [12]
-Underfull \hbox (badness 1635) in paragraph at lines 201--202
-[]\OT1/cmr/m/n/10 Now in the re-verse model we have the den-sity
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
+[]\OT1/cmr/m/n/10 In the re-verse model we have the den-sity
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
+\OML/cmm/m/it/10 r[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v[]\OMS/cmsy/m/n/10 j\OML
+/cmm/m/it/10 z[]; u[]; t; x\OT1/cmr/m/n/10 )$ cap-tur-ing the dis-tri-bu-
+ []
+
+
+Underfull \vbox (badness 4217) has occurred while \output is active []
+
+)
+(./chapters/experiments.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1786,20 +1797,11 @@ Package Fancyhdr Warning: \headheight is too small (10.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13]) (./chapters/experiments.tex
+[13]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package Fancyhdr Warning: \headheight is too small (10.0pt): 
- Make it at least 11.0pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[14] <figures/binarization_example.pdf, id=448, 635.97598pt x 209.58301pt>
+<figures/binarization_example.pdf, id=442, 635.97598pt x 209.58301pt>
 File: figures/binarization_example.pdf Graphic file (type pdf)
 
 <use figures/binarization_example.pdf>
@@ -1808,6 +1810,22 @@ Package pdftex.def Info: figures/binarization_example.pdf used on input line 21
 (pdftex.def)             Requested size: 234.8775pt x 77.40057pt.
 
 Underfull \vbox (badness 1406) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (10.0pt): 
+ Make it at least 11.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[14pdfTeX warning (ext4): destination with the same identifier (name{figure.5})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.31 
+      <./figures/binarization_example.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 (./figures/tableResults.tex)
@@ -1820,13 +1838,7 @@ Package Fancyhdr Warning: \headheight is too small (10.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15pdfTeX warning (ext4): destination with the same identifier (name{figure.5})
- has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.47 \end{table*}
-                  <./figures/binarization_example.pdf>]
+[15]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
@@ -1840,23 +1852,16 @@ Package Fancyhdr Warning: \headheight is too small (10.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-)
-
-Package Fancyhdr Warning: \headheight is too small (10.0pt): 
- Make it at least 11.0pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[17pdfTeX warning (ext4): destination with the same identifier (name{table.1}) 
+[16pdfTeX warning (ext4): destination with the same identifier (name{table.1}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.44 \printbibliography{
-                        }]
+l.1 \section
+            {Conclusion and Future Work}]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+)
 Underfull \hbox (badness 7925) in paragraph at lines 44--44
 [][]\OT1/cmr/m/n/10 Bayer, J., C. Os-endor-fer, S. Diot-Girard, T.
  []
@@ -1883,14 +1888,15 @@ v:
  []
 
 
+Package Fancyhdr Warning: \headheight is too small (10.0pt): 
+ Make it at least 11.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17]
 Underfull \hbox (badness 1205) in paragraph at lines 44--44
 \OT1/cmr/m/n/10 Carlo al-go-rithm''. In: \OT1/cmr/m/it/10 Physics Let-ters B \O
 T1/cmr/m/n/10 268.2,
- []
-
-
-Underfull \hbox (badness 1112) in paragraph at lines 44--44
-[][]\OT1/cmr/m/n/10 Kingma, D. P. and J. L. Ba (2015). ``Adam: a
  []
 
 
@@ -1899,7 +1905,9 @@ Package Fancyhdr Warning: \headheight is too small (10.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[18] (./chapters/appendix.tex
+[18
+
+] (./chapters/appendix.tex
 Underfull \hbox (badness 10000) in paragraph at lines 11--13
 \OT1/cmr/m/n/10 where $\OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s[
 ]\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 t; x\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 f[
@@ -1908,26 +1916,27 @@ x\OT1/cmr/m/n/10 ) +
  []
 
 
-Underfull \hbox (badness 1082) in paragraph at lines 11--13
+Underfull \hbox (badness 3219) in paragraph at lines 11--13
 \OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (0\OML/cmm/m/it/10 ; s[]\OMS/cmsy/m/n/10 j\
-OML/cmm/m/it/10 t; x\OT1/cmr/m/n/10 )$ and we can rewrite the terms
+OML/cmm/m/it/10 t; x\OT1/cmr/m/n/10 )$. These terms can then we
  []
 
 
-Underfull \hbox (badness 7168) in paragraph at lines 26--28
-\OT1/cmr/m/n/10 Now if $\OML/cmm/m/it/10 H\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 z[]
-; \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^
-U \OML/cmm/m/it/10 H\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 HD\OT1/cmr/m/n/10 (\OML/c
-mm/m/it/10 z[]; \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ))$ hol
-ds,
+Underfull \hbox (badness 5245) in paragraph at lines 26--28
+\OT1/cmr/m/n/10 Now, if $\OML/cmm/m/it/10 H\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 z[
+]; \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^
+^U \OML/cmm/m/it/10 H\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 HD\OT1/cmr/m/n/10 (\OML/
+cmm/m/it/10 z[]; \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ))$ ho
+lds,
  []
 
-<figures/vae_pot_energy_example.pdf, id=514, 1077.06137pt x 1056.20218pt>
-File: figures/vae_pot_energy_example.pdf Graphic file (type pdf)
 
-<use figures/vae_pot_energy_example.pdf>
-Package pdftex.def Info: figures/vae_pot_energy_example.pdf used on input line 
-53.
+<figures/vae_pot_energy_example_with_inset.pdf, id=498, 1077.06137pt x 1056.202
+18pt>
+File: figures/vae_pot_energy_example_with_inset.pdf Graphic file (type pdf)
+ <use figures/vae_pot_energy_example_with_inset.pdf>
+Package pdftex.def Info: figures/vae_pot_energy_example_with_inset.pdf used on 
+input line 53.
 (pdftex.def)             Requested size: 234.8775pt x 230.31842pt.
 
 Underfull \vbox (badness 6944) has occurred while \output is active []
@@ -1947,9 +1956,9 @@ s been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.62 
-      <./figures/vae_pot_energy_example.pdf>]
-<figures/learned_representation_train_points_small.pdf, id=1156, 914.21548pt x 
-860.01299pt>
+      <./figures/vae_pot_energy_example_with_inset.pdf>]
+<figures/learned_representation_train_points_small.pdf, id=808, 914.21548pt x 8
+60.01299pt>
 File: figures/learned_representation_train_points_small.pdf Graphic file (type 
 pdf)
  <use figures/learned_representation_train_points_small.pdf>
@@ -1979,19 +1988,19 @@ l.48 \end{document}
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 48.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 48.
 Package rerunfilecheck Info: File `tum_paper.out' has not changed.
-(rerunfilecheck)             Checksum: 208F24FB2E2439795E112EAF91DE1DA5;2515.
+(rerunfilecheck)             Checksum: 55F1B96664C50DDC61E4F60CCCF3D5C5;2516.
 Package logreq Info: Writing requests to 'tum_paper.run.xml'.
 \openout1 = `tum_paper.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43896 strings out of 493089
- 984576 string characters out of 6134842
- 1524143 words of memory out of 5000000
- 46534 multiletter control sequences out of 15000+600000
- 12697 words of font info for 48 fonts, out of 8000000 for 9000
+ 43894 strings out of 493089
+ 984616 string characters out of 6134842
+ 1524270 words of memory out of 5000000
+ 46536 multiletter control sequences out of 15000+600000
+ 12529 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,19n,84p,10442b,1079s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,19n,84p,10442b,1092s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
@@ -2012,13 +2021,12 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2015/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2015/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf-dist
-/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on build/tum_paper.pdf (20 pages, 5927437 bytes).
+t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on build/tum_paper.pdf (20 pages, 4730876 bytes).
 PDF statistics:
- 1286 PDF objects out of 1440 (max. 8388607)
- 932 compressed objects within 10 object streams
- 125 named destinations out of 1000 (max. 500000)
+ 934 PDF objects out of 1000 (max. 8388607)
+ 694 compressed objects within 7 object streams
+ 122 named destinations out of 1000 (max. 500000)
  307 words of extra memory for PDF output out of 10000 (max. 10000000)
 

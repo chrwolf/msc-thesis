@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.7)  29 JAN 2016 03:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.7)  3 FEB 2016 22:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2308,7 +2308,7 @@ File: tum_paper.pdf Graphic file (type pdf)
 Package pdftex.def Info: tum_paper.pdf, page3 used on input line 29.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [3 <build/tum_paper.pdf>]
-<tum_paper.pdf, id=171, page=5, 597.50829pt x 845.0471pt>
+<tum_paper.pdf, id=161, page=5, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 5>
@@ -2324,7 +2324,7 @@ File: tum_paper.pdf Graphic file (type pdf)
 Package pdftex.def Info: tum_paper.pdf, page4 used on input line 29.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [4 <build/tum_paper.pdf>]
-<tum_paper.pdf, id=223, page=6, 597.50829pt x 845.0471pt>
+<tum_paper.pdf, id=228, page=6, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 6>
@@ -2356,7 +2356,7 @@ File: tum_paper.pdf Graphic file (type pdf)
 Package pdftex.def Info: tum_paper.pdf, page6 used on input line 29.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [6 <build/tum_paper.pdf>]
-<tum_paper.pdf, id=239, page=8, 597.50829pt x 845.0471pt>
+<tum_paper.pdf, id=280, page=8, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 8>
@@ -2372,7 +2372,7 @@ File: tum_paper.pdf Graphic file (type pdf)
 Package pdftex.def Info: tum_paper.pdf, page7 used on input line 29.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [7 <build/tum_paper.pdf>]
-<tum_paper.pdf, id=285, page=9, 597.50829pt x 845.0471pt>
+<tum_paper.pdf, id=293, page=9, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 9>
@@ -2484,7 +2484,7 @@ File: tum_paper.pdf Graphic file (type pdf)
 Package pdftex.def Info: tum_paper.pdf, page14 used on input line 29.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [14 <build/tum_paper.pdf>]
-<tum_paper.pdf, id=334, page=16, 597.50829pt x 845.0471pt>
+<tum_paper.pdf, id=344, page=16, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 16>
@@ -2516,7 +2516,7 @@ File: tum_paper.pdf Graphic file (type pdf)
 Package pdftex.def Info: tum_paper.pdf, page16 used on input line 29.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [16 <build/tum_paper.pdf>]
-<tum_paper.pdf, id=355, page=18, 597.50829pt x 845.0471pt>
+<tum_paper.pdf, id=360, page=18, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 18>
@@ -2548,7 +2548,7 @@ File: tum_paper.pdf Graphic file (type pdf)
 Package pdftex.def Info: tum_paper.pdf, page18 used on input line 29.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [18 <build/tum_paper.pdf>]
-<tum_paper.pdf, id=375, page=20, 597.50829pt x 845.0471pt>
+<tum_paper.pdf, id=370, page=20, 597.50829pt x 845.0471pt>
 File: tum_paper.pdf Graphic file (type pdf)
 
 <use tum_paper.pdf, page 20>
@@ -2588,10 +2588,10 @@ Package logreq Info: Writing requests to 'tum.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52547 strings out of 493089
- 1131965 string characters out of 6134842
- 1797433 words of memory out of 5000000
- 55046 multiletter control sequences out of 15000+600000
+ 52548 strings out of 493089
+ 1131980 string characters out of 6134842
+ 1797560 words of memory out of 5000000
+ 55047 multiletter control sequences out of 15000+600000
  30662 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,18n,84p,10462b,1489s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2616,15 +2616,14 @@ type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
-blic/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
-1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
-ype1/urw/palatino/uplb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/ur
-w/palatino/uplr8a.pfb>
-Output written on build/tum.pdf (23 pages, 6426177 bytes).
+ublic/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
+e1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2015/texmf-dist/fonts/
+type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/u
+rw/palatino/uplr8a.pfb>
+Output written on build/tum.pdf (23 pages, 5231942 bytes).
 PDF statistics:
- 1076 PDF objects out of 1200 (max. 8388607)
- 668 compressed objects within 7 object streams
+ 738 PDF objects out of 1000 (max. 8388607)
+ 443 compressed objects within 5 object streams
  23 named destinations out of 1000 (max. 500000)
  19594 words of extra memory for PDF output out of 20736 (max. 10000000)
 

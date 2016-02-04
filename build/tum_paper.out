@@ -2,7 +2,7 @@
 \BOOKMARK [1][-]{section.2}{Variational Inference and MCMC}{}% 2
 \BOOKMARK [2][-]{subsection.2.1}{Variational Inference}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{MCMC}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{Combining Variational Inference and MCMC}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.3}{Combining variational inference and MCMC}{section.2}% 5
 \BOOKMARK [1][-]{section.3}{Hamiltonian Monte Carlo}{}% 6
 \BOOKMARK [2][-]{subsection.3.1}{Hamiltonian Dynamics}{section.3}% 7
 \BOOKMARK [2][-]{subsection.3.2}{The HMC algorithm}{section.3}% 8
@@ -16,13 +16,13 @@
 \BOOKMARK [2][-]{subsection.4.2}{Transition densities without the acceptance step}{section.4}% 16
 \BOOKMARK [2][-]{subsection.4.3}{Transition densities with the acceptance step}{section.4}% 17
 \BOOKMARK [3][-]{subsubsection.4.3.1}{Forward model}{subsection.4.3}% 18
-\BOOKMARK [3][-]{subsubsection.4.3.2}{Reverse Model}{subsection.4.3}% 19
+\BOOKMARK [3][-]{subsubsection.4.3.2}{Reverse model}{subsection.4.3}% 19
 \BOOKMARK [2][-]{subsection.4.4}{Learning the mass matrix}{section.4}% 20
-\BOOKMARK [2][-]{subsection.4.5}{Computational Simplifications}{section.4}% 21
-\BOOKMARK [3][-]{subsubsection.4.5.1}{Simplifications for HMCVI without Partial Momentum Update}{subsection.4.5}% 22
-\BOOKMARK [3][-]{subsubsection.4.5.2}{Computing Expectations Explicitly}{subsection.4.5}% 23
+\BOOKMARK [2][-]{subsection.4.5}{Computational simplifications}{section.4}% 21
+\BOOKMARK [3][-]{subsubsection.4.5.1}{Simplifications for HMCVI without partial momentum updates}{subsection.4.5}% 22
+\BOOKMARK [3][-]{subsubsection.4.5.2}{Computing expectations explicitly}{subsection.4.5}% 23
 \BOOKMARK [1][-]{section.5}{Experimental Results}{}% 24
-\BOOKMARK [2][-]{subsection.5.1}{Variational Auto Encoders}{section.5}% 25
+\BOOKMARK [2][-]{subsection.5.1}{Variational Auto-Encoders}{section.5}% 25
 \BOOKMARK [2][-]{subsection.5.2}{The dataset and the effects of data binarization}{section.5}% 26
 \BOOKMARK [2][-]{subsection.5.3}{Model Specifications}{section.5}% 27
 \BOOKMARK [2][-]{subsection.5.4}{Model Comparison}{section.5}% 28
