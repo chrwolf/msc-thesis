@@ -16,7 +16,7 @@
 \defcounter {refsection}{0}\relax 
 \beamer@subsectionintoc {2}{2}{The algorithm}{15}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {2}{3}{Visualizations}{16}{0}{2}
+\beamer@subsectionintoc {2}{3}{Visualization}{16}{0}{2}
 \defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {3}{Contributions}{17}{0}{3}
 \defcounter {refsection}{0}\relax 

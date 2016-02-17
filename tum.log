@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.7)  4 FEB 2016 00:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.7)  4 FEB 2016 02:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2558,7 +2558,7 @@ Package logreq Info: Writing requests to 'tum.run.xml'.
 Here is how much of TeX's memory you used:
  52470 strings out of 493089
  1130532 string characters out of 6134842
- 1796650 words of memory out of 5000000
+ 1796651 words of memory out of 5000000
  54982 multiletter control sequences out of 15000+600000
  28480 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2589,7 +2589,7 @@ blic/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
 1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
 ype1/urw/palatino/uplb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/ur
 w/palatino/uplr8a.pfb>
-Output written on tum.pdf (23 pages, 5241035 bytes).
+Output written on tum.pdf (23 pages, 5241023 bytes).
 PDF statistics:
  744 PDF objects out of 1000 (max. 8388607)
  448 compressed objects within 5 object streams

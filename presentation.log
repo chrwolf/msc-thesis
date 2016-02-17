@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.7)  3 FEB 2016 18:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.7)  4 FEB 2016 02:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2146,9 +2146,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 585.
 (./presentation.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 585.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 585.
-Package rerunfilecheck Info: File `presentation.out' has not changed.
-(rerunfilecheck)             Checksum: A387E14D346A592A00EF6F5386171895;1055.
 
+
+Package rerunfilecheck Warning: File `presentation.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `presentation.out':
+(rerunfilecheck)             Before: A387E14D346A592A00EF6F5386171895;1055
+(rerunfilecheck)             After:  7BC94B02EE8505197F78A574D82A9F78;1054.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
@@ -2161,7 +2167,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 585.
 Here is how much of TeX's memory you used:
  47786 strings out of 493089
  1079793 string characters out of 6134842
- 1612523 words of memory out of 5000000
+ 1612522 words of memory out of 5000000
  50286 multiletter control sequences out of 15000+600000
  25948 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2187,7 +2193,7 @@ e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/
 5/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on presentation.pdf (34 pages, 4598800 bytes).
+Output written on presentation.pdf (34 pages, 4598804 bytes).
 PDF statistics:
  820 PDF objects out of 1000 (max. 8388607)
  553 compressed objects within 6 object streams
